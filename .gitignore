@@ -43,5 +43,5 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# data files (gitkeep 유지)
-/public/data/*.json
+# data files — JSON은 버전 관리 (GitHub Actions가 매일 업데이트)
+# /public/data/*.json
