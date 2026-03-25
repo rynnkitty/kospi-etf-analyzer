@@ -1,434 +1,434 @@
 {
-  "updated_at": "2026-03-25T12:17:55+09:00",
+  "updated_at": "2026-03-25T18:23:02+09:00",
   "stocks": {
     "000100": {
       "name": "유한양행",
       "market": "KOSPI",
-      "per": 40.94,
+      "per": 41.4,
       "eps": 2389,
-      "pbr": 3.17,
+      "pbr": 3.21,
       "bps": 30855,
       "dividend_yield": 0.61,
-      "close": 97800,
-      "market_cap": null
+      "close": 98900,
+      "market_cap": 7877100000000
     },
     "000250": {
       "name": "삼천당제약",
       "market": "KOSPI",
       "per": 486.0,
       "eps": null,
-      "pbr": 91.28,
+      "pbr": 96.93,
       "bps": 11503,
       "dividend_yield": 0.0,
-      "close": 1050000,
-      "market_cap": null
+      "close": 1115000,
+      "market_cap": 26155000000000
     },
     "000270": {
       "name": "기아",
       "market": "KOSPI",
-      "per": 8.31,
+      "per": 8.26,
       "eps": 19111,
-      "pbr": 1.01,
+      "pbr": 1.0,
       "bps": 157456,
-      "dividend_yield": 4.28,
-      "close": 158900,
-      "market_cap": null
+      "dividend_yield": 4.31,
+      "close": 157900,
+      "market_cap": 61646200000000
     },
     "000660": {
       "name": "SK하이닉스",
       "market": "KOSPI",
-      "per": 17.05,
+      "per": 16.88,
       "eps": 58955,
-      "pbr": 5.76,
+      "pbr": 5.7,
       "bps": 174539,
       "dividend_yield": 0.3,
-      "close": 1005000,
-      "market_cap": null
+      "close": 995000,
+      "market_cap": 709138800000000
     },
     "000670": {
       "name": "영풍",
       "market": "KOSPI",
       "per": 422.0,
       "eps": null,
-      "pbr": 0.31,
+      "pbr": 0.32,
       "bps": 195371,
       "dividend_yield": 0.01,
-      "close": 61500,
-      "market_cap": null
+      "close": 62800,
+      "market_cap": 1135200000000
     },
     "000720": {
       "name": "현대건설",
       "market": "KOSPI",
-      "per": 47.36,
+      "per": 47.56,
       "eps": 3320,
-      "pbr": 2.14,
+      "pbr": 2.15,
       "bps": 73523,
       "dividend_yield": 0.51,
-      "close": 157250,
-      "market_cap": null
+      "close": 157900,
+      "market_cap": 17583000000000
     },
     "000810": {
       "name": "삼성화재",
       "market": "KOSPI",
-      "per": 12.28,
+      "per": 12.3,
       "eps": 39851,
       "pbr": 1.11,
       "bps": 439821,
       "dividend_yield": 3.98,
-      "close": 489500,
-      "market_cap": null
+      "close": 490000,
+      "market_cap": 22545400000000
     },
     "000880": {
       "name": "한화",
       "market": "KOSPI",
-      "per": 30.08,
+      "per": 29.63,
       "eps": 3939,
-      "pbr": 0.89,
+      "pbr": 0.88,
       "bps": 133067,
-      "dividend_yield": 0.93,
-      "close": 118500,
-      "market_cap": null
+      "dividend_yield": 0.94,
+      "close": 116700,
+      "market_cap": 8747600000000
     },
     "000990": {
       "name": "DB하이텍",
       "market": "KOSPI",
-      "per": 14.2,
+      "per": 14.25,
       "eps": 5783,
       "pbr": 1.55,
       "bps": 53095,
-      "dividend_yield": 0.99,
-      "close": 82100,
-      "market_cap": null
+      "dividend_yield": 0.98,
+      "close": 82400,
+      "market_cap": 3584700000000
     },
     "001040": {
       "name": "CJ",
       "market": "KOSPI",
-      "per": 52.38,
+      "per": 52.25,
       "eps": 4019,
       "pbr": 1.3,
       "bps": 161796,
       "dividend_yield": 1.57,
-      "close": 210500,
-      "market_cap": null
+      "close": 210000,
+      "market_cap": 6127100000000
     },
     "001430": {
       "name": "세아베스틸지주",
       "market": "KOSPI",
-      "per": 43.71,
+      "per": 46.27,
       "eps": 1567,
-      "pbr": 1.26,
+      "pbr": 1.34,
       "bps": 54192,
-      "dividend_yield": 1.75,
-      "close": 68500,
-      "market_cap": null
+      "dividend_yield": 1.65,
+      "close": 72500,
+      "market_cap": 2600000000000
     },
     "001510": {
       "name": "SK증권",
       "market": "KOSPI",
-      "per": 277.12,
+      "per": 275.62,
       "eps": 8,
-      "pbr": 1.55,
+      "pbr": 1.54,
       "bps": 1432,
       "dividend_yield": 0.05,
-      "close": 2217,
-      "market_cap": null
+      "close": 2205,
+      "market_cap": 1042000000000
     },
     "001720": {
       "name": "신영증권",
       "market": "KOSPI",
-      "per": 24.21,
+      "per": 24.33,
       "eps": 8632,
       "pbr": 0.84,
       "bps": 249001,
-      "dividend_yield": 2.39,
-      "close": 209000,
-      "market_cap": null
+      "dividend_yield": 2.38,
+      "close": 210000,
+      "market_cap": 3452400000000
     },
     "002030": {
       "name": "아세아",
       "market": "KOSPI",
-      "per": 13.39,
+      "per": 13.58,
       "eps": 20504,
-      "pbr": 0.38,
+      "pbr": 0.39,
       "bps": 722265,
-      "dividend_yield": 2.04,
-      "close": 274500,
-      "market_cap": null
+      "dividend_yield": 2.01,
+      "close": 278500,
+      "market_cap": 577200000000
     },
     "002380": {
       "name": "KCC",
       "market": "KOSPI",
-      "per": 3.02,
+      "per": 3.08,
       "eps": 173128,
-      "pbr": 0.49,
+      "pbr": 0.5,
       "bps": 1063952,
-      "dividend_yield": 2.87,
-      "close": 523000,
-      "market_cap": null
+      "dividend_yield": 2.81,
+      "close": 533000,
+      "market_cap": 4736400000000
     },
     "003030": {
       "name": "세아제강지주",
       "market": "KOSPI",
-      "per": 12.33,
+      "per": 12.23,
       "eps": 15274,
       "pbr": 0.37,
       "bps": 510476,
       "dividend_yield": 0.96,
-      "close": 188300,
-      "market_cap": null
+      "close": 186800,
+      "market_cap": 773700000000
     },
     "003230": {
       "name": "삼양식품",
       "market": "KOSPI",
-      "per": 24.72,
+      "per": 24.76,
       "eps": 49106,
-      "pbr": 8.38,
+      "pbr": 8.39,
       "bps": 144930,
       "dividend_yield": 0.4,
-      "close": 1214000,
-      "market_cap": null
+      "close": 1216000,
+      "market_cap": 9160100000000
     },
     "003470": {
       "name": "유안타증권",
       "market": "KOSPI",
-      "per": 14.71,
+      "per": 14.74,
       "eps": 346,
       "pbr": 0.63,
       "bps": 8106,
-      "dividend_yield": 4.32,
-      "close": 5090,
-      "market_cap": null
+      "dividend_yield": 4.31,
+      "close": 5100,
+      "market_cap": 1017900000000
     },
     "003530": {
       "name": "한화투자증권",
       "market": "KOSPI",
-      "per": 25.12,
+      "per": 24.98,
       "eps": 301,
       "pbr": 0.87,
       "bps": 8686,
       "dividend_yield": null,
-      "close": 7560,
-      "market_cap": null
+      "close": 7520,
+      "market_cap": 1613300000000
     },
     "003540": {
       "name": "대신증권",
       "market": "KOSPI",
-      "per": 15.73,
+      "per": 15.84,
       "eps": 2515,
-      "pbr": 0.78,
+      "pbr": 0.79,
       "bps": 50750,
-      "dividend_yield": 3.03,
-      "close": 39550,
-      "market_cap": null
+      "dividend_yield": 3.01,
+      "close": 39850,
+      "market_cap": 2023300000000
     },
     "003550": {
       "name": "LG",
       "market": "KOSPI",
-      "per": 18.99,
+      "per": 19.19,
       "eps": 4628,
-      "pbr": 0.47,
+      "pbr": 0.48,
       "bps": 186173,
-      "dividend_yield": 3.53,
-      "close": 87900,
-      "market_cap": null
+      "dividend_yield": 3.49,
+      "close": 88800,
+      "market_cap": 13694800000000
     },
     "004020": {
       "name": "현대제철",
       "market": "KOSPI",
       "per": 168.0,
       "eps": null,
-      "pbr": 0.24,
+      "pbr": 0.25,
       "bps": 144778,
-      "dividend_yield": 1.41,
-      "close": 35400,
-      "market_cap": null
+      "dividend_yield": 1.4,
+      "close": 35700,
+      "market_cap": 4764000000000
     },
     "004170": {
       "name": "신세계",
       "market": "KOSPI",
-      "per": 226.39,
+      "per": 234.03,
       "eps": 1440,
-      "pbr": 0.64,
+      "pbr": 0.66,
       "bps": 508154,
-      "dividend_yield": 1.6,
-      "close": 326000,
-      "market_cap": null
+      "dividend_yield": 1.54,
+      "close": 337000,
+      "market_cap": 3250400000000
     },
     "005290": {
       "name": "동진쎄미켐",
       "market": "KOSPI",
-      "per": 25.56,
+      "per": 25.95,
       "eps": 1927,
-      "pbr": 2.34,
+      "pbr": 2.37,
       "bps": 21080,
-      "dividend_yield": 1.32,
-      "close": 49250,
-      "market_cap": null
+      "dividend_yield": 1.3,
+      "close": 50000,
+      "market_cap": 2570700000000
     },
     "005380": {
       "name": "현대차",
       "market": "KOSPI",
-      "per": 14.12,
+      "per": 14.18,
       "eps": 35331,
-      "pbr": 1.13,
+      "pbr": 1.14,
       "bps": 439541,
-      "dividend_yield": 2.01,
-      "close": 498750,
-      "market_cap": null
+      "dividend_yield": 2.0,
+      "close": 501000,
+      "market_cap": 102583600000000
     },
     "005490": {
       "name": "POSCO홀딩스",
       "market": "KOSPI",
-      "per": 41.93,
+      "per": 42.3,
       "eps": 8085,
       "pbr": 0.46,
       "bps": 736969,
-      "dividend_yield": 2.95,
-      "close": 339000,
-      "market_cap": null
+      "dividend_yield": 2.92,
+      "close": 342000,
+      "market_cap": 27679000000000
     },
     "005850": {
       "name": "에스엘",
       "market": "KOSPI",
-      "per": 9.04,
+      "per": 9.12,
       "eps": 6692,
-      "pbr": 1.13,
+      "pbr": 1.14,
       "bps": 53655,
-      "dividend_yield": 4.58,
-      "close": 60500,
-      "market_cap": null
+      "dividend_yield": 4.54,
+      "close": 61000,
+      "market_cap": 2833300000000
     },
     "005930": {
       "name": "삼성전자",
       "market": "KOSPI",
-      "per": 29.22,
+      "per": 28.79,
       "eps": 6564,
-      "pbr": 3.0,
+      "pbr": 2.95,
       "bps": 63997,
-      "dividend_yield": 0.87,
-      "close": 191800,
-      "market_cap": null
+      "dividend_yield": 0.88,
+      "close": 189000,
+      "market_cap": 1118811500000000
     },
     "005940": {
       "name": "NH투자증권",
       "market": "KOSPI",
-      "per": 13.91,
+      "per": 13.99,
       "eps": 2452,
-      "pbr": 1.4,
+      "pbr": 1.41,
       "bps": 24354,
-      "dividend_yield": 3.81,
-      "close": 34100,
-      "market_cap": null
+      "dividend_yield": 3.79,
+      "close": 34300,
+      "market_cap": 12222600000000
     },
     "006220": {
       "name": "제주은행",
       "market": "KOSPI",
-      "per": 33.95,
+      "per": 34.05,
       "eps": 385,
       "pbr": 0.76,
       "bps": 17195,
       "dividend_yield": 0.76,
-      "close": 13070,
-      "market_cap": null
+      "close": 13110,
+      "market_cap": 495500000000
     },
     "006360": {
       "name": "GS건설",
       "market": "KOSPI",
-      "per": 24.7,
+      "per": 25.07,
       "eps": 1093,
-      "pbr": 0.48,
+      "pbr": 0.49,
       "bps": 56462,
-      "dividend_yield": 1.85,
-      "close": 27000,
-      "market_cap": null
+      "dividend_yield": 1.83,
+      "close": 27400,
+      "market_cap": 2344900000000
     },
     "006400": {
       "name": "삼성SDI",
       "market": "KOSPI",
       "per": 8325.0,
       "eps": null,
-      "pbr": 1.47,
+      "pbr": 1.48,
       "bps": 272485,
       "dividend_yield": null,
-      "close": 401000,
-      "market_cap": null
+      "close": 404000,
+      "market_cap": 32556500000000
     },
     "006800": {
       "name": "미래에셋증권",
       "market": "KOSPI",
-      "per": 37.07,
+      "per": 38.86,
       "eps": 1732,
-      "pbr": 2.97,
+      "pbr": 3.11,
       "bps": 21650,
-      "dividend_yield": 0.46,
-      "close": 64200,
-      "market_cap": null
+      "dividend_yield": 0.44,
+      "close": 67300,
+      "market_cap": 37372700000000
     },
     "007340": {
       "name": "DN오토모티브",
       "market": "KOSPI",
-      "per": 7.96,
+      "per": 8.15,
       "eps": 4809,
-      "pbr": 0.99,
+      "pbr": 1.01,
       "bps": 38780,
-      "dividend_yield": 2.61,
-      "close": 38300,
-      "market_cap": null
+      "dividend_yield": 2.55,
+      "close": 39200,
+      "market_cap": 2293600000000
     },
     "007660": {
       "name": "이수페타시스",
       "market": "KOSPI",
-      "per": 61.02,
+      "per": 61.07,
       "eps": 1970,
-      "pbr": 12.34,
+      "pbr": 12.35,
       "bps": 9737,
       "dividend_yield": 0.19,
-      "close": 120200,
-      "market_cap": null
+      "close": 120300,
+      "market_cap": 8831100000000
     },
     "008730": {
       "name": "율촌화학",
       "market": "KOSPI",
-      "per": 141.37,
+      "per": 141.07,
       "eps": 168,
-      "pbr": 2.02,
+      "pbr": 2.01,
       "bps": 11783,
       "dividend_yield": 1.05,
-      "close": 23750,
-      "market_cap": null
+      "close": 23700,
+      "market_cap": 587800000000
     },
     "009150": {
       "name": "삼성전기",
       "market": "KOSPI",
-      "per": 50.01,
+      "per": 49.95,
       "eps": 9099,
       "pbr": 3.6,
       "bps": 126302,
       "dividend_yield": 0.52,
-      "close": 455000,
-      "market_cap": null
+      "close": 454500,
+      "market_cap": 33948200000000
     },
     "009520": {
       "name": "포스코엠텍",
       "market": "KOSPI",
-      "per": 522.06,
+      "per": 525.88,
       "eps": 34,
-      "pbr": 6.47,
+      "pbr": 6.52,
       "bps": 2744,
       "dividend_yield": 0.06,
-      "close": 17750,
-      "market_cap": null
+      "close": 17880,
+      "market_cap": 744600000000
     },
     "009540": {
       "name": "HD한국조선해양",
       "market": "KOSPI",
-      "per": 12.39,
+      "per": 12.57,
       "eps": 30639,
-      "pbr": 2.02,
+      "pbr": 2.05,
       "bps": 187883,
-      "dividend_yield": 3.24,
-      "close": 379500,
-      "market_cap": null
+      "dividend_yield": 3.19,
+      "close": 385000,
+      "market_cap": 27247600000000
     },
     "009830": {
       "name": "한화솔루션",
@@ -439,7 +439,7 @@
       "bps": 52947,
       "dividend_yield": null,
       "close": 45000,
-      "market_cap": null
+      "market_cap": 7735100000000
     },
     "010060": {
       "name": "OCI홀딩스",
@@ -449,118 +449,118 @@
       "pbr": 0.87,
       "bps": 210598,
       "dividend_yield": 0.55,
-      "close": 182600,
-      "market_cap": null
+      "close": 182800,
+      "market_cap": 3412900000000
     },
     "010130": {
       "name": "고려아연",
       "market": "KOSPI",
-      "per": 40.63,
+      "per": 41.36,
       "eps": 38514,
-      "pbr": 2.92,
+      "pbr": 2.97,
       "bps": 536342,
-      "dividend_yield": 1.28,
-      "close": 1565000,
-      "market_cap": null
+      "dividend_yield": 1.25,
+      "close": 1593000,
+      "market_cap": 33250600000000
     },
     "010140": {
       "name": "삼성중공업",
       "market": "KOSPI",
-      "per": 42.82,
+      "per": 43.31,
       "eps": 620,
-      "pbr": 5.47,
+      "pbr": 5.53,
       "bps": 4857,
       "dividend_yield": null,
-      "close": 26550,
-      "market_cap": null
+      "close": 26850,
+      "market_cap": 23628000000000
     },
     "010950": {
       "name": "S-Oil",
       "market": "KOSPI",
       "per": 1542.0,
       "eps": null,
-      "pbr": 1.51,
+      "pbr": 1.53,
       "bps": 74265,
       "dividend_yield": 0.29,
-      "close": 111900,
-      "market_cap": null
+      "close": 113300,
+      "market_cap": 12755600000000
     },
     "011210": {
       "name": "현대위아",
       "market": "KOSPI",
-      "per": 22.47,
+      "per": 22.69,
       "eps": 3641,
-      "pbr": 0.6,
+      "pbr": 0.61,
       "bps": 135750,
-      "dividend_yield": 1.47,
-      "close": 81800,
-      "market_cap": null
+      "dividend_yield": 1.45,
+      "close": 82600,
+      "market_cap": 2246300000000
     },
     "011780": {
       "name": "금호석유화학",
       "market": "KOSPI",
-      "per": 12.84,
+      "per": 13.21,
       "eps": 9843,
-      "pbr": 0.52,
+      "pbr": 0.53,
       "bps": 244373,
-      "dividend_yield": 1.35,
-      "close": 126400,
-      "market_cap": null
+      "dividend_yield": 1.31,
+      "close": 130000,
+      "market_cap": 3384100000000
     },
     "011790": {
       "name": "SKC",
       "market": "KOSPI",
       "per": 19393.0,
       "eps": null,
-      "pbr": 4.16,
+      "pbr": 4.18,
       "bps": 24423,
       "dividend_yield": null,
-      "close": 101700,
-      "market_cap": null
+      "close": 102100,
+      "market_cap": 3866300000000
     },
     "012330": {
       "name": "현대모비스",
       "market": "KOSPI",
-      "per": 9.99,
+      "per": 10.13,
       "eps": 39682,
-      "pbr": 0.72,
+      "pbr": 0.73,
       "bps": 551325,
-      "dividend_yield": 1.64,
-      "close": 396500,
-      "market_cap": null
+      "dividend_yield": 1.62,
+      "close": 402000,
+      "market_cap": 36474400000000
     },
     "012630": {
       "name": "HDC",
       "market": "KOSPI",
-      "per": 6.5,
+      "per": 6.6,
       "eps": 4214,
-      "pbr": 0.48,
+      "pbr": 0.49,
       "bps": 57072,
-      "dividend_yield": 1.64,
-      "close": 27400,
-      "market_cap": null
+      "dividend_yield": 1.62,
+      "close": 27800,
+      "market_cap": 1660800000000
     },
     "014680": {
       "name": "한솔케미칼",
       "market": "KOSPI",
-      "per": 21.86,
+      "per": 21.74,
       "eps": 12993,
-      "pbr": 2.86,
+      "pbr": 2.84,
       "bps": 99420,
       "dividend_yield": 0.92,
-      "close": 284000,
-      "market_cap": null
+      "close": 282500,
+      "market_cap": 3212000000000
     },
     "014820": {
       "name": "동원시스템즈",
       "market": "KOSPI",
-      "per": 13.21,
+      "per": 13.31,
       "eps": 2003,
       "pbr": 0.92,
       "bps": 28905,
-      "dividend_yield": 2.27,
-      "close": 26450,
-      "market_cap": null
+      "dividend_yield": 2.25,
+      "close": 26650,
+      "market_cap": 772600000000
     },
     "015760": {
       "name": "한국전력",
@@ -571,40 +571,40 @@
       "bps": 75035,
       "dividend_yield": 3.32,
       "close": 46450,
-      "market_cap": null
+      "market_cap": 29819200000000
     },
     "016360": {
       "name": "삼성증권",
       "market": "KOSPI",
-      "per": 9.21,
+      "per": 9.29,
       "eps": 10526,
-      "pbr": 1.1,
+      "pbr": 1.11,
       "bps": 87744,
-      "dividend_yield": 4.13,
-      "close": 96900,
-      "market_cap": null
+      "dividend_yield": 4.09,
+      "close": 97800,
+      "market_cap": 8733500000000
     },
     "017670": {
       "name": "SK텔레콤",
       "market": "KOSPI",
-      "per": 41.14,
+      "per": 41.98,
       "eps": 1901,
-      "pbr": 1.29,
+      "pbr": 1.32,
       "bps": 60395,
-      "dividend_yield": 4.53,
-      "close": 78200,
-      "market_cap": null
+      "dividend_yield": 4.44,
+      "close": 79800,
+      "market_cap": 17140200000000
     },
     "018260": {
       "name": "삼성에스디에스",
       "market": "KOSPI",
-      "per": 16.05,
+      "per": 16.25,
       "eps": 9816,
-      "pbr": 1.23,
+      "pbr": 1.24,
       "bps": 128198,
-      "dividend_yield": 2.03,
-      "close": 157500,
-      "market_cap": null
+      "dividend_yield": 2.0,
+      "close": 159500,
+      "market_cap": 12341700000000
     },
     "018880": {
       "name": "한온시스템",
@@ -614,52 +614,52 @@
       "pbr": 1.07,
       "bps": 3773,
       "dividend_yield": null,
-      "close": 4035,
-      "market_cap": null
+      "close": 4055,
+      "market_cap": 4161400000000
     },
     "021240": {
       "name": "코웨이",
       "market": "KOSPI",
-      "per": 8.54,
+      "per": 8.66,
       "eps": 8558,
-      "pbr": 1.43,
+      "pbr": 1.45,
       "bps": 51065,
-      "dividend_yield": 2.65,
-      "close": 73100,
-      "market_cap": null
+      "dividend_yield": 2.62,
+      "close": 74100,
+      "market_cap": 5243800000000
     },
     "024110": {
       "name": "기업은행",
       "market": "KOSPI",
-      "per": 6.88,
+      "per": 6.9,
       "eps": 3389,
-      "pbr": 0.52,
+      "pbr": 0.53,
       "bps": 44443,
-      "dividend_yield": 4.5,
-      "close": 23300,
-      "market_cap": null
+      "dividend_yield": 4.48,
+      "close": 23400,
+      "market_cap": 18659700000000
     },
     "028050": {
       "name": "삼성E&A",
       "market": "KOSPI",
-      "per": 10.75,
+      "per": 10.7,
       "eps": 3150,
-      "pbr": 1.4,
+      "pbr": 1.39,
       "bps": 24187,
-      "dividend_yield": 2.33,
-      "close": 33850,
-      "market_cap": null
+      "dividend_yield": 2.34,
+      "close": 33700,
+      "market_cap": 6605200000000
     },
     "028300": {
       "name": "HLB",
       "market": "KOSPI",
       "per": 1675.0,
       "eps": null,
-      "pbr": 17.59,
+      "pbr": 17.8,
       "bps": 2876,
       "dividend_yield": null,
-      "close": 50600,
-      "market_cap": null
+      "close": 51200,
+      "market_cap": 6815600000000
     },
     "030000": {
       "name": "제일기획",
@@ -670,205 +670,205 @@
       "bps": 15525,
       "dividend_yield": 6.14,
       "close": 20050,
-      "market_cap": null
+      "market_cap": 2306500000000
     },
     "030200": {
       "name": "KT",
       "market": "KOSPI",
-      "per": 8.78,
+      "per": 8.75,
       "eps": 6869,
       "pbr": 0.82,
       "bps": 73231,
-      "dividend_yield": 3.98,
-      "close": 60300,
-      "market_cap": null
+      "dividend_yield": 3.99,
+      "close": 60100,
+      "market_cap": 15146500000000
     },
     "032640": {
       "name": "LG유플러스",
       "market": "KOSPI",
-      "per": 12.89,
+      "per": 12.91,
       "eps": 1208,
       "pbr": 0.75,
       "bps": 20826,
-      "dividend_yield": 4.24,
-      "close": 15570,
-      "market_cap": null
+      "dividend_yield": 4.23,
+      "close": 15600,
+      "market_cap": 6705300000000
     },
     "032830": {
       "name": "삼성생명",
       "market": "KOSPI",
-      "per": 19.67,
+      "per": 19.76,
       "eps": 11514,
       "pbr": 0.65,
       "bps": 349293,
-      "dividend_yield": 2.34,
-      "close": 226500,
-      "market_cap": null
+      "dividend_yield": 2.33,
+      "close": 227500,
+      "market_cap": 45500000000000
     },
     "033780": {
       "name": "KT&G",
       "market": "KOSPI",
-      "per": 17.49,
+      "per": 17.37,
       "eps": 8973,
-      "pbr": 1.75,
+      "pbr": 1.74,
       "bps": 89409,
-      "dividend_yield": 3.82,
-      "close": 156900,
-      "market_cap": null
+      "dividend_yield": 3.85,
+      "close": 155900,
+      "market_cap": 17878000000000
     },
     "034020": {
       "name": "두산에너빌리티",
       "market": "KOSPI",
       "per": 159.0,
       "eps": null,
-      "pbr": 8.52,
+      "pbr": 8.53,
       "bps": 12030,
       "dividend_yield": null,
-      "close": 102500,
-      "market_cap": null
+      "close": 102600,
+      "market_cap": 65721500000000
     },
     "034730": {
       "name": "SK",
       "market": "KOSPI",
-      "per": 15.99,
+      "per": 15.83,
       "eps": 21863,
       "pbr": 0.76,
       "bps": 457231,
-      "dividend_yield": 2.29,
-      "close": 349500,
-      "market_cap": null
+      "dividend_yield": 2.31,
+      "close": 346000,
+      "market_cap": 25085900000000
     },
     "035250": {
       "name": "강원랜드",
       "market": "KOSPI",
-      "per": 12.18,
+      "per": 12.2,
       "eps": 1487,
       "pbr": 0.91,
       "bps": 19841,
-      "dividend_yield": 5.25,
-      "close": 18110,
-      "market_cap": null
+      "dividend_yield": 5.24,
+      "close": 18140,
+      "market_cap": 3880800000000
     },
     "035420": {
       "name": "NAVER",
       "market": "KOSPI",
-      "per": 17.37,
+      "per": 17.41,
       "eps": 12376,
       "pbr": 1.17,
       "bps": 184396,
       "dividend_yield": 1.22,
-      "close": 215000,
-      "market_cap": null
+      "close": 215500,
+      "market_cap": 33801700000000
     },
     "035720": {
       "name": "카카오",
       "market": "KOSPI",
-      "per": 93.33,
+      "per": 93.43,
       "eps": 525,
       "pbr": 2.03,
       "bps": 24133,
       "dividend_yield": 0.15,
-      "close": 49000,
-      "market_cap": null
+      "close": 49050,
+      "market_cap": 21717600000000
     },
     "036570": {
       "name": "엔씨소프트",
       "market": "KOSPI",
-      "per": 14.64,
+      "per": 14.48,
       "eps": 15713,
-      "pbr": 1.3,
+      "pbr": 1.29,
       "bps": 176471,
       "dividend_yield": 0.5,
-      "close": 230000,
-      "market_cap": null
+      "close": 227500,
+      "market_cap": 4901200000000
     },
     "036930": {
       "name": "주성엔지니어링",
       "market": "KOSPI",
-      "per": 98.01,
+      "per": 97.48,
       "eps": 755,
-      "pbr": 5.73,
+      "pbr": 5.7,
       "bps": 12922,
       "dividend_yield": 0.07,
-      "close": 74000,
-      "market_cap": null
+      "close": 73600,
+      "market_cap": 3421000000000
     },
     "038500": {
       "name": "삼표시멘트",
       "market": "KOSPI",
-      "per": 45.42,
+      "per": 45.63,
       "eps": 378,
-      "pbr": 2.34,
+      "pbr": 2.36,
       "bps": 7323,
       "dividend_yield": 0.7,
-      "close": 17170,
-      "market_cap": null
+      "close": 17250,
+      "market_cap": 1861500000000
     },
     "039030": {
       "name": "이오테크닉스",
       "market": "KOSPI",
-      "per": 98.67,
+      "per": 97.26,
       "eps": 4591,
-      "pbr": 8.36,
+      "pbr": 8.24,
       "bps": 54212,
-      "dividend_yield": 0.26,
-      "close": 453000,
-      "market_cap": null
+      "dividend_yield": 0.27,
+      "close": 446500,
+      "market_cap": 5500600000000
     },
     "039200": {
       "name": "오스코텍",
       "market": "KOSPI",
       "per": 344.0,
       "eps": null,
-      "pbr": 16.82,
+      "pbr": 17.21,
       "bps": 3121,
       "dividend_yield": null,
-      "close": 52500,
-      "market_cap": null
+      "close": 53700,
+      "market_cap": 2054400000000
     },
     "039490": {
       "name": "키움증권",
       "market": "KOSPI",
-      "per": 11.7,
+      "per": 11.84,
       "eps": 36496,
-      "pbr": 1.76,
+      "pbr": 1.78,
       "bps": 243015,
-      "dividend_yield": 2.69,
-      "close": 427000,
-      "market_cap": null
+      "dividend_yield": 2.66,
+      "close": 432000,
+      "market_cap": 11323400000000
     },
     "042660": {
       "name": "한화오션",
       "market": "KOSPI",
-      "per": 30.23,
+      "per": 30.67,
       "eps": 4066,
-      "pbr": 6.1,
+      "pbr": 6.19,
       "bps": 20138,
       "dividend_yield": null,
-      "close": 122900,
-      "market_cap": null
+      "close": 124700,
+      "market_cap": 38209700000000
     },
     "042700": {
       "name": "한미반도체",
       "market": "KOSPI",
-      "per": 133.0,
+      "per": 134.35,
       "eps": 2233,
-      "pbr": 40.81,
+      "pbr": 41.22,
       "bps": 7278,
       "dividend_yield": 0.27,
-      "close": 297000,
-      "market_cap": null
+      "close": 300000,
+      "market_cap": 28593600000000
     },
     "047040": {
       "name": "대우건설",
       "market": "KOSPI",
       "per": 2195.0,
       "eps": null,
-      "pbr": 2.0,
+      "pbr": 2.01,
       "bps": 8148,
       "dividend_yield": null,
-      "close": 16330,
-      "market_cap": null
+      "close": 16410,
+      "market_cap": 6820300000000
     },
     "051900": {
       "name": "LG생활건강",
@@ -878,96 +878,96 @@
       "pbr": 0.76,
       "bps": 325224,
       "dividend_yield": 0.81,
-      "close": 248000,
-      "market_cap": null
+      "close": 246500,
+      "market_cap": 3772000000000
     },
     "051910": {
       "name": "LG화학",
       "market": "KOSPI",
       "per": 23242.0,
       "eps": null,
-      "pbr": 0.74,
+      "pbr": 0.76,
       "bps": 419617,
-      "dividend_yield": 0.64,
-      "close": 312000,
-      "market_cap": null
+      "dividend_yield": 0.63,
+      "close": 318000,
+      "market_cap": 22448300000000
     },
     "052690": {
       "name": "한전기술",
       "market": "KOSPI",
-      "per": 76.1,
+      "per": 75.56,
       "eps": 2234,
-      "pbr": 10.35,
+      "pbr": 10.28,
       "bps": 16428,
-      "dividend_yield": 0.79,
-      "close": 170000,
-      "market_cap": null
+      "dividend_yield": 0.8,
+      "close": 168800,
+      "market_cap": 6451500000000
     },
     "055550": {
       "name": "신한지주",
       "market": "KOSPI",
-      "per": 9.4,
+      "per": 9.42,
       "eps": 9774,
-      "pbr": 0.76,
+      "pbr": 0.77,
       "bps": 120214,
-      "dividend_yield": 2.82,
-      "close": 91900,
-      "market_cap": null
+      "dividend_yield": 2.81,
+      "close": 92100,
+      "market_cap": 43715600000000
     },
     "058470": {
       "name": "리노공업",
       "market": "KOSPI",
-      "per": 53.16,
+      "per": 53.91,
       "eps": 1994,
-      "pbr": 11.0,
+      "pbr": 11.16,
       "bps": 9635,
-      "dividend_yield": 0.75,
-      "close": 106000,
-      "market_cap": null
+      "dividend_yield": 0.74,
+      "close": 107500,
+      "market_cap": 8192700000000
     },
     "064350": {
       "name": "현대로템",
       "market": "KOSPI",
-      "per": 26.68,
+      "per": 27.03,
       "eps": 7055,
-      "pbr": 6.67,
+      "pbr": 6.76,
       "bps": 28211,
-      "dividend_yield": 0.32,
-      "close": 188200,
-      "market_cap": null
+      "dividend_yield": 0.31,
+      "close": 190700,
+      "market_cap": 20813400000000
     },
     "066570": {
       "name": "LG전자",
       "market": "KOSPI",
-      "per": 21.54,
+      "per": 21.56,
       "eps": 5321,
       "pbr": 0.86,
       "bps": 132659,
       "dividend_yield": 1.18,
-      "close": 114600,
-      "market_cap": null
+      "close": 114700,
+      "market_cap": 18683000000000
     },
     "068270": {
       "name": "셀트리온",
       "market": "KOSPI",
-      "per": 45.54,
+      "per": 45.76,
       "eps": 4447,
-      "pbr": 2.57,
+      "pbr": 2.59,
       "bps": 78721,
       "dividend_yield": 0.37,
-      "close": 202500,
-      "market_cap": null
+      "close": 203500,
+      "market_cap": 47018300000000
     },
     "071050": {
       "name": "한국금융지주",
       "market": "KOSPI",
-      "per": 7.57,
+      "per": 7.64,
       "eps": 28863,
-      "pbr": 1.1,
+      "pbr": 1.11,
       "bps": 198518,
-      "dividend_yield": 3.98,
-      "close": 218500,
-      "market_cap": null
+      "dividend_yield": 3.94,
+      "close": 220500,
+      "market_cap": 12287500000000
     },
     "073240": {
       "name": "금호타이어",
@@ -978,7 +978,7 @@
       "bps": 7065,
       "dividend_yield": null,
       "close": 6220,
-      "market_cap": null
+      "market_cap": 1786700000000
     },
     "078930": {
       "name": "GS",
@@ -987,97 +987,97 @@
       "eps": 8675,
       "pbr": 0.46,
       "bps": 151821,
-      "dividend_yield": 4.34,
-      "close": 69200,
-      "market_cap": null
+      "dividend_yield": 4.27,
+      "close": 70200,
+      "market_cap": 6522600000000
     },
     "086520": {
       "name": "에코프로",
       "market": "KOSPI",
       "per": 148.0,
       "eps": null,
-      "pbr": 12.55,
+      "pbr": 12.69,
       "bps": 11926,
       "dividend_yield": 0.1,
-      "close": 149700,
-      "market_cap": null
+      "close": 151300,
+      "market_cap": 20542900000000
     },
     "086790": {
       "name": "하나금융지주",
       "market": "KOSPI",
-      "per": 7.67,
+      "per": 7.7,
       "eps": 14110,
       "pbr": 0.66,
       "bps": 164776,
-      "dividend_yield": 3.79,
-      "close": 108200,
-      "market_cap": null
+      "dividend_yield": 3.78,
+      "close": 108700,
+      "market_cap": 30254000000000
     },
     "087010": {
       "name": "펩트론",
       "market": "KOSPI",
       "per": 593.0,
       "eps": null,
-      "pbr": 50.16,
+      "pbr": 51.8,
       "bps": 6110,
       "dividend_yield": null,
-      "close": 306500,
-      "market_cap": null
+      "close": 316500,
+      "market_cap": 7379900000000
     },
     "090430": {
       "name": "아모레퍼시픽",
       "market": "KOSPI",
-      "per": 39.85,
+      "per": 40.08,
       "eps": 3413,
-      "pbr": 1.72,
+      "pbr": 1.73,
       "bps": 78989,
       "dividend_yield": 0.91,
-      "close": 136000,
-      "market_cap": null
+      "close": 136800,
+      "market_cap": 8001800000000
     },
     "095340": {
       "name": "ISC",
       "market": "KOSPI",
-      "per": 91.96,
+      "per": 94.41,
       "eps": 2648,
-      "pbr": 9.29,
+      "pbr": 9.53,
       "bps": 26223,
-      "dividend_yield": 0.35,
-      "close": 243500,
-      "market_cap": null
+      "dividend_yield": 0.34,
+      "close": 250000,
+      "market_cap": 5299200000000
     },
     "096770": {
       "name": "SK이노베이션",
       "market": "KOSPI",
       "per": 21056.0,
       "eps": null,
-      "pbr": 0.87,
+      "pbr": 0.88,
       "bps": 129847,
-      "dividend_yield": 1.78,
-      "close": 112500,
-      "market_cap": null
+      "dividend_yield": 1.75,
+      "close": 114100,
+      "market_cap": 19288900000000
     },
     "097950": {
       "name": "CJ제일제당",
       "market": "KOSPI",
       "per": 34884.0,
       "eps": null,
-      "pbr": 0.49,
+      "pbr": 0.5,
       "bps": 440524,
-      "dividend_yield": 2.75,
-      "close": 218000,
-      "market_cap": null
+      "dividend_yield": 2.74,
+      "close": 219000,
+      "market_cap": 3296800000000
     },
     "103140": {
       "name": "풍산",
       "market": "KOSPI",
-      "per": 18.13,
+      "per": 18.7,
       "eps": 5251,
-      "pbr": 1.13,
+      "pbr": 1.17,
       "bps": 84137,
-      "dividend_yield": 1.79,
-      "close": 95200,
-      "market_cap": null
+      "dividend_yield": 1.73,
+      "close": 98200,
+      "market_cap": 2751900000000
     },
     "105560": {
       "name": "KB금융",
@@ -1088,480 +1088,480 @@
       "bps": 164568,
       "dividend_yield": 2.92,
       "close": 149400,
-      "market_cap": null
+      "market_cap": 55703800000000
     },
     "111770": {
       "name": "영원무역",
       "market": "KOSPI",
-      "per": 7.35,
+      "per": 7.36,
       "eps": 11109,
       "pbr": 0.85,
       "bps": 96154,
       "dividend_yield": 2.57,
-      "close": 81600,
-      "market_cap": null
+      "close": 81800,
+      "market_cap": 3624600000000
     },
     "128940": {
       "name": "한미약품",
       "market": "KOSPI",
-      "per": 58.51,
+      "per": 59.5,
       "eps": 9093,
-      "pbr": 5.7,
+      "pbr": 5.79,
       "bps": 93381,
-      "dividend_yield": 0.38,
-      "close": 532000,
-      "market_cap": null
+      "dividend_yield": 0.37,
+      "close": 541000,
+      "market_cap": 6930700000000
     },
     "138040": {
       "name": "메리츠금융지주",
       "market": "KOSPI",
-      "per": 8.83,
+      "per": 8.85,
       "eps": 12589,
-      "pbr": 1.84,
+      "pbr": 1.85,
       "bps": 60328,
-      "dividend_yield": 1.22,
-      "close": 111100,
-      "market_cap": null
+      "dividend_yield": 1.21,
+      "close": 111400,
+      "market_cap": 18826700000000
     },
     "138930": {
       "name": "BNK금융지주",
       "market": "KOSPI",
-      "per": 7.35,
+      "per": 7.41,
       "eps": 2490,
-      "pbr": 0.53,
+      "pbr": 0.54,
       "bps": 34376,
-      "dividend_yield": 4.01,
-      "close": 18310,
-      "market_cap": null
+      "dividend_yield": 3.98,
+      "close": 18450,
+      "market_cap": 5725500000000
     },
     "139130": {
       "name": "iM금융지주",
       "market": "KOSPI",
-      "per": 7.12,
+      "per": 7.18,
       "eps": 2366,
-      "pbr": 0.43,
+      "pbr": 0.44,
       "bps": 38746,
-      "dividend_yield": 4.16,
-      "close": 16840,
-      "market_cap": null
+      "dividend_yield": 4.12,
+      "close": 16980,
+      "market_cap": 2727400000000
     },
     "139480": {
       "name": "이마트",
       "market": "KOSPI",
-      "per": 19.87,
+      "per": 20.02,
       "eps": 4921,
       "pbr": 0.24,
       "bps": 410591,
-      "dividend_yield": 2.56,
-      "close": 97800,
-      "market_cap": null
+      "dividend_yield": 2.54,
+      "close": 98500,
+      "market_cap": 2718100000000
     },
     "141080": {
       "name": "리가켐바이오",
       "market": "KOSPI",
       "per": 686.0,
       "eps": null,
-      "pbr": 13.64,
+      "pbr": 14.03,
       "bps": 15215,
       "dividend_yield": null,
-      "close": 207500,
-      "market_cap": null
+      "close": 213500,
+      "market_cap": 7816300000000
     },
     "145020": {
       "name": "휴젤",
       "market": "KOSPI",
       "per": 19.0,
       "eps": 13300,
-      "pbr": 3.03,
+      "pbr": 3.08,
       "bps": 83877,
       "dividend_yield": null,
-      "close": 254000,
-      "market_cap": null
+      "close": 258000,
+      "market_cap": 3174400000000
     },
     "161390": {
       "name": "한국타이어앤테크놀로지",
       "market": "KOSPI",
-      "per": 6.63,
+      "per": 6.61,
       "eps": 8795,
       "pbr": 0.59,
       "bps": 99234,
-      "dividend_yield": 3.94,
-      "close": 58300,
-      "market_cap": null
+      "dividend_yield": 3.96,
+      "close": 58100,
+      "market_cap": 7197100000000
     },
     "161890": {
       "name": "한국콜마",
       "market": "KOSPI",
       "per": 13.0,
       "eps": 6135,
-      "pbr": 2.16,
+      "pbr": 2.18,
       "bps": 36478,
-      "dividend_yield": 1.1,
-      "close": 78900,
-      "market_cap": null
+      "dividend_yield": 1.09,
+      "close": 79600,
+      "market_cap": 1878900000000
     },
     "175330": {
       "name": "JB금융지주",
       "market": "KOSPI",
-      "per": 8.25,
+      "per": 8.29,
       "eps": 3576,
-      "pbr": 0.94,
+      "pbr": 0.95,
       "bps": 31275,
-      "dividend_yield": 3.86,
-      "close": 29500,
-      "market_cap": null
+      "dividend_yield": 3.85,
+      "close": 29650,
+      "market_cap": 5581700000000
     },
     "180640": {
       "name": "한진칼",
       "market": "KOSPI",
-      "per": 47.38,
+      "per": 48.17,
       "eps": 2630,
-      "pbr": 2.54,
+      "pbr": 2.58,
       "bps": 49151,
-      "dividend_yield": 0.29,
-      "close": 124600,
-      "market_cap": null
+      "dividend_yield": 0.28,
+      "close": 126700,
+      "market_cap": 8458700000000
     },
     "192820": {
       "name": "코스맥스",
       "market": "KOSPI",
-      "per": 18.24,
+      "per": 18.1,
       "eps": 10843,
-      "pbr": 4.02,
+      "pbr": 3.99,
       "bps": 49196,
-      "dividend_yield": 1.67,
-      "close": 197800,
-      "market_cap": null
+      "dividend_yield": 1.68,
+      "close": 196300,
+      "market_cap": 2227900000000
     },
     "195940": {
       "name": "HK이노엔",
       "market": "KOSPI",
       "per": 17.0,
       "eps": 3099,
-      "pbr": 1.15,
+      "pbr": 1.16,
       "bps": 45679,
-      "dividend_yield": 0.78,
-      "close": 52500,
-      "market_cap": null
+      "dividend_yield": 0.77,
+      "close": 53000,
+      "market_cap": 1501400000000
     },
     "196170": {
       "name": "알테오젠",
       "market": "KOSPI",
-      "per": 151.62,
+      "per": 152.68,
       "eps": 2348,
-      "pbr": 51.36,
+      "pbr": 51.72,
       "bps": 6931,
       "dividend_yield": 0.1,
-      "close": 356000,
-      "market_cap": null
+      "close": 358500,
+      "market_cap": 19191800000000
     },
     "204320": {
       "name": "HL만도",
       "market": "KOSPI",
-      "per": 24.69,
+      "per": 24.6,
       "eps": 2130,
       "pbr": 0.91,
       "bps": 57793,
       "dividend_yield": 1.43,
-      "close": 52600,
-      "market_cap": null
+      "close": 52400,
+      "market_cap": 2460500000000
     },
     "207940": {
       "name": "삼성바이오로직스",
       "market": "KOSPI",
-      "per": 59.12,
+      "per": 59.65,
       "eps": 26572,
-      "pbr": 9.76,
+      "pbr": 9.85,
       "bps": 160963,
       "dividend_yield": null,
-      "close": 1571000,
-      "market_cap": null
+      "close": 1585000,
+      "market_cap": 73371100000000
     },
     "240810": {
       "name": "원익IPS",
       "market": "KOSPI",
-      "per": 75.35,
+      "per": 76.17,
       "eps": 1712,
-      "pbr": 6.47,
+      "pbr": 6.54,
       "bps": 19936,
-      "dividend_yield": 0.16,
-      "close": 129000,
-      "market_cap": null
+      "dividend_yield": 0.15,
+      "close": 130400,
+      "market_cap": 6400500000000
     },
     "251270": {
       "name": "넷마블",
       "market": "KOSPI",
-      "per": 19.67,
+      "per": 19.63,
       "eps": 2618,
       "pbr": 0.78,
       "bps": 66269,
       "dividend_yield": 1.7,
-      "close": 51500,
-      "market_cap": null
+      "close": 51400,
+      "market_cap": 4212700000000
     },
     "259960": {
       "name": "크래프톤",
       "market": "KOSPI",
-      "per": 15.61,
+      "per": 15.58,
       "eps": 15438,
-      "pbr": 1.53,
+      "pbr": 1.52,
       "bps": 157747,
       "dividend_yield": 0.93,
-      "close": 241000,
-      "market_cap": null
+      "close": 240500,
+      "market_cap": 11400800000000
     },
     "267250": {
       "name": "HD현대",
       "market": "KOSPI",
-      "per": 21.62,
+      "per": 21.74,
       "eps": 12187,
-      "pbr": 1.84,
+      "pbr": 1.85,
       "bps": 143153,
-      "dividend_yield": 1.52,
-      "close": 263500,
-      "market_cap": null
+      "dividend_yield": 1.51,
+      "close": 265000,
+      "market_cap": 20933100000000
     },
     "267260": {
       "name": "HD현대일렉트릭",
       "market": "KOSPI",
-      "per": 48.17,
+      "per": 48.81,
       "eps": 20324,
-      "pbr": 17.37,
+      "pbr": 17.6,
       "bps": 56366,
-      "dividend_yield": 0.73,
-      "close": 979000,
-      "market_cap": null
+      "dividend_yield": 0.72,
+      "close": 992000,
+      "market_cap": 35758700000000
     },
     "271560": {
       "name": "오리온",
       "market": "KOSPI",
-      "per": 13.7,
+      "per": 13.85,
       "eps": 9680,
-      "pbr": 1.38,
+      "pbr": 1.39,
       "bps": 96352,
-      "dividend_yield": 2.64,
-      "close": 132600,
-      "market_cap": null
+      "dividend_yield": 2.61,
+      "close": 134100,
+      "market_cap": 5301700000000
     },
     "278470": {
       "name": "에이피알",
       "market": "KOSPI",
-      "per": 41.73,
+      "per": 42.64,
       "eps": 7704,
-      "pbr": 26.99,
+      "pbr": 27.58,
       "bps": 11910,
-      "dividend_yield": 1.58,
-      "close": 321500,
-      "market_cap": null
+      "dividend_yield": 1.55,
+      "close": 328500,
+      "market_cap": 12298400000000
     },
     "294870": {
       "name": "HDC현대산업개발",
       "market": "KOSPI",
-      "per": 9.21,
+      "per": 9.31,
       "eps": 2400,
       "pbr": 0.44,
       "bps": 50672,
-      "dividend_yield": 3.17,
-      "close": 22100,
-      "market_cap": null
+      "dividend_yield": 3.13,
+      "close": 22350,
+      "market_cap": 1473000000000
     },
     "295310": {
       "name": "에이치브이엠",
       "market": "KOSPI",
       "per": 507.0,
       "eps": null,
-      "pbr": 14.45,
+      "pbr": 16.24,
       "bps": 6901,
       "dividend_yield": null,
-      "close": 99700,
-      "market_cap": null
+      "close": 112100,
+      "market_cap": 1348200000000
     },
     "298040": {
       "name": "효성중공업",
       "market": "KOSPI",
-      "per": 52.69,
+      "per": 53.63,
       "eps": 55755,
-      "pbr": 11.63,
+      "pbr": 11.84,
       "bps": 252555,
       "dividend_yield": 0.25,
-      "close": 2938000,
-      "market_cap": null
+      "close": 2990000,
+      "market_cap": 27880300000000
     },
     "298380": {
       "name": "에이비엘바이오",
       "market": "KOSPI",
       "per": 693.0,
       "eps": null,
-      "pbr": 60.99,
+      "pbr": 61.38,
       "bps": 2807,
       "dividend_yield": null,
-      "close": 171200,
-      "market_cap": null
+      "close": 172300,
+      "market_cap": 9646600000000
     },
     "310210": {
       "name": "보로노이",
       "market": "KOSPI",
       "per": 2572.0,
       "eps": null,
-      "pbr": 102.43,
+      "pbr": 101.42,
       "bps": 2958,
       "dividend_yield": null,
-      "close": 303000,
-      "market_cap": null
+      "close": 300000,
+      "market_cap": 5518000000000
     },
     "316140": {
       "name": "우리금융지주",
       "market": "KOSPI",
-      "per": 7.56,
+      "per": 7.6,
       "eps": 4341,
-      "pbr": 0.68,
+      "pbr": 0.69,
       "bps": 48167,
-      "dividend_yield": 4.15,
-      "close": 32800,
-      "market_cap": null
+      "dividend_yield": 4.12,
+      "close": 33000,
+      "market_cap": 24224500000000
     },
     "319400": {
       "name": "현대무벡스",
       "market": "KOSPI",
-      "per": 280.3,
+      "per": 282.83,
       "eps": 99,
-      "pbr": 18.99,
+      "pbr": 19.16,
       "bps": 1461,
       "dividend_yield": 0.18,
-      "close": 27750,
-      "market_cap": null
+      "close": 28000,
+      "market_cap": 3118500000000
     },
     "323410": {
       "name": "카카오뱅크",
       "market": "KOSPI",
-      "per": 25.23,
+      "per": 25.49,
       "eps": 963,
-      "pbr": 1.72,
+      "pbr": 1.74,
       "bps": 14094,
-      "dividend_yield": 1.89,
-      "close": 24300,
-      "market_cap": null
+      "dividend_yield": 1.87,
+      "close": 24550,
+      "market_cap": 11711400000000
     },
     "328130": {
       "name": "루닛",
       "market": "KOSPI",
       "per": 2840.0,
       "eps": null,
-      "pbr": 6.23,
+      "pbr": 6.22,
       "bps": 5639,
       "dividend_yield": null,
-      "close": 35150,
-      "market_cap": null
+      "close": 35100,
+      "market_cap": 1027800000000
     },
     "329180": {
       "name": "HD현대중공업",
       "market": "KOSPI",
-      "per": 32.61,
+      "per": 33.31,
       "eps": 15702,
-      "pbr": 5.75,
+      "pbr": 5.88,
       "bps": 89001,
-      "dividend_yield": 1.11,
-      "close": 512000,
-      "market_cap": null
+      "dividend_yield": 1.08,
+      "close": 523000,
+      "market_cap": 54894700000000
     },
     "352820": {
       "name": "하이브",
       "market": "KOSPI",
       "per": 5673.0,
       "eps": null,
-      "pbr": 3.92,
+      "pbr": 3.97,
       "bps": 76647,
-      "dividend_yield": 0.17,
-      "close": 300500,
-      "market_cap": null
+      "dividend_yield": 0.16,
+      "close": 304500,
+      "market_cap": 13114100000000
     },
     "357780": {
       "name": "솔브레인",
       "market": "KOSPI",
-      "per": 41.57,
+      "per": 41.13,
       "eps": 10164,
-      "pbr": 3.06,
+      "pbr": 3.03,
       "bps": 137853,
       "dividend_yield": 0.56,
-      "close": 422500,
-      "market_cap": null
+      "close": 418000,
+      "market_cap": 3251400000000
     },
     "373220": {
       "name": "LG에너지솔루션",
       "market": "KOSPI",
       "per": 4585.0,
       "eps": null,
-      "pbr": 4.47,
+      "pbr": 4.56,
       "bps": 86391,
       "dividend_yield": null,
-      "close": 386500,
-      "market_cap": null
+      "close": 394000,
+      "market_cap": 92196000000000
     },
     "375500": {
       "name": "DL이앤씨",
       "market": "KOSPI",
-      "per": 8.05,
+      "per": 8.03,
       "eps": 8625,
       "pbr": 0.55,
       "bps": 126050,
       "dividend_yield": 1.28,
-      "close": 69400,
-      "market_cap": null
+      "close": 69300,
+      "market_cap": 2681400000000
     },
     "376900": {
       "name": "로킷헬스케어",
       "market": "KOSPI",
       "per": 535.0,
       "eps": null,
-      "pbr": 183.28,
+      "pbr": 184.51,
       "bps": 652,
       "dividend_yield": null,
-      "close": 119500,
-      "market_cap": null
+      "close": 120300,
+      "market_cap": 1893300000000
     },
     "402340": {
       "name": "SK스퀘어",
       "market": "KOSPI",
-      "per": 9.15,
+      "per": 9.1,
       "eps": 66468,
-      "pbr": 2.9,
+      "pbr": 2.89,
       "bps": 209566,
       "dividend_yield": null,
-      "close": 608000,
-      "market_cap": null
+      "close": 605000,
+      "market_cap": 79912700000000
     },
     "403870": {
       "name": "HPSP",
       "market": "KOSPI",
-      "per": 49.6,
+      "per": 50.05,
       "eps": 994,
-      "pbr": 14.03,
+      "pbr": 14.15,
       "bps": 3515,
-      "dividend_yield": 1.01,
-      "close": 49300,
-      "market_cap": null
+      "dividend_yield": 1.0,
+      "close": 49750,
+      "market_cap": 4094400000000
     },
     "445680": {
       "name": "큐리옥스바이오시스템즈",
       "market": "KOSPI",
       "per": 1429.0,
       "eps": null,
-      "pbr": 36.59,
+      "pbr": 37.16,
       "bps": 3146,
       "dividend_yield": null,
-      "close": 115100,
-      "market_cap": null
+      "close": 116900,
+      "market_cap": 2001300000000
     },
     "460860": {
       "name": "동국제강",
       "market": "KOSPI",
-      "per": 56.63,
+      "per": 56.69,
       "eps": 166,
       "pbr": 0.25,
       "bps": 38029,
-      "dividend_yield": 4.26,
-      "close": 9400,
-      "market_cap": null
+      "dividend_yield": 4.25,
+      "close": 9410,
+      "market_cap": 466800000000
     }
   }
 }
