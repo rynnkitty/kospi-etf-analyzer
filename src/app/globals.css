@@ -8,6 +8,11 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* 숫자 테이블 정렬용 모노스페이스 */
+  .tabular-mono {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 @layer base {
@@ -89,6 +94,8 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    /* Geist(영문) → Noto Sans KR(한글) 순 폴백 */
+    font-family: var(--font-geist-sans), var(--font-noto-kr), 'Apple SD Gothic Neo',
+      'Malgun Gothic', sans-serif;
   }
 }

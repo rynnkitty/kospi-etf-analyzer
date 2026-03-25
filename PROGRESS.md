@@ -4,12 +4,12 @@
 
 ---
 
-## 현재 상태: Phase 0 — 기획 완료
+## 현재 상태: Phase 1 진행 중 — 명령 1-3 완료
 
 | Phase | 상태 | 시작일 | 완료일 | 비고 |
 |-------|------|--------|--------|------|
 | Phase 0: 기획 | ✅ 완료 | - | - | PRD, CLAUDE.md, MANUAL.md 작성 |
-| Phase 1: 초기화 + 데이터 | ⬜ 대기 | | | |
+| Phase 1: 초기화 + 데이터 | 🔄 진행중 | 2026-03-25 | | 명령 1-3까지 완료 |
 | Phase 2: 프론트엔드 MVP | ⬜ 대기 | | | |
 | Phase 3: UX 강화 | ⬜ 대기 | | | |
 | Phase 4: 테스트 + CI/CD | ⬜ 대기 | | | |
@@ -51,19 +51,19 @@
 
 ### 명령 1-3. Python 수집 스크립트
 
-- [ ] scripts/config.py
-- [ ] scripts/collect_etf_list.py
-- [ ] scripts/collect_holdings.py
-- [ ] scripts/collect_valuation.py
-- [ ] scripts/merge_data.py
-- [ ] scripts/requirements.txt
+- [x] scripts/config.py
+- [x] scripts/collect_etf_list.py
+- [x] scripts/collect_holdings.py
+- [x] scripts/collect_valuation.py
+- [x] scripts/merge_data.py
+- [x] scripts/requirements.txt
 
 ### 명령 1-4. 데이터 수집 테스트
 
-- [ ] etf-list.json 생성 확인
-- [ ] etf-holdings.json 생성 확인
-- [ ] stock-valuation.json 생성 확인
-- [ ] metadata.json 생성 + 검증 통과
+- [x] etf-list.json 생성 확인 (19 ETF, 10 섹터)
+- [x] etf-holdings.json 생성 확인 (19 ETF × 10개 보유종목)
+- [x] stock-valuation.json 생성 확인 (142 종목, PER/PBR 100%)
+- [x] metadata.json 생성 + 검증 통과 (커버리지 100%)
 
 ---
 
@@ -143,9 +143,10 @@
 
 ### 명령 4-3. E2E 테스트
 
-- [ ] dashboard.spec.ts
-- [ ] filter.spec.ts
-- [ ] npx playwright test 통과
+- [x] playwright.config.ts (chromium, webServer, workers=1)
+- [x] dashboard.spec.ts (5개 테스트)
+- [x] filter.spec.ts (5개 테스트)
+- [x] npx playwright test 통과 (10/10 passed)
 
 ### 명령 4-4. 최종 검증
 

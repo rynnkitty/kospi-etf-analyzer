@@ -1,0 +1,69 @@
+name: Deploy to GitHub Pages
+
+on:
+  # main 브랜치 push 시 자동 배포 (데이터 수집 커밋 포함)
+  push:
+    branches:
+      - main
+  # 수동 트리거
+  workflow_dispatch:
+
+# GitHub Pages 배포에 필요한 권한
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시 배포 방지 (진행 중인 배포는 취소하지 않고 대기)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # ── 빌드 ────────────────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build Next.js static site
+        run: npm run build
+        env:
+          # GitHub Pages 서브경로 (/kospi-etf-analyzer) 설정
+          NEXT_PUBLIC_BASE_PATH: /kospi-etf-analyzer
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # ── 배포 ────────────────────────────────────────────────────────
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
