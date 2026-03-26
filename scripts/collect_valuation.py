@@ -227,6 +227,74 @@ def _to_int(val, default=None):
         return default
 
 
+NAVER_MOBILE_FINANCE_URL = "https://m.stock.naver.com/api/stock/{code}/finance/annual"
+
+
+def fetch_financial_summary(
+    session: requests.Session,
+    ticker: str,
+    max_retry: int = MAX_RETRY,
+) -> dict | None:
+    """
+    NAVER 모바일 재무 API (JSON) 호출.
+
+    반환: API 응답 dict, 실패 시 None
+    URL: https://m.stock.naver.com/api/stock/{ticker}/finance/annual
+    """
+    url = NAVER_MOBILE_FINANCE_URL.format(code=ticker)
+    for attempt in range(1, max_retry + 1):
+        try:
+            resp = session.get(url, headers=NAVER_HEADERS, timeout=30)
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as exc:
+            logger.debug(
+                "종목 %s finance API 시도 %d/%d 실패: %s", ticker, attempt, max_retry, exc
+            )
+            if attempt < max_retry:
+                time.sleep(REQUEST_DELAY_SEC * 2)
+    return None
+
+
+def parse_financial_summary(api_data: dict | None) -> dict:
+    """
+    NAVER 모바일 재무 API 응답에서 ROE와 부채비율 추출.
+
+    전략:
+      - trTitleList에서 isConsensus=N인 기간 중 가장 최근 key 선택
+      - rowList에서 title이 'ROE' / '부채비율'인 행의 해당 기간 값 파싱
+    """
+    result = {"roe": None, "debt_ratio": None}
+
+    if not api_data:
+        return result
+
+    finance_info = api_data.get("financeInfo") or {}
+
+    # ── 1) 최근 확정 실적 기간 key 결정 ───────────────────────────
+    period_list = finance_info.get("trTitleList", [])
+    actual_keys = [p["key"] for p in period_list if p.get("isConsensus") == "N"]
+    if not actual_keys:
+        return result
+    latest_key = actual_keys[-1]  # 가장 최근 확정 기간
+
+    # ── 2) ROE / 부채비율 행 파싱 ─────────────────────────────────
+    for row in finance_info.get("rowList", []):
+        title = row.get("title", "")
+        val_str = row.get("columns", {}).get(latest_key, {}).get("value", "")
+        val = _to_float(str(val_str).replace(",", ""))
+
+        if title == "ROE" and result["roe"] is None:
+            result["roe"] = val
+        elif title == "부채비율" and result["debt_ratio"] is None:
+            result["debt_ratio"] = val
+
+        if result["roe"] is not None and result["debt_ratio"] is not None:
+            break
+
+    return result
+
+
 def save_json(data: dict, filename: str) -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     path = os.path.join(OUTPUT_DIR, filename)
@@ -267,10 +335,17 @@ def main() -> None:
 
             valuation = parse_valuation(soup)
 
+            # ── 모바일 재무 API: ROE + 부채비율 ──────────────────────────
+            time.sleep(REQUEST_DELAY_SEC)
+            finance_api_data = fetch_financial_summary(session, ticker)
+            fin_data = parse_financial_summary(finance_api_data)
+            # ─────────────────────────────────────────────────────────────
+
             stocks_output[ticker] = {
                 "name": name,
                 "market": "KOSPI",
                 **valuation,
+                **fin_data,
             }
 
             if idx % 10 == 0:
