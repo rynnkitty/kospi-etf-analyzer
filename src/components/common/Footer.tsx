@@ -56,10 +56,21 @@ export function Footer() {
             )}
           </div>
 
-          {/* 면책 조항 */}
-          <p className="text-xs text-muted-foreground leading-relaxed sm:text-right sm:max-w-[280px]">
-            본 서비스는 투자 참고용이며, 투자 판단의 책임은 본인에게 있습니다.
-          </p>
+          {/* 면책 조항 + 링크 */}
+          <div className="flex flex-col gap-1 sm:items-end">
+            <p className="text-xs text-muted-foreground leading-relaxed sm:text-right sm:max-w-[280px]">
+              본 서비스는 투자 참고용이며, 투자 판단의 책임은 본인에게 있습니다.
+            </p>
+            <a
+              href="https://kimkitty.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-0.5 text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              kimkitty.net
+              <ExternalLink className="h-3 w-3 shrink-0" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
