@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-26T10:12:14+09:00",
+  "updated_at": "2026-03-26T10:29:23+09:00",
   "holdings": {
     "091160": {
       "etf_name": "KODEX 반도체",
@@ -826,6 +826,61 @@
         }
       ]
     },
+    "228810": {
+      "etf_name": "TIGER 미디어컨텐츠",
+      "top_holdings": [
+        {
+          "ticker": "035760",
+          "name": "CJ ENM",
+          "weight": 10.93
+        },
+        {
+          "ticker": "352820",
+          "name": "하이브",
+          "weight": 52.0
+        },
+        {
+          "ticker": "376300",
+          "name": "디어유",
+          "weight": 10.45
+        },
+        {
+          "ticker": "035900",
+          "name": "JYP Ent.",
+          "weight": 10.42
+        },
+        {
+          "ticker": "253450",
+          "name": "스튜디오드래곤",
+          "weight": 9.96
+        },
+        {
+          "ticker": "122870",
+          "name": "와이지엔터테인먼트",
+          "weight": 9.94
+        },
+        {
+          "ticker": "041510",
+          "name": "에스엠",
+          "weight": 9.18
+        },
+        {
+          "ticker": "419530",
+          "name": "SAMG엔터",
+          "weight": 7.68
+        },
+        {
+          "ticker": "473980",
+          "name": "노머스",
+          "weight": 3.98
+        },
+        {
+          "ticker": "403850",
+          "name": "더핑크퐁컴퍼니",
+          "weight": 3.64
+        }
+      ]
+    },
     "229200": {
       "etf_name": "KODEX 코스닥150",
       "top_holdings": [
@@ -991,9 +1046,60 @@
         }
       ]
     },
-    "261240": {
-      "etf_name": "KODEX 미국달러선물",
-      "top_holdings": []
+    "261070": {
+      "etf_name": "TIGER 코스닥150바이오테크",
+      "top_holdings": [
+        {
+          "ticker": "000250",
+          "name": "삼천당제약",
+          "weight": 72.0
+        },
+        {
+          "ticker": "196170",
+          "name": "알테오젠",
+          "weight": 10.85
+        },
+        {
+          "ticker": "298380",
+          "name": "에이비엘바이오",
+          "weight": 8.73
+        },
+        {
+          "ticker": "087010",
+          "name": "펩트론",
+          "weight": 8.31
+        },
+        {
+          "ticker": "028300",
+          "name": "HLB",
+          "weight": 7.31
+        },
+        {
+          "ticker": "141080",
+          "name": "리가켐바이오",
+          "weight": 6.66
+        },
+        {
+          "ticker": "310210",
+          "name": "보로노이",
+          "weight": 56.0
+        },
+        {
+          "ticker": "226950",
+          "name": "올릭스",
+          "weight": 84.0
+        },
+        {
+          "ticker": "347850",
+          "name": "디앤디파마텍",
+          "weight": 3.32
+        },
+        {
+          "ticker": "214450",
+          "name": "파마리서치",
+          "weight": 36.0
+        }
+      ]
     },
     "266410": {
       "etf_name": "KODEX 필수소비재",
@@ -1050,10 +1156,6 @@
         }
       ]
     },
-    "289070": {
-      "etf_name": "289070",
-      "top_holdings": []
-    },
     "315270": {
       "etf_name": "TIGER 200커뮤니케이션서비스",
       "top_holdings": [
@@ -1106,124 +1208,6 @@
           "ticker": "030000",
           "name": "제일기획",
           "weight": 1.85
-        }
-      ]
-    },
-    "315930": {
-      "etf_name": "KODEX Top5PlusTR",
-      "top_holdings": [
-        {
-          "ticker": "000660",
-          "name": "SK하이닉스",
-          "weight": 29.72
-        },
-        {
-          "ticker": "005930",
-          "name": "삼성전자",
-          "weight": 29.56
-        },
-        {
-          "ticker": "005380",
-          "name": "현대차",
-          "weight": 9.2
-        },
-        {
-          "ticker": "105560",
-          "name": "KB금융",
-          "weight": 6.14
-        },
-        {
-          "ticker": "000270",
-          "name": "기아",
-          "weight": 5.32
-        },
-        {
-          "ticker": "055550",
-          "name": "신한지주",
-          "weight": 4.75
-        },
-        {
-          "ticker": "068270",
-          "name": "셀트리온",
-          "weight": 4.28
-        },
-        {
-          "ticker": "035420",
-          "name": "NAVER",
-          "weight": 3.83
-        },
-        {
-          "ticker": "086790",
-          "name": "하나금융지주",
-          "weight": 3.59
-        },
-        {
-          "ticker": "005490",
-          "name": "POSCO홀딩스",
-          "weight": 3.1
-        }
-      ]
-    },
-    "315940": {
-      "etf_name": "315940",
-      "top_holdings": []
-    },
-    "315950": {
-      "etf_name": "315950",
-      "top_holdings": []
-    },
-    "315960": {
-      "etf_name": "RISE 대형고배당10TR",
-      "top_holdings": [
-        {
-          "ticker": "000660",
-          "name": "SK하이닉스",
-          "weight": 35.23
-        },
-        {
-          "ticker": "005930",
-          "name": "삼성전자",
-          "weight": 30.08
-        },
-        {
-          "ticker": "005380",
-          "name": "현대차",
-          "weight": 9.44
-        },
-        {
-          "ticker": "000270",
-          "name": "기아",
-          "weight": 5.64
-        },
-        {
-          "ticker": "105560",
-          "name": "KB금융",
-          "weight": 5.29
-        },
-        {
-          "ticker": "055550",
-          "name": "신한지주",
-          "weight": 4.17
-        },
-        {
-          "ticker": "086790",
-          "name": "하나금융지주",
-          "weight": 2.81
-        },
-        {
-          "ticker": "005490",
-          "name": "POSCO홀딩스",
-          "weight": 2.49
-        },
-        {
-          "ticker": "316140",
-          "name": "우리금융지주",
-          "weight": 2.2
-        },
-        {
-          "ticker": "000810",
-          "name": "삼성화재",
-          "weight": 2.1
         }
       ]
     },

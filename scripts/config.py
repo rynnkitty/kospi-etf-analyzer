@@ -147,35 +147,35 @@ ALL_ETF_TICKERS: list[str] = sorted(
 # ──────────────────────────────────────────────
 # KOSDAQ 섹터 코드 → 섹터명 매핑 (KOSDAQ150 기반)
 # ──────────────────────────────────────────────
+# 참고: 구 KODEX KOSDAQ150 섹터 ETF(315930~315960)는 2024년경 상장폐지 후
+#       해당 티커가 전혀 다른 상품에 재사용됨. 현재 KOSDAQ 전용 섹터 ETF는
+#       바이오 이외에는 마땅한 대체재가 없어 섹터 구성 최소화.
+# ──────────────────────────────────────────────
 KOSDAQ_SECTORS = {
-    "KQ_IT": "IT",
     "KQ_BIO": "바이오/헬스케어",
     "KQ_MEDIA": "미디어/엔터",
-    "KQ_CONSUMER": "소비재",
     "KQ_BROAD": "KOSDAQ 150",
 }
 
 # ──────────────────────────────────────────────
 # KOSDAQ 섹터별 대표 ETF 티커 매핑
+#
+# 선정 기준:
+#   - NAVER Finance에서 보유종목 조회 가능
+#   - 순자산(AUM) 상위 종목 우선
+#   - KOSDAQ 관련 기초지수 추종
 # ──────────────────────────────────────────────
 KOSDAQ_SECTOR_ETFS: dict[str, list[str]] = {
-    "KQ_IT": [
-        "315960",   # KODEX KOSDAQ150 IT
-    ],
     "KQ_BIO": [
-        "315930",   # KODEX KOSDAQ150 헬스케어
-        "289070",   # TIGER KOSDAQ바이오
+        "261070",   # TIGER 코스닥150 바이오테크  (948억, KOSDAQ150 Healthcare Index)
     ],
     "KQ_MEDIA": [
-        "315940",   # KODEX KOSDAQ150 미디어&엔터테인먼트
-    ],
-    "KQ_CONSUMER": [
-        "315950",   # KODEX KOSDAQ150 소비재
+        "228810",   # TIGER 미디어컨텐츠         (147억, WISE Media Contents Index)
     ],
     "KQ_BROAD": [
-        "229200",   # TIGER KOSDAQ150
+        "229200",   # KODEX KOSDAQ150
         "232080",   # KOSEF KOSDAQ150
-        "261240",   # KODEX KOSDAQ150
+        # 261240은 KODEX 미국달러선물로 재사용됨 — 제거
     ],
 }
 
