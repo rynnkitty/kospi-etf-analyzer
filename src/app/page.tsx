@@ -7,6 +7,7 @@ import { SECTORS, SECTOR_MAP } from '@/constants/sectors';
 import { SectorCard } from '@/components/dashboard/SectorCard';
 import { SectorCompareChart } from '@/components/dashboard/SectorCompareChart';
 import { ValuationHeatmap } from '@/components/dashboard/ValuationHeatmap';
+import { ValueFilterPanel } from '@/components/dashboard/ValueFilterPanel';
 import type { EtfListData, EtfHoldingsData } from '@/types/etf';
 import type { StockValuationData } from '@/types/stock';
 
@@ -26,6 +27,7 @@ export interface ScatterPoint {
   per: number;
   pbr: number;
   market_cap: number | null;
+  dividend_yield: number | null;
 }
 
 // ─── 계산 함수 ────────────────────────────────────────────────────────────────
@@ -92,6 +94,7 @@ function computeScatterPoints(
             per: stock.per,
             pbr: stock.pbr as number,
             market_cap: stock.market_cap,
+            dividend_yield: stock.dividend_yield ?? null,
           });
         }
       }
@@ -155,6 +158,11 @@ export default function DashboardPage() {
         <div className="rounded-lg border border-destructive/50 bg-destructive/10 px-4 py-3 text-sm text-destructive">
           {error}
         </div>
+      )}
+
+      {/* ── 가치주 후보 필터 ──────────────────────────────────────── */}
+      {!isLoading && !error && scatterPoints && scatterPoints.length > 0 && (
+        <ValueFilterPanel points={scatterPoints} />
       )}
 
       {/* ── 섹터 카드 그리드 ──────────────────────────────────────── */}
