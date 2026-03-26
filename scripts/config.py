@@ -153,6 +153,8 @@ ALL_ETF_TICKERS: list[str] = sorted(
 # ──────────────────────────────────────────────
 KOSDAQ_SECTORS = {
     "KQ_BIO": "바이오/헬스케어",
+    "KQ_IT": "IT/소프트웨어",
+    "KQ_GAME": "게임",
     "KQ_MEDIA": "미디어/엔터",
     "KQ_BROAD": "KOSDAQ 150",
 }
@@ -167,15 +169,27 @@ KOSDAQ_SECTORS = {
 # ──────────────────────────────────────────────
 KOSDAQ_SECTOR_ETFS: dict[str, list[str]] = {
     "KQ_BIO": [
-        "261070",   # TIGER 코스닥150 바이오테크  (948억, KOSDAQ150 Healthcare Index)
+        "261070",   # TIGER 코스닥150 바이오테크  (936억, KOSDAQ150 Healthcare Index)
+    ],
+    "KQ_IT": [
+        "261060",   # TIGER 코스닥150IT           (387억, KOSDAQ150 IT Index)
+    ],
+    "KQ_GAME": [
+        "364990",   # TIGER 게임TOP10             (357억, FnGuide 게임TOP10 Index)
+        "300950",   # KODEX 게임산업              (348억, KRX 게임산업 Index)
+        "300640",   # RISE 게임테마               (275억, KRX 게임테마 Index)
+        "300610",   # TIGER K게임                 (168억, FnGuide K게임 Index)
     ],
     "KQ_MEDIA": [
-        "228810",   # TIGER 미디어컨텐츠         (147억, WISE Media Contents Index)
+        "228810",   # TIGER 미디어컨텐츠          (1153억, WISE Media Contents Index)
+        "395290",   # HANARO Fn K-POP&미디어      (448억, FnGuide K-POP&미디어 Index)
     ],
     "KQ_BROAD": [
-        "229200",   # KODEX KOSDAQ150
-        "232080",   # KOSEF KOSDAQ150
-        # 261240은 KODEX 미국달러선물로 재사용됨 — 제거
+        "229200",   # KODEX KOSDAQ150             (72217억)
+        "232080",   # TIGER KOSDAQ150             (22440억)
+        "270810",   # RISE 코스닥150              (5044억)
+        "354500",   # ACE 코스닥150               (2390억)
+        "304770",   # HANARO 코스닥150            (316억)
     ],
 }
 

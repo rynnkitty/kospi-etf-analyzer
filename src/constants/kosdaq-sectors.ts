@@ -15,12 +15,28 @@ export const KOSDAQ_SECTORS: SectorConfig[] = [
     representativeEtfs: ['261070'],
   },
   {
+    code: 'KQ_IT',
+    name: 'IT/소프트웨어',
+    nameEn: 'IT / Software',
+    color: 'bg-violet-500',
+    colorHex: '#8b5cf6',
+    representativeEtfs: ['261060'],
+  },
+  {
+    code: 'KQ_GAME',
+    name: '게임',
+    nameEn: 'Game',
+    color: 'bg-orange-500',
+    colorHex: '#f97316',
+    representativeEtfs: ['364990', '300950', '300640', '300610'],
+  },
+  {
     code: 'KQ_MEDIA',
     name: '미디어/엔터',
     nameEn: 'Media / Entertainment',
     color: 'bg-pink-500',
     colorHex: '#ec4899',
-    representativeEtfs: ['228810'],
+    representativeEtfs: ['228810', '395290'],
   },
   {
     code: 'KQ_BROAD',
@@ -28,7 +44,7 @@ export const KOSDAQ_SECTORS: SectorConfig[] = [
     nameEn: 'KOSDAQ 150',
     color: 'bg-blue-500',
     colorHex: '#3b82f6',
-    representativeEtfs: ['229200', '232080'],
+    representativeEtfs: ['229200', '232080', '270810', '354500', '304770'],
   },
 ];
 

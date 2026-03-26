@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-26T10:29:23+09:00",
+  "updated_at": "2026-03-26T12:07:28+09:00",
   "holdings": {
     "091160": {
       "etf_name": "KODEX 반도체",
@@ -1046,6 +1046,61 @@
         }
       ]
     },
+    "261060": {
+      "etf_name": "TIGER 코스닥150IT",
+      "top_holdings": [
+        {
+          "ticker": "058470",
+          "name": "리노공업",
+          "weight": 7.72
+        },
+        {
+          "ticker": "240810",
+          "name": "원익IPS",
+          "weight": 6.21
+        },
+        {
+          "ticker": "032820",
+          "name": "우리기술",
+          "weight": 5.75
+        },
+        {
+          "ticker": "039030",
+          "name": "이오테크닉스",
+          "weight": 65.0
+        },
+        {
+          "ticker": "108490",
+          "name": "로보티즈",
+          "weight": 81.0
+        },
+        {
+          "ticker": "095340",
+          "name": "ISC",
+          "weight": 78.0
+        },
+        {
+          "ticker": "036930",
+          "name": "주성엔지니어링",
+          "weight": 3.38
+        },
+        {
+          "ticker": "403870",
+          "name": "HPSP",
+          "weight": 3.32
+        },
+        {
+          "ticker": "084370",
+          "name": "유진테크",
+          "weight": 2.71
+        },
+        {
+          "ticker": "067310",
+          "name": "하나마이크론",
+          "weight": 2.51
+        }
+      ]
+    },
     "261070": {
       "etf_name": "TIGER 코스닥150바이오테크",
       "top_holdings": [
@@ -1156,6 +1211,281 @@
         }
       ]
     },
+    "270810": {
+      "etf_name": "RISE 코스닥150",
+      "top_holdings": [
+        {
+          "ticker": "000250",
+          "name": "삼천당제약",
+          "weight": 25.0
+        },
+        {
+          "ticker": "086520",
+          "name": "에코프로",
+          "weight": 6.65
+        },
+        {
+          "ticker": "196170",
+          "name": "알테오젠",
+          "weight": 73.0
+        },
+        {
+          "ticker": "247540",
+          "name": "에코프로비엠",
+          "weight": 97.0
+        },
+        {
+          "ticker": "298380",
+          "name": "에이비엘바이오",
+          "weight": 74.0
+        },
+        {
+          "ticker": "087010",
+          "name": "펩트론",
+          "weight": 39.0
+        },
+        {
+          "ticker": "028300",
+          "name": "HLB",
+          "weight": 2.68
+        },
+        {
+          "ticker": "141080",
+          "name": "리가켐바이오",
+          "weight": 46.0
+        },
+        {
+          "ticker": "058470",
+          "name": "리노공업",
+          "weight": 89.0
+        },
+        {
+          "ticker": "277810",
+          "name": "레인보우로보틱스",
+          "weight": 14.0
+        }
+      ]
+    },
+    "300610": {
+      "etf_name": "TIGER K게임",
+      "top_holdings": [
+        {
+          "ticker": "263750",
+          "name": "펄어비스",
+          "weight": 12.8
+        },
+        {
+          "ticker": "251270",
+          "name": "넷마블",
+          "weight": 10.18
+        },
+        {
+          "ticker": "036570",
+          "name": "엔씨소프트",
+          "weight": 10.16
+        },
+        {
+          "ticker": "259960",
+          "name": "크래프톤",
+          "weight": 9.93
+        },
+        {
+          "ticker": "462870",
+          "name": "시프트업",
+          "weight": 8.84
+        },
+        {
+          "ticker": "293490",
+          "name": "카카오게임즈",
+          "weight": 7.96
+        },
+        {
+          "ticker": "192080",
+          "name": "더블유게임즈",
+          "weight": 7.69
+        },
+        {
+          "ticker": "112040",
+          "name": "위메이드",
+          "weight": 6.44
+        },
+        {
+          "ticker": "194480",
+          "name": "데브시스터즈",
+          "weight": 4.51
+        },
+        {
+          "ticker": "095660",
+          "name": "네오위즈",
+          "weight": 4.19
+        }
+      ]
+    },
+    "300640": {
+      "etf_name": "RISE 게임테마",
+      "top_holdings": [
+        {
+          "ticker": "462870",
+          "name": "시프트업",
+          "weight": 9.62
+        },
+        {
+          "ticker": "259960",
+          "name": "크래프톤",
+          "weight": 9.41
+        },
+        {
+          "ticker": "036570",
+          "name": "엔씨소프트",
+          "weight": 9.2
+        },
+        {
+          "ticker": "251270",
+          "name": "넷마블",
+          "weight": 8.85
+        },
+        {
+          "ticker": "293490",
+          "name": "카카오게임즈",
+          "weight": 8.15
+        },
+        {
+          "ticker": "192080",
+          "name": "더블유게임즈",
+          "weight": 7.69
+        },
+        {
+          "ticker": "263750",
+          "name": "펄어비스",
+          "weight": 6.71
+        },
+        {
+          "ticker": "112040",
+          "name": "위메이드",
+          "weight": 6.38
+        },
+        {
+          "ticker": "194480",
+          "name": "데브시스터즈",
+          "weight": 4.62
+        },
+        {
+          "ticker": "095660",
+          "name": "네오위즈",
+          "weight": 4.28
+        }
+      ]
+    },
+    "300950": {
+      "etf_name": "KODEX 게임산업",
+      "top_holdings": [
+        {
+          "ticker": "259960",
+          "name": "크래프톤",
+          "weight": 23.57
+        },
+        {
+          "ticker": "036570",
+          "name": "엔씨소프트",
+          "weight": 22.33
+        },
+        {
+          "ticker": "263750",
+          "name": "펄어비스",
+          "weight": 13.47
+        },
+        {
+          "ticker": "251270",
+          "name": "넷마블",
+          "weight": 11.77
+        },
+        {
+          "ticker": "462870",
+          "name": "시프트업",
+          "weight": 7.62
+        },
+        {
+          "ticker": "293490",
+          "name": "카카오게임즈",
+          "weight": 3.94
+        },
+        {
+          "ticker": "192080",
+          "name": "더블유게임즈",
+          "weight": 3.81
+        },
+        {
+          "ticker": "112040",
+          "name": "위메이드",
+          "weight": 3.19
+        },
+        {
+          "ticker": "194480",
+          "name": "데브시스터즈",
+          "weight": 2.25
+        },
+        {
+          "ticker": "095660",
+          "name": "네오위즈",
+          "weight": 2.07
+        }
+      ]
+    },
+    "304770": {
+      "etf_name": "HANARO 코스닥150",
+      "top_holdings": [
+        {
+          "ticker": "000250",
+          "name": "삼천당제약",
+          "weight": 25.0
+        },
+        {
+          "ticker": "086520",
+          "name": "에코프로",
+          "weight": 6.6
+        },
+        {
+          "ticker": "196170",
+          "name": "알테오젠",
+          "weight": 73.0
+        },
+        {
+          "ticker": "247540",
+          "name": "에코프로비엠",
+          "weight": 97.0
+        },
+        {
+          "ticker": "298380",
+          "name": "에이비엘바이오",
+          "weight": 75.0
+        },
+        {
+          "ticker": "087010",
+          "name": "펩트론",
+          "weight": 39.0
+        },
+        {
+          "ticker": "028300",
+          "name": "HLB",
+          "weight": 2.68
+        },
+        {
+          "ticker": "141080",
+          "name": "리가켐바이오",
+          "weight": 46.0
+        },
+        {
+          "ticker": "058470",
+          "name": "리노공업",
+          "weight": 89.0
+        },
+        {
+          "ticker": "277810",
+          "name": "레인보우로보틱스",
+          "weight": 14.0
+        }
+      ]
+    },
     "315270": {
       "etf_name": "TIGER 200커뮤니케이션서비스",
       "top_holdings": [
@@ -1208,6 +1538,171 @@
           "ticker": "030000",
           "name": "제일기획",
           "weight": 1.85
+        }
+      ]
+    },
+    "354500": {
+      "etf_name": "ACE 코스닥150",
+      "top_holdings": [
+        {
+          "ticker": "000250",
+          "name": "삼천당제약",
+          "weight": 6.85
+        },
+        {
+          "ticker": "086520",
+          "name": "에코프로",
+          "weight": 6.58
+        },
+        {
+          "ticker": "196170",
+          "name": "알테오젠",
+          "weight": 6.48
+        },
+        {
+          "ticker": "247540",
+          "name": "에코프로비엠",
+          "weight": 4.86
+        },
+        {
+          "ticker": "298380",
+          "name": "에이비엘바이오",
+          "weight": 3.17
+        },
+        {
+          "ticker": "087010",
+          "name": "펩트론",
+          "weight": 3.02
+        },
+        {
+          "ticker": "028300",
+          "name": "HLB",
+          "weight": 2.67
+        },
+        {
+          "ticker": "141080",
+          "name": "리가켐바이오",
+          "weight": 2.43
+        },
+        {
+          "ticker": "058470",
+          "name": "리노공업",
+          "weight": 2.37
+        },
+        {
+          "ticker": "277810",
+          "name": "레인보우로보틱스",
+          "weight": 70.0
+        }
+      ]
+    },
+    "364990": {
+      "etf_name": "TIGER 게임TOP10",
+      "top_holdings": [
+        {
+          "ticker": "259960",
+          "name": "크래프톤",
+          "weight": 27.23
+        },
+        {
+          "ticker": "036570",
+          "name": "엔씨소프트",
+          "weight": 26.35
+        },
+        {
+          "ticker": "251270",
+          "name": "넷마블",
+          "weight": 23.09
+        },
+        {
+          "ticker": "263750",
+          "name": "펄어비스",
+          "weight": 8.68
+        },
+        {
+          "ticker": "293490",
+          "name": "카카오게임즈",
+          "weight": 2.86
+        },
+        {
+          "ticker": "192080",
+          "name": "더블유게임즈",
+          "weight": 2.72
+        },
+        {
+          "ticker": "181710",
+          "name": "NHN",
+          "weight": 2.35
+        },
+        {
+          "ticker": "112040",
+          "name": "위메이드",
+          "weight": 2.2
+        },
+        {
+          "ticker": "462870",
+          "name": "시프트업",
+          "weight": 2.15
+        },
+        {
+          "ticker": "225570",
+          "name": "넥슨게임즈",
+          "weight": 1.33
+        }
+      ]
+    },
+    "395290": {
+      "etf_name": "HANARO Fn K-POP&미디어",
+      "top_holdings": [
+        {
+          "ticker": "352820",
+          "name": "하이브",
+          "weight": 26.91
+        },
+        {
+          "ticker": "035900",
+          "name": "JYP Ent.",
+          "weight": 22.26
+        },
+        {
+          "ticker": "041510",
+          "name": "에스엠",
+          "weight": 15.7
+        },
+        {
+          "ticker": "122870",
+          "name": "와이지엔터테인먼트",
+          "weight": 9.85
+        },
+        {
+          "ticker": "035760",
+          "name": "CJ ENM",
+          "weight": 8.67
+        },
+        {
+          "ticker": "253450",
+          "name": "스튜디오드래곤",
+          "weight": 6.6
+        },
+        {
+          "ticker": "037270",
+          "name": "YG PLUS",
+          "weight": 3.01
+        },
+        {
+          "ticker": "034120",
+          "name": "SBS",
+          "weight": 2.35
+        },
+        {
+          "ticker": "473980",
+          "name": "노머스",
+          "weight": 1.67
+        },
+        {
+          "ticker": "310200",
+          "name": "애니플러스",
+          "weight": 1.09
         }
       ]
     },
