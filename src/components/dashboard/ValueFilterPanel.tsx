@@ -16,12 +16,13 @@ interface ValueCandidate {
   sector_code: string;
   per: number;
   pbr: number;
-  graham: number;   // PER × PBR
-  score: number;    // 복합 점수 (낮을수록 좋음)
+  graham: number;       // PER × PBR
+  score: number;        // 복합 점수 (낮을수록 좋음)
   close: number;
   dividend_yield: number | null;
   roe: number | null;
   debt_ratio: number | null;
+  warnings: string[];   // 가치 함정 경고 항목 ('ROE' | '부채')
 }
 
 interface ValueFilterPanelProps {
@@ -34,11 +35,14 @@ interface ValueFilterPanelProps {
 
 const KOSPI_FILTER = {
   PER_MIN: 0.5,
-  PER_MAX: 10,
+  PER_MAX: 15,          // 기획서 기준: PER < 15
   PBR_MIN: 0.1,
   PBR_MAX: 1.0,
-  GRAHAM_MAX: 22.5,   // Benjamin Graham: PER × PBR ≤ 22.5
+  GRAHAM_MAX: 22.5,     // Benjamin Graham: PER × PBR ≤ 22.5
+  SECTOR_RATIO: 0.70,   // 업종 평균의 70% 이하 = 상대 저평가
 } as const;
+
+const WEIGHTS = { PER: 0.30, PBR: 0.25, ROE: 0.25, SECTOR: 0.20 } as const;
 
 const TOP_N = 10;
 
@@ -47,42 +51,101 @@ const TOP_N = 10;
 function computeKospiCandidates(points: ScatterPoint[]): ValueCandidate[] {
   // 유효한 종목 (PER > 0, PBR > 0)
   const valid = points.filter((p) => p.per > 0 && p.pbr > 0);
+  if (valid.length === 0) return [];
 
-  // 전체 종목 기준 백분위 계산용 정렬
+  const total = valid.length;
+
+  // ── 전체 백분위 계산 (낮을수록 낮은 값) ──────────────────────────────────
   const perSorted = [...valid].sort((a, b) => a.per - b.per);
   const pbrSorted = [...valid].sort((a, b) => a.pbr - b.pbr);
-  const total = valid.length;
+  // ROE는 높을수록 좋으므로 내림차순 → 높은 종목 = 낮은 인덱스 = 낮은 백분위(고득점)
+  const roeSorted = [...valid]
+    .filter((p) => p.roe != null)
+    .sort((a, b) => (b.roe as number) - (a.roe as number));
+  const roeTotal = roeSorted.length;
 
   const perRankMap = new Map<string, number>();
   const pbrRankMap = new Map<string, number>();
-  perSorted.forEach((p, i) => perRankMap.set(p.ticker, (i / (total - 1)) * 100));
-  pbrSorted.forEach((p, i) => pbrRankMap.set(p.ticker, (i / (total - 1)) * 100));
+  const roeRankMap = new Map<string, number>();
 
-  // 필터링
-  const filtered = valid.filter(
-    (p) =>
+  perSorted.forEach((p, i) => perRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
+  pbrSorted.forEach((p, i) => pbrRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
+  roeSorted.forEach((p, i) => roeRankMap.set(p.ticker, roeTotal > 1 ? (i / (roeTotal - 1)) * 100 : 0));
+
+  // ── 업종 평균 PER/PBR 계산 ────────────────────────────────────────────────
+  const sectorGroups = new Map<string, { perSum: number; pbrSum: number; count: number }>();
+  for (const p of valid) {
+    const g = sectorGroups.get(p.sector_code) ?? { perSum: 0, pbrSum: 0, count: 0 };
+    g.perSum += p.per;
+    g.pbrSum += p.pbr;
+    g.count += 1;
+    sectorGroups.set(p.sector_code, g);
+  }
+  const sectorAvg = new Map<string, { per: number; pbr: number }>();
+  sectorGroups.forEach((g, code) => {
+    sectorAvg.set(code, { per: g.perSum / g.count, pbr: g.pbrSum / g.count });
+  });
+
+  // ── 2단계: 핵심 필터링 (절대 기준 OR 상대 기준) + 3단계: 그레이엄 ──────────
+  const filtered = valid.filter((p) => {
+    const avg = sectorAvg.get(p.sector_code);
+    const absOk =
       p.per > KOSPI_FILTER.PER_MIN &&
       p.per < KOSPI_FILTER.PER_MAX &&
       p.pbr > KOSPI_FILTER.PBR_MIN &&
-      p.pbr < KOSPI_FILTER.PBR_MAX &&
-      p.per * p.pbr <= KOSPI_FILTER.GRAHAM_MAX
-  );
+      p.pbr < KOSPI_FILTER.PBR_MAX;
+    const relOk =
+      avg != null &&
+      (p.per <= avg.per * KOSPI_FILTER.SECTOR_RATIO ||
+        p.pbr <= avg.pbr * KOSPI_FILTER.SECTOR_RATIO);
+    const grahamOk = p.per * p.pbr <= KOSPI_FILTER.GRAHAM_MAX;
+    return (absOk || relOk) && grahamOk;
+  });
 
-  // 복합 점수 계산 (PER 백분위 50% + PBR 백분위 50%)
-  const candidates: ValueCandidate[] = filtered.map((p) => ({
-    rank: 0,
-    ticker: p.ticker,
-    name: p.name,
-    sector_code: p.sector_code,
-    per: p.per,
-    pbr: p.pbr,
-    graham: parseFloat((p.per * p.pbr).toFixed(2)),
-    score: 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50),
-    close: p.close,
-    dividend_yield: p.dividend_yield,
-    roe: p.roe,
-    debt_ratio: p.debt_ratio,
-  }));
+  // ── 4단계: 복합 스코어링 ──────────────────────────────────────────────────
+  // S_SECTOR = 1 - (기업_PER/업종평균_PER + 기업_PBR/업종평균_PBR) / 4  (1에 가까울수록 저평가)
+  // 최종 score는 낮을수록 좋음 → S_SECTOR는 (1 - S_SECTOR) 로 변환하여 합산
+  const candidates: ValueCandidate[] = filtered.map((p) => {
+    const perRank = perRankMap.get(p.ticker) ?? 50;
+    const pbrRank = pbrRankMap.get(p.ticker) ?? 50;
+    const roeRank = p.roe != null ? (roeRankMap.get(p.ticker) ?? 50) : 50;
+    const avg = sectorAvg.get(p.sector_code);
+    const sectorScore = avg
+      ? 1 - (p.per / avg.per + p.pbr / avg.pbr) / 4
+      : 0.5;
+    const sectorRank = (1 - sectorScore) * 100; // 낮을수록 더 저평가
+
+    let score =
+      WEIGHTS.PER * perRank +
+      WEIGHTS.PBR * pbrRank +
+      WEIGHTS.ROE * roeRank +
+      WEIGHTS.SECTOR * sectorRank;
+
+    // 배당수익률 ≥ 2% → 가점 (점수 차감)
+    if (p.dividend_yield != null && p.dividend_yield >= 2) {
+      score -= 5;
+    }
+
+    const warnings: string[] = [];
+    if (p.roe != null && p.roe < 5) warnings.push('ROE');
+    if (p.debt_ratio != null && p.debt_ratio > 150) warnings.push('부채');
+
+    return {
+      rank: 0,
+      ticker: p.ticker,
+      name: p.name,
+      sector_code: p.sector_code,
+      per: p.per,
+      pbr: p.pbr,
+      graham: parseFloat((p.per * p.pbr).toFixed(2)),
+      score,
+      close: p.close,
+      dividend_yield: p.dividend_yield,
+      roe: p.roe,
+      debt_ratio: p.debt_ratio,
+      warnings,
+    };
+  });
 
   // 점수 오름차순 정렬 → TOP N
   candidates.sort((a, b) => a.score - b.score);
@@ -107,20 +170,27 @@ function computeKosdaqCandidates(points: ScatterPoint[]): ValueCandidate[] {
   perSorted.forEach((p, i) => perRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
   pbrSorted.forEach((p, i) => pbrRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
 
-  const candidates: ValueCandidate[] = valid.map((p) => ({
-    rank: 0,
-    ticker: p.ticker,
-    name: p.name,
-    sector_code: p.sector_code,
-    per: p.per,
-    pbr: p.pbr,
-    graham: parseFloat((p.per * p.pbr).toFixed(2)),
-    score: 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50),
-    close: p.close,
-    dividend_yield: p.dividend_yield,
-    roe: p.roe,
-    debt_ratio: p.debt_ratio,
-  }));
+  const candidates: ValueCandidate[] = valid.map((p) => {
+    const score = 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50);
+    const warnings: string[] = [];
+    if (p.roe != null && p.roe < 5) warnings.push('ROE');
+    if (p.debt_ratio != null && p.debt_ratio > 150) warnings.push('부채');
+    return {
+      rank: 0,
+      ticker: p.ticker,
+      name: p.name,
+      sector_code: p.sector_code,
+      per: p.per,
+      pbr: p.pbr,
+      graham: parseFloat((p.per * p.pbr).toFixed(2)),
+      score,
+      close: p.close,
+      dividend_yield: p.dividend_yield,
+      roe: p.roe,
+      debt_ratio: p.debt_ratio,
+      warnings,
+    };
+  });
 
   candidates.sort((a, b) => a.score - b.score);
   const top = candidates.slice(0, TOP_N);
@@ -163,7 +233,7 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
           <p className="mt-0.5 text-xs text-muted-foreground">
             {isKosdaq
               ? 'KOSDAQ 종목 내 상대적으로 PER·PBR이 낮은 상위 ' + TOP_N + '개 (성장주 특성상 절대 기준 미적용)'
-              : 'PER 0.5–10 · PBR 0.1–1.0 · 그레이엄 조건(PER×PBR ≤ 22.5) 동시 충족 종목 · 복합점수 기준 상위 ' + TOP_N + '개'
+              : '절대(PER 0.5–15·PBR 0.1–1.0) 또는 업종 상대 저평가 + 그레이엄(PER×PBR ≤ 22.5) · 복합점수 상위 ' + TOP_N + '개'
             }
           </p>
         </div>
@@ -182,13 +252,15 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
             <>
               <p><span className="font-medium text-foreground">상대 순위</span> — KOSDAQ 바이오·미디어는 성장주 특성상 PER·PBR 절대값이 높습니다. 이 목록은 절대 가치주 기준 대신, 동일 KOSDAQ 보유종목 내에서 상대적으로 PER·PBR이 낮은 종목을 선별합니다.</p>
               <p><span className="font-medium text-foreground">복합점수</span> — PER·PBR 각 50% 가중 백분위 합산, 낮을수록 상대적으로 저평가</p>
+              <p><span className="font-medium text-foreground">가치 함정 경고</span> — ⚠️ ROE &lt; 5% 또는 부채비율 &gt; 150% 시 경고 표시 (제외하지 않음)</p>
             </>
           ) : (
             <>
-              <p><span className="font-medium text-foreground">저PER</span> — 0.5 &lt; PER &lt; 10: 수익 대비 저평가</p>
-              <p><span className="font-medium text-foreground">저PBR</span> — 0.1 &lt; PBR &lt; 1.0: 자산 대비 저평가 (장부가 이하)</p>
+              <p><span className="font-medium text-foreground">핵심 필터</span> — <b>절대 기준</b>(PER 0.5–15 · PBR 0.1–1.0) <b>또는 상대 기준</b>(업종 평균 PER·PBR의 70% 이하) 중 하나 이상 충족</p>
               <p><span className="font-medium text-foreground">그레이엄 조건</span> — PER × PBR ≤ 22.5: 두 지표 동시 고려 (벤자민 그레이엄 기준)</p>
-              <p><span className="font-medium text-foreground">복합점수</span> — PER·PBR 각 50% 가중 백분위 합산, 낮을수록 더 저평가</p>
+              <p><span className="font-medium text-foreground">복합점수</span> — PER 30% + PBR 25% + ROE 25% + 섹터상대 20% 가중 백분위 합산, 낮을수록 저평가</p>
+              <p><span className="font-medium text-foreground">배당 가점</span> — 배당수익률 ≥ 2% 시 점수 차감 (우대)</p>
+              <p><span className="font-medium text-foreground">가치 함정 경고</span> — ⚠️ ROE &lt; 5% 또는 부채비율 &gt; 150% 시 경고 표시 (제외하지 않음)</p>
             </>
           )}
         </div>
@@ -210,6 +282,7 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">부채비율</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">배당률</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">복합점수</th>
+              <th className="px-3 py-2.5 text-center text-xs font-medium text-muted-foreground">경고</th>
             </tr>
           </thead>
           <tbody>
@@ -343,6 +416,26 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
                     <span className="text-xs tabular-nums text-muted-foreground">
                       {c.score.toFixed(1)}
                     </span>
+                  </td>
+
+                  {/* 경고 */}
+                  <td className="px-3 py-2.5 text-center">
+                    {c.warnings.length > 0 ? (
+                      <span
+                        title={
+                          c.warnings.includes('ROE') && c.warnings.includes('부채')
+                            ? 'ROE < 5% · 부채비율 > 150%'
+                            : c.warnings.includes('ROE')
+                            ? 'ROE < 5% — 수익성 주의'
+                            : '부채비율 > 150% — 재무 건전성 주의'
+                        }
+                        className="text-xs text-amber-500 cursor-help"
+                      >
+                        ⚠️
+                      </span>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">—</span>
+                    )}
                   </td>
                 </tr>
               );
