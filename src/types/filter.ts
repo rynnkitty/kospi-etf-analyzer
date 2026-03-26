@@ -35,6 +35,9 @@ export interface RangeFilter {
   max: number | null;
 }
 
+/** 시장 필터 */
+export type MarketFilter = 'all' | 'kospi' | 'kosdaq';
+
 /** 전체 필터 상태 (Zustand store 스키마) */
 export interface FilterState {
   /** PER 범위 필터 */
@@ -52,6 +55,8 @@ export interface FilterState {
   searchQuery: string;
   /** 현재 정렬 옵션 */
   sort: SortOption;
+  /** 시장 필터 (all: 전체, kospi: KOSPI만, kosdaq: KOSDAQ만) */
+  selectedMarket: MarketFilter;
 }
 
 /** FilterState의 기본값 */
@@ -62,4 +67,5 @@ export const DEFAULT_FILTER_STATE: FilterState = {
   selectedSectors: [],
   searchQuery: '',
   sort: { field: 'market_cap', direction: 'desc' },
+  selectedMarket: 'all',
 };

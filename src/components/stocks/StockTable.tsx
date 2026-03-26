@@ -3,6 +3,7 @@
 import { Building2, ChevronDown, ChevronUp, ChevronsUpDown } from 'lucide-react';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { SECTOR_MAP } from '@/constants/sectors';
+import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
 import {
   getPERGrade,
   getPBRGrade,
@@ -22,6 +23,7 @@ export interface StockRow {
   sectorCodes: string[];
   etfCount: number;
   valuation: StockValuation | null;
+  market: 'KOSPI' | 'KOSDAQ';
 }
 
 // ─── 내부 헬퍼 ─────────────────────────────────────────────────────────────────
@@ -226,8 +228,17 @@ export function StockTable({
                   {/* 섹터 배지 */}
                   <td className="px-3 py-2.5">
                     <div className="flex flex-wrap gap-1">
+                      <span
+                        className={
+                          row.market === 'KOSDAQ'
+                            ? 'inline-flex items-center rounded px-1.5 py-0.5 text-xs font-bold text-white whitespace-nowrap bg-emerald-600/80'
+                            : 'inline-flex items-center rounded px-1.5 py-0.5 text-xs font-bold text-white whitespace-nowrap bg-blue-600/80'
+                        }
+                      >
+                        {row.market}
+                      </span>
                       {row.sectorCodes.map((code) => {
-                        const sector = SECTOR_MAP[code];
+                        const sector = SECTOR_MAP[code] ?? KOSDAQ_SECTOR_MAP[code];
                         if (!sector) return null;
                         return (
                           <span

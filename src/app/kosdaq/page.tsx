@@ -144,7 +144,7 @@ export default function KosdaqDashboardPage() {
 
       {/* ── 가치주 후보 필터 ──────────────────────────────────────── */}
       {!isLoading && !error && scatterPoints && scatterPoints.length > 0 && (
-        <ValueFilterPanel points={scatterPoints} />
+        <ValueFilterPanel points={scatterPoints} variant="kosdaq" />
       )}
 
       {/* ── 섹터 카드 그리드 ──────────────────────────────────────── */}

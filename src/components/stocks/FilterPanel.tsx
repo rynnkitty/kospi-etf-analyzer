@@ -5,7 +5,9 @@ import { Search, RotateCcw } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { useFilter } from '@/hooks/useFilter';
 import { SECTORS } from '@/constants/sectors';
+import { KOSDAQ_SECTORS } from '@/constants/kosdaq-sectors';
 import { cn } from '@/lib/utils';
+import type { MarketFilter } from '@/types/filter';
 
 interface FilterPanelProps {
   className?: string;
@@ -17,10 +19,12 @@ export function FilterPanel({ className }: FilterPanelProps) {
     pbrRange,
     selectedSectors,
     searchQuery,
+    selectedMarket,
     setPerRange,
     setPbrRange,
     setSelectedSectors,
     setSearchQuery,
+    setSelectedMarket,
     resetFilter,
   } = useFilter();
 
@@ -72,10 +76,48 @@ export function FilterPanel({ className }: FilterPanelProps) {
     pbrRange.min !== null ||
     pbrRange.max !== null ||
     selectedSectors.length > 0 ||
-    searchQuery !== '';
+    searchQuery !== '' ||
+    selectedMarket !== 'all';
+
+  // 현재 시장에 따라 표시할 섹터 목록
+  const visibleSectors = selectedMarket === 'kosdaq'
+    ? KOSDAQ_SECTORS
+    : selectedMarket === 'kospi'
+    ? SECTORS
+    : [...SECTORS, ...KOSDAQ_SECTORS];
+
+  const MARKET_OPTIONS: { value: MarketFilter; label: string }[] = [
+    { value: 'all', label: '전체' },
+    { value: 'kospi', label: 'KOSPI' },
+    { value: 'kosdaq', label: 'KOSDAQ' },
+  ];
 
   return (
     <aside className={cn('rounded-xl border bg-card p-4 space-y-5', className)}>
+      {/* ── 시장 선택 ─────────────────────────────────────── */}
+      <div className="space-y-1.5">
+        <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+          시장
+        </p>
+        <div className="flex rounded-lg border overflow-hidden text-xs">
+          {MARKET_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => setSelectedMarket(opt.value)}
+              className={cn(
+                'flex-1 py-1.5 font-medium transition-colors',
+                selectedMarket === opt.value
+                  ? 'bg-foreground text-background'
+                  : 'hover:bg-muted text-muted-foreground'
+              )}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* ── 검색 ──────────────────────────────────────────── */}
       <div className="space-y-1.5">
         <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
@@ -144,7 +186,7 @@ export function FilterPanel({ className }: FilterPanelProps) {
           )}
         </div>
         <div className="space-y-0.5">
-          {SECTORS.map((sector) => {
+          {visibleSectors.map((sector) => {
             const checked = selectedSectors.includes(sector.code);
             return (
               <label

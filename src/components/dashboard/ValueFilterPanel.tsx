@@ -23,11 +23,13 @@ interface ValueCandidate {
 
 interface ValueFilterPanelProps {
   points: ScatterPoint[];
+  /** kosdaq: 절대 기준 없이 상대 순위로 TOP 10 선정 */
+  variant?: 'kospi' | 'kosdaq';
 }
 
 // ─── 필터 기준 상수 ───────────────────────────────────────────────────────────
 
-const FILTER = {
+const KOSPI_FILTER = {
   PER_MIN: 0.5,
   PER_MAX: 10,
   PBR_MIN: 0.1,
@@ -39,7 +41,7 @@ const TOP_N = 10;
 
 // ─── 필터링 + 스코어링 함수 ───────────────────────────────────────────────────
 
-function computeCandidates(points: ScatterPoint[]): ValueCandidate[] {
+function computeKospiCandidates(points: ScatterPoint[]): ValueCandidate[] {
   // 유효한 종목 (PER > 0, PBR > 0)
   const valid = points.filter((p) => p.per > 0 && p.pbr > 0);
 
@@ -56,11 +58,11 @@ function computeCandidates(points: ScatterPoint[]): ValueCandidate[] {
   // 필터링
   const filtered = valid.filter(
     (p) =>
-      p.per > FILTER.PER_MIN &&
-      p.per < FILTER.PER_MAX &&
-      p.pbr > FILTER.PBR_MIN &&
-      p.pbr < FILTER.PBR_MAX &&
-      p.per * p.pbr <= FILTER.GRAHAM_MAX
+      p.per > KOSPI_FILTER.PER_MIN &&
+      p.per < KOSPI_FILTER.PER_MAX &&
+      p.pbr > KOSPI_FILTER.PBR_MIN &&
+      p.pbr < KOSPI_FILTER.PBR_MAX &&
+      p.per * p.pbr <= KOSPI_FILTER.GRAHAM_MAX
   );
 
   // 복합 점수 계산 (PER 백분위 50% + PBR 백분위 50%)
@@ -84,16 +86,55 @@ function computeCandidates(points: ScatterPoint[]): ValueCandidate[] {
   return top;
 }
 
+/** KOSDAQ: 절대 기준 없이 PER·PBR 상대 백분위 기준으로 TOP N 선정 */
+function computeKosdaqCandidates(points: ScatterPoint[]): ValueCandidate[] {
+  // 유효한 종목 (PER > 0, PBR > 0)
+  const valid = points.filter((p) => p.per > 0 && p.pbr > 0);
+  if (valid.length === 0) return [];
+
+  const total = valid.length;
+  const perSorted = [...valid].sort((a, b) => a.per - b.per);
+  const pbrSorted = [...valid].sort((a, b) => a.pbr - b.pbr);
+
+  const perRankMap = new Map<string, number>();
+  const pbrRankMap = new Map<string, number>();
+  perSorted.forEach((p, i) => perRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
+  pbrSorted.forEach((p, i) => pbrRankMap.set(p.ticker, total > 1 ? (i / (total - 1)) * 100 : 0));
+
+  const candidates: ValueCandidate[] = valid.map((p) => ({
+    rank: 0,
+    ticker: p.ticker,
+    name: p.name,
+    sector_code: p.sector_code,
+    per: p.per,
+    pbr: p.pbr,
+    graham: parseFloat((p.per * p.pbr).toFixed(2)),
+    score: 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50),
+    dividend_yield: p.dividend_yield,
+  }));
+
+  candidates.sort((a, b) => a.score - b.score);
+  const top = candidates.slice(0, TOP_N);
+  top.forEach((c, i) => { c.rank = i + 1; });
+
+  return top;
+}
+
 // ─── 컴포넌트 ─────────────────────────────────────────────────────────────────
 
-export function ValueFilterPanel({ points }: ValueFilterPanelProps) {
+export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanelProps) {
   const [showInfo, setShowInfo] = useState(false);
 
-  const candidates = useMemo(() => computeCandidates(points), [points]);
+  const candidates = useMemo(
+    () => variant === 'kosdaq' ? computeKosdaqCandidates(points) : computeKospiCandidates(points),
+    [points, variant]
+  );
 
   if (candidates.length === 0) {
     return null;
   }
+
+  const isKosdaq = variant === 'kosdaq';
 
   return (
     <section>
@@ -101,13 +142,20 @@ export function ValueFilterPanel({ points }: ValueFilterPanelProps) {
       <div className="mb-4 flex items-start justify-between gap-2">
         <div>
           <h2 className="text-base font-semibold flex items-center gap-2">
-            가치주 후보 TOP {TOP_N}
-            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700">
-              자동 필터
+            {isKosdaq ? '상대 저평가 TOP' : '가치주 후보 TOP'} {TOP_N}
+            <span className={
+              isKosdaq
+                ? 'rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700'
+                : 'rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700'
+            }>
+              {isKosdaq ? '상대 순위' : '자동 필터'}
             </span>
           </h2>
           <p className="mt-0.5 text-xs text-muted-foreground">
-            PER 0.5–10 · PBR 0.1–1.0 · 그레이엄 조건(PER×PBR ≤ 22.5) 동시 충족 종목 · 복합점수 기준 상위 {TOP_N}개
+            {isKosdaq
+              ? 'KOSDAQ 종목 내 상대적으로 PER·PBR이 낮은 상위 ' + TOP_N + '개 (성장주 특성상 절대 기준 미적용)'
+              : 'PER 0.5–10 · PBR 0.1–1.0 · 그레이엄 조건(PER×PBR ≤ 22.5) 동시 충족 종목 · 복합점수 기준 상위 ' + TOP_N + '개'
+            }
           </p>
         </div>
         <button
@@ -121,10 +169,19 @@ export function ValueFilterPanel({ points }: ValueFilterPanelProps) {
       {/* 기준 설명 패널 */}
       {showInfo && (
         <div className="mb-4 rounded-lg border bg-muted/30 px-4 py-3 text-xs text-muted-foreground space-y-1">
-          <p><span className="font-medium text-foreground">저PER</span> — 0.5 &lt; PER &lt; 10: 수익 대비 저평가</p>
-          <p><span className="font-medium text-foreground">저PBR</span> — 0.1 &lt; PBR &lt; 1.0: 자산 대비 저평가 (장부가 이하)</p>
-          <p><span className="font-medium text-foreground">그레이엄 조건</span> — PER × PBR ≤ 22.5: 두 지표 동시 고려 (벤자민 그레이엄 기준)</p>
-          <p><span className="font-medium text-foreground">복합점수</span> — PER·PBR 각 50% 가중 백분위 합산, 낮을수록 더 저평가</p>
+          {isKosdaq ? (
+            <>
+              <p><span className="font-medium text-foreground">상대 순위</span> — KOSDAQ 바이오·미디어는 성장주 특성상 PER·PBR 절대값이 높습니다. 이 목록은 절대 가치주 기준 대신, 동일 KOSDAQ 보유종목 내에서 상대적으로 PER·PBR이 낮은 종목을 선별합니다.</p>
+              <p><span className="font-medium text-foreground">복합점수</span> — PER·PBR 각 50% 가중 백분위 합산, 낮을수록 상대적으로 저평가</p>
+            </>
+          ) : (
+            <>
+              <p><span className="font-medium text-foreground">저PER</span> — 0.5 &lt; PER &lt; 10: 수익 대비 저평가</p>
+              <p><span className="font-medium text-foreground">저PBR</span> — 0.1 &lt; PBR &lt; 1.0: 자산 대비 저평가 (장부가 이하)</p>
+              <p><span className="font-medium text-foreground">그레이엄 조건</span> — PER × PBR ≤ 22.5: 두 지표 동시 고려 (벤자민 그레이엄 기준)</p>
+              <p><span className="font-medium text-foreground">복합점수</span> — PER·PBR 각 50% 가중 백분위 합산, 낮을수록 더 저평가</p>
+            </>
+          )}
         </div>
       )}
 

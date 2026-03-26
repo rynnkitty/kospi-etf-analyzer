@@ -4,48 +4,58 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Filter, X } from 'lucide-react';
 import { useEtfData } from '@/hooks/useEtfData';
+import { useKosdaqEtfData } from '@/hooks/useKosdaqEtfData';
 import { useValuation } from '@/hooks/useValuation';
 import { useFilter } from '@/hooks/useFilter';
 import { FilterPanel } from '@/components/stocks/FilterPanel';
 import { StockTable } from '@/components/stocks/StockTable';
 import type { StockRow } from '@/components/stocks/StockTable';
 import type { SortField } from '@/types/filter';
+import type { MarketFilter } from '@/types/filter';
 
 const PAGE_SIZE = 50;
 
 // ─── 데이터 처리 ──────────────────────────────────────────────────────────────
 
 function buildStockRows(
-  etfListSectors: { sector_code: string; etfs: { ticker: string }[] }[],
+  kospiSectors: { sector_code: string; etfs: { ticker: string }[] }[],
+  kosdaqSectors: { sector_code: string; etfs: { ticker: string }[] }[],
   holdingsMap: Record<string, { top_holdings: { ticker: string; name: string }[] }>,
   valuationStocks: Record<string, import('@/types/stock').StockValuation>
 ): StockRow[] {
-  // ETF 티커 → 섹터코드 매핑
-  const etfSectorMap: Record<string, string> = {};
-  for (const sector of etfListSectors) {
+  // ETF 티커 → { 섹터코드, 시장 } 매핑
+  const etfMetaMap: Record<string, { sectorCode: string; market: 'KOSPI' | 'KOSDAQ' }> = {};
+  for (const sector of kospiSectors) {
     for (const etf of sector.etfs) {
-      etfSectorMap[etf.ticker] = sector.sector_code;
+      etfMetaMap[etf.ticker] = { sectorCode: sector.sector_code, market: 'KOSPI' };
+    }
+  }
+  for (const sector of kosdaqSectors) {
+    for (const etf of sector.etfs) {
+      etfMetaMap[etf.ticker] = { sectorCode: sector.sector_code, market: 'KOSDAQ' };
     }
   }
 
   // 종목 코드 기준 중복 제거 + 소속 섹터/ETF 집계
   const stockMap = new Map<
     string,
-    { name: string; sectorCodes: Set<string>; etfTickers: Set<string> }
+    { name: string; sectorCodes: Set<string>; etfTickers: Set<string>; market: 'KOSPI' | 'KOSDAQ' }
   >();
 
   for (const [etfTicker, etfHolding] of Object.entries(holdingsMap)) {
-    const sectorCode = etfSectorMap[etfTicker];
+    const meta = etfMetaMap[etfTicker];
+    if (!meta) continue;
     for (const holding of etfHolding.top_holdings) {
       if (!stockMap.has(holding.ticker)) {
         stockMap.set(holding.ticker, {
           name: holding.name,
           sectorCodes: new Set(),
           etfTickers: new Set(),
+          market: meta.market,
         });
       }
       const entry = stockMap.get(holding.ticker)!;
-      if (sectorCode) entry.sectorCodes.add(sectorCode);
+      entry.sectorCodes.add(meta.sectorCode);
       entry.etfTickers.add(etfTicker);
     }
   }
@@ -56,6 +66,7 @@ function buildStockRows(
     sectorCodes: Array.from(info.sectorCodes),
     etfCount: info.etfTickers.size,
     valuation: valuationStocks[ticker] ?? null,
+    market: info.market,
   }));
 }
 
@@ -67,6 +78,7 @@ function StocksPageContent() {
   const searchParams = useSearchParams();
 
   const { etfList, holdings, isLoading: etfLoading, error: etfError } = useEtfData();
+  const { etfList: kosdaqEtfList, isLoading: kosdaqLoading, error: kosdaqError } = useKosdaqEtfData();
   const { valuation, isLoading: valLoading, error: valError } = useValuation();
 
   const {
@@ -75,11 +87,13 @@ function StocksPageContent() {
     selectedSectors,
     searchQuery,
     sort,
+    selectedMarket,
     setPerRange,
     setPbrRange,
     setSelectedSectors,
     setSearchQuery,
     setSort,
+    setSelectedMarket,
   } = useFilter();
 
   const [page, setPage] = useState(1);
@@ -102,6 +116,7 @@ function StocksPageContent() {
     pbrRange.min !== null || pbrRange.max !== null,
     selectedSectors.length > 0,
     searchQuery !== '',
+    selectedMarket !== 'all',
   ].filter(Boolean).length;
 
   // ── URL → 필터 초기화 (마운트 시 1회) ─────────────────────────────────────
@@ -129,6 +144,8 @@ function StocksPageContent() {
     if (sectors) setSelectedSectors(sectors.split(',').filter(Boolean));
     if (q) setSearchQuery(q);
     if (p) setPage(Math.max(1, Number(p)));
+    const m = searchParams.get('market');
+    if (m === 'kospi' || m === 'kosdaq') setSelectedMarket(m as MarketFilter);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -141,29 +158,35 @@ function StocksPageContent() {
     if (pbrRange.max !== null) params.set('pbr_max', String(pbrRange.max));
     if (selectedSectors.length > 0) params.set('sectors', selectedSectors.join(','));
     if (searchQuery) params.set('q', searchQuery);
+    if (selectedMarket !== 'all') params.set('market', selectedMarket);
     if (page > 1) params.set('page', String(page));
 
     const qs = params.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-  }, [perRange, pbrRange, selectedSectors, searchQuery, page, pathname, router]);
+  }, [perRange, pbrRange, selectedSectors, searchQuery, selectedMarket, page, pathname, router]);
 
   // 필터 변경 시 첫 페이지로 리셋
   useEffect(() => {
     setPage(1);
-  }, [perRange, pbrRange, selectedSectors, searchQuery]);
+  }, [perRange, pbrRange, selectedSectors, searchQuery, selectedMarket]);
 
-  const isLoading = etfLoading || valLoading;
-  const error = etfError ?? valError;
+  const isLoading = etfLoading || kosdaqLoading || valLoading;
+  const error = etfError ?? kosdaqError ?? valError;
 
   // ── 전체 종목 행 생성 ─────────────────────────────────────────────────────
   const allRows = useMemo<StockRow[]>(() => {
     if (!etfList || !holdings || !valuation) return [];
-    return buildStockRows(etfList.sectors, holdings.holdings, valuation.stocks);
-  }, [etfList, holdings, valuation]);
+    const kosdaqSectors = kosdaqEtfList?.sectors ?? [];
+    return buildStockRows(etfList.sectors, kosdaqSectors, holdings.holdings, valuation.stocks);
+  }, [etfList, kosdaqEtfList, holdings, valuation]);
 
   // ── 필터 적용 ─────────────────────────────────────────────────────────────
   const filteredRows = useMemo(() => {
     return allRows.filter((row) => {
+      // 시장 필터
+      if (selectedMarket === 'kospi' && row.market !== 'KOSPI') return false;
+      if (selectedMarket === 'kosdaq' && row.market !== 'KOSDAQ') return false;
+
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         if (!row.name.toLowerCase().includes(q) && !row.ticker.includes(q)) return false;
@@ -183,7 +206,7 @@ function StocksPageContent() {
 
       return true;
     });
-  }, [allRows, searchQuery, selectedSectors, perRange, pbrRange]);
+  }, [allRows, searchQuery, selectedSectors, perRange, pbrRange, selectedMarket]);
 
   // ── 정렬 적용 ─────────────────────────────────────────────────────────────
   const sortedRows = useMemo(() => {
@@ -254,7 +277,7 @@ function StocksPageContent() {
       avgPer,
       avgPbr,
     };
-  }, [allRows.length, filteredRows]);
+  }, [allRows, filteredRows]);
 
   const handleSort = (field: SortField) => {
     setSort(field);
@@ -266,7 +289,7 @@ function StocksPageContent() {
       <div className="mb-6">
         <h1 className="text-2xl font-bold tracking-tight">전체 종목 탐색</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          KOSPI 섹터 ETF 보유종목을 통합하여 PER/PBR 기반으로 필터링합니다.
+          KOSPI · KOSDAQ 섹터 ETF 보유종목을 통합하여 PER/PBR 기반으로 검색·필터링합니다.
         </p>
       </div>
 

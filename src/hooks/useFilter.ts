@@ -6,7 +6,7 @@
  */
 
 import { useFilterStore } from '@/store/filter-store';
-import type { FilterState, RangeFilter, SortField, SortDirection } from '@/types/filter';
+import type { FilterState, RangeFilter, SortField, SortDirection, MarketFilter } from '@/types/filter';
 
 export interface UseFilterResult {
   // 상태
@@ -16,12 +16,14 @@ export interface UseFilterResult {
   selectedSectors: FilterState['selectedSectors'];
   searchQuery: FilterState['searchQuery'];
   sort: FilterState['sort'];
+  selectedMarket: FilterState['selectedMarket'];
   // 액션
   setPerRange: (range: RangeFilter) => void;
   setPbrRange: (range: RangeFilter) => void;
   setSelectedSectors: (sectors: string[]) => void;
   setSearchQuery: (query: string) => void;
   setSort: (field: SortField, direction?: SortDirection) => void;
+  setSelectedMarket: (market: MarketFilter) => void;
   resetFilter: () => void;
 }
 
@@ -35,11 +37,13 @@ export function useFilter(): UseFilterResult {
     selectedSectors: store.selectedSectors,
     searchQuery: store.searchQuery,
     sort: store.sort,
+    selectedMarket: store.selectedMarket,
 
     setPerRange: store.setPerRange,
     setPbrRange: store.setPbrRange,
     setSelectedSectors: store.setSelectedSectors,
     setSearchQuery: store.setSearchQuery,
+    setSelectedMarket: store.setSelectedMarket,
 
     setSort: (field, direction) =>
       store.setSort({

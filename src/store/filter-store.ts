@@ -4,7 +4,7 @@
  */
 
 import { create } from 'zustand';
-import type { FilterState, RangeFilter, SortOption } from '@/types/filter';
+import type { FilterState, RangeFilter, SortOption, MarketFilter } from '@/types/filter';
 import { DEFAULT_FILTER_STATE } from '@/types/filter';
 
 interface FilterStore extends FilterState {
@@ -20,6 +20,8 @@ interface FilterStore extends FilterState {
   setSearchQuery: (query: string) => void;
   /** 정렬 옵션을 업데이트한다 */
   setSort: (sort: SortOption) => void;
+  /** 시장 필터를 업데이트한다 */
+  setSelectedMarket: (market: MarketFilter) => void;
   /** 모든 필터를 기본값으로 초기화한다 */
   resetFilter: () => void;
 }
@@ -38,6 +40,8 @@ export const useFilterStore = create<FilterStore>((set) => ({
   setSearchQuery: (query) => set({ searchQuery: query }),
 
   setSort: (sort) => set({ sort }),
+
+  setSelectedMarket: (market) => set({ selectedMarket: market }),
 
   resetFilter: () => set(DEFAULT_FILTER_STATE),
 }));
