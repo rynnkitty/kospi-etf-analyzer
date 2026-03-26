@@ -5,6 +5,7 @@ import type { ScatterPoint } from '@/app/page';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { getPERGrade, getPBRGrade } from '@/lib/valuation-utils';
 import { SECTOR_MAP } from '@/constants/sectors';
+import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
 
 // ─── 타입 ─────────────────────────────────────────────────────────────────────
 
@@ -144,7 +145,7 @@ export function ValueFilterPanel({ points }: ValueFilterPanelProps) {
           </thead>
           <tbody>
             {candidates.map((c) => {
-              const sector = SECTOR_MAP[c.sector_code];
+              const sector = SECTOR_MAP[c.sector_code] ?? KOSDAQ_SECTOR_MAP[c.sector_code];
               return (
                 <tr key={c.ticker} className="border-b last:border-0 hover:bg-muted/20 transition-colors">
                   {/* 순위 */}

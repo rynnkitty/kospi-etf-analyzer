@@ -21,6 +21,7 @@ from config import (
     NAVER_HEADERS,
     OUTPUT_DIR,
     SECTOR_ETFS,
+    KOSDAQ_SECTOR_ETFS,
     REQUEST_DELAY_SEC,
     MAX_RETRY,
     HOLDINGS_TOP_N,
@@ -134,17 +135,18 @@ def parse_holdings(soup: BeautifulSoup, top_n: int = HOLDINGS_TOP_N) -> list[dic
 
 
 def load_etf_name_map() -> dict[str, str]:
-    """etf-list.json에서 {ticker: name} 맵 로드 (없으면 빈 dict)"""
-    path = os.path.join(OUTPUT_DIR, "etf-list.json")
-    if not os.path.exists(path):
-        logger.warning("etf-list.json 없음 — ETF 이름을 티커로 대체합니다")
-        return {}
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
+    """etf-list.json + kosdaq-etf-list.json에서 {ticker: name} 맵 로드"""
     result: dict[str, str] = {}
-    for sector in data.get("sectors", []):
-        for etf in sector.get("etfs", []):
-            result[etf["ticker"]] = etf["name"]
+    for filename in ("etf-list.json", "kosdaq-etf-list.json"):
+        path = os.path.join(OUTPUT_DIR, filename)
+        if not os.path.exists(path):
+            logger.warning("%s 없음 — ETF 이름을 티커로 대체합니다", filename)
+            continue
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        for sector in data.get("sectors", []):
+            for etf in sector.get("etfs", []):
+                result[etf["ticker"]] = etf["name"]
     return result
 
 
@@ -163,8 +165,10 @@ def main() -> None:
         session = requests.Session()
         holdings_output: dict[str, dict] = {}
 
+        # KOSPI + KOSDAQ ETF 통합 수집
         all_tickers = sorted(
             set(t for tickers in SECTOR_ETFS.values() for t in tickers)
+            | set(t for tickers in KOSDAQ_SECTOR_ETFS.values() for t in tickers)
         )
         total = len(all_tickers)
 

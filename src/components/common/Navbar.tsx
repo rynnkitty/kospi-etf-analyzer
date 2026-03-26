@@ -8,7 +8,8 @@ import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
-  { href: '/', label: '대시보드' },
+  { href: '/', label: 'KOSPI' },
+  { href: '/kosdaq', label: 'KOSDAQ' },
   { href: '/stocks', label: '종목 탐색' },
 ] as const;
 
@@ -32,7 +33,7 @@ export function Navbar() {
           >
             <BarChart3 className="h-[18px] w-[18px] text-blue-600 shrink-0" />
             <span className="text-sm font-semibold tracking-tight text-foreground">
-              KOSPI ETF
+              KRX ETF
             </span>
             <span className="hidden sm:inline text-sm font-normal text-muted-foreground">
               Analyzer

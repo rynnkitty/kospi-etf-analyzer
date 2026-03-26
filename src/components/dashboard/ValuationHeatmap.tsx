@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import { useTheme } from 'next-themes';
 import { SECTORS } from '@/constants/sectors';
+import { KOSDAQ_SECTORS } from '@/constants/kosdaq-sectors';
 import type { ScatterPoint } from '@/app/page';
 
 // ─── 타입 ─────────────────────────────────────────────────────────────────────
@@ -93,7 +94,7 @@ export function ValuationHeatmap({ data }: ValuationHeatmapProps) {
         <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />
         <Legend />
 
-        {SECTORS.map((sector) => {
+        {[...SECTORS, ...KOSDAQ_SECTORS].map((sector) => {
           const points = dataByCode.get(sector.code);
           if (!points?.length) return null;
           return (

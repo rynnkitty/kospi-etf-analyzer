@@ -139,9 +139,49 @@ SECTOR_ETFS: dict[str, list[str]] = {
     ],
 }
 
-# 모든 ETF 티커 (중복 제거, 편의용)
+# 모든 KOSPI ETF 티커 (중복 제거, 편의용)
 ALL_ETF_TICKERS: list[str] = sorted(
     set(ticker for tickers in SECTOR_ETFS.values() for ticker in tickers)
+)
+
+# ──────────────────────────────────────────────
+# KOSDAQ 섹터 코드 → 섹터명 매핑 (KOSDAQ150 기반)
+# ──────────────────────────────────────────────
+KOSDAQ_SECTORS = {
+    "KQ_IT": "IT",
+    "KQ_BIO": "바이오/헬스케어",
+    "KQ_MEDIA": "미디어/엔터",
+    "KQ_CONSUMER": "소비재",
+    "KQ_BROAD": "KOSDAQ 150",
+}
+
+# ──────────────────────────────────────────────
+# KOSDAQ 섹터별 대표 ETF 티커 매핑
+# ──────────────────────────────────────────────
+KOSDAQ_SECTOR_ETFS: dict[str, list[str]] = {
+    "KQ_IT": [
+        "315960",   # KODEX KOSDAQ150 IT
+    ],
+    "KQ_BIO": [
+        "315930",   # KODEX KOSDAQ150 헬스케어
+        "289070",   # TIGER KOSDAQ바이오
+    ],
+    "KQ_MEDIA": [
+        "315940",   # KODEX KOSDAQ150 미디어&엔터테인먼트
+    ],
+    "KQ_CONSUMER": [
+        "315950",   # KODEX KOSDAQ150 소비재
+    ],
+    "KQ_BROAD": [
+        "229200",   # TIGER KOSDAQ150
+        "232080",   # KOSEF KOSDAQ150
+        "261240",   # KODEX KOSDAQ150
+    ],
+}
+
+# 모든 KOSDAQ ETF 티커 (중복 제거, 편의용)
+ALL_KOSDAQ_ETF_TICKERS: list[str] = sorted(
+    set(ticker for tickers in KOSDAQ_SECTOR_ETFS.values() for ticker in tickers)
 )
 
 # ──────────────────────────────────────────────

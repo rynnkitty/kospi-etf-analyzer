@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { getPERGrade, getPBRGrade } from '@/lib/valuation-utils';
 import { SECTOR_MAP } from '@/constants/sectors';
+import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
 
 // ─── 타입 ─────────────────────────────────────────────────────────────────────
 
@@ -13,19 +14,21 @@ interface SectorCardProps {
   etfCount: number;
   avgPer: number | null;
   avgPbr: number | null;
+  /** false로 설정하면 클릭 시 섹터 상세 페이지로 이동하지 않음 */
+  navigable?: boolean;
 }
 
 // ─── 컴포넌트 ─────────────────────────────────────────────────────────────────
 
-export function SectorCard({ sectorCode, etfCount, avgPer, avgPbr }: SectorCardProps) {
+export function SectorCard({ sectorCode, etfCount, avgPer, avgPbr, navigable = true }: SectorCardProps) {
   const router = useRouter();
-  const sector = SECTOR_MAP[sectorCode];
+  const sector = SECTOR_MAP[sectorCode] ?? KOSDAQ_SECTOR_MAP[sectorCode];
   if (!sector) return null;
 
   return (
     <Card
-      className="cursor-pointer hover:ring-2 hover:ring-primary/50 transition-shadow"
-      onClick={() => router.push(`/sector/${sectorCode}`)}
+      className={navigable ? 'cursor-pointer hover:ring-2 hover:ring-primary/50 transition-shadow' : undefined}
+      onClick={navigable ? () => router.push(`/sector/${sectorCode}`) : undefined}
     >
       <CardHeader>
         <div className="flex items-center gap-2">

@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import { useTheme } from 'next-themes';
 import { SECTOR_MAP } from '@/constants/sectors';
+import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
 import type { SectorStats } from '@/app/page';
 
 // ─── 타입 ─────────────────────────────────────────────────────────────────────
@@ -27,12 +28,15 @@ export function SectorCompareChart({ data }: SectorCompareChartProps) {
   const { resolvedTheme } = useTheme();
   const tickColor = resolvedTheme === 'dark' ? '#9ca3af' : '#6b7280';
 
-  const chartData = data.map((s) => ({
-    name: SECTOR_MAP[s.sector_code]?.name ?? s.sector_code,
-    per: s.avg_per !== null ? +s.avg_per.toFixed(1) : null,
-    pbr: s.avg_pbr !== null ? +s.avg_pbr.toFixed(2) : null,
-    colorHex: SECTOR_MAP[s.sector_code]?.colorHex ?? '#888888',
-  }));
+  const chartData = data.map((s) => {
+    const config = SECTOR_MAP[s.sector_code] ?? KOSDAQ_SECTOR_MAP[s.sector_code];
+    return {
+      name: config?.name ?? s.sector_code,
+      per: s.avg_per !== null ? +s.avg_per.toFixed(1) : null,
+      pbr: s.avg_pbr !== null ? +s.avg_pbr.toFixed(2) : null,
+      colorHex: config?.colorHex ?? '#888888',
+    };
+  });
 
   return (
     <div className="h-[200px] sm:h-[280px] lg:h-[320px]">

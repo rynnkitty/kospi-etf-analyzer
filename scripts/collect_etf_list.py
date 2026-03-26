@@ -19,6 +19,8 @@ from config import (
     OUTPUT_DIR,
     SECTORS,
     SECTOR_ETFS,
+    KOSDAQ_SECTORS,
+    KOSDAQ_SECTOR_ETFS,
     REQUEST_DELAY_SEC,
     MAX_RETRY,
 )
@@ -96,6 +98,48 @@ def infer_provider(name: str) -> str:
     return "기타"
 
 
+def build_kosdaq_output(etf_map: dict[str, dict]) -> dict:
+    """NAVER ETF 데이터 + config KOSDAQ 섹터 매핑 → kosdaq-etf-list.json 스키마"""
+    sectors_output = []
+    matched_total = 0
+
+    for sector_code, sector_name in KOSDAQ_SECTORS.items():
+        etf_tickers = KOSDAQ_SECTOR_ETFS.get(sector_code, [])
+        etfs_output = []
+
+        for ticker in etf_tickers:
+            if ticker not in etf_map:
+                logger.warning(
+                    "KOSDAQ 섹터 %s(%s): ETF %s — NAVER 목록에서 찾을 수 없음",
+                    sector_code, sector_name, ticker,
+                )
+                continue
+
+            info = etf_map[ticker]
+            name = info["name"]
+            etfs_output.append({
+                "ticker": ticker,
+                "name": name,
+                "provider": infer_provider(name),
+                "nav": info.get("nav"),
+                "return_1m": None,
+                "return_3m": info.get("three_month_earn_rate"),
+            })
+            matched_total += 1
+
+        sectors_output.append({
+            "sector_code": sector_code,
+            "sector_name": sector_name,
+            "etfs": etfs_output,
+        })
+
+    logger.info("KOSDAQ 섹터 %d개, ETF %d개 매핑 완료", len(sectors_output), matched_total)
+    return {
+        "updated_at": datetime.now(KST).isoformat(timespec="seconds"),
+        "sectors": sectors_output,
+    }
+
+
 def build_output(etf_map: dict[str, dict]) -> dict:
     """NAVER ETF 데이터 + config 섹터 매핑 → etf-list.json 스키마"""
     sectors_output = []
@@ -159,6 +203,15 @@ def main() -> None:
         ))
 
         save_json(output, "etf-list.json")
+
+        # KOSDAQ ETF 목록 생성
+        kosdaq_output = build_kosdaq_output(etf_map)
+        total_kosdaq_etfs = sum(len(s["etfs"]) for s in kosdaq_output["sectors"])
+        logger.info("KOSDAQ 수집 ETF 수: %d / 전체 설정 %d", total_kosdaq_etfs, len(
+            set(t for tl in KOSDAQ_SECTOR_ETFS.values() for t in tl)
+        ))
+        save_json(kosdaq_output, "kosdaq-etf-list.json")
+
         logger.info("=== ETF 목록 수집 완료 ===")
     except Exception as exc:
         logger.error("수집 실패: %s", exc, exc_info=True)
