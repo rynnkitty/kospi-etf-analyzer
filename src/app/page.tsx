@@ -26,8 +26,11 @@ export interface ScatterPoint {
   sector_code: string;
   per: number;
   pbr: number;
+  close: number;
   market_cap: number | null;
   dividend_yield: number | null;
+  roe: number | null;
+  debt_ratio: number | null;
 }
 
 // ─── 계산 함수 ────────────────────────────────────────────────────────────────
@@ -93,8 +96,11 @@ function computeScatterPoints(
             sector_code: sector.sector_code,
             per: stock.per,
             pbr: stock.pbr as number,
+            close: stock.close,
             market_cap: stock.market_cap,
             dividend_yield: stock.dividend_yield ?? null,
+            roe: stock.roe ?? null,
+            debt_ratio: stock.debt_ratio ?? null,
           });
         }
       }

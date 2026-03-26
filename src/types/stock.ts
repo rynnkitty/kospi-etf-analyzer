@@ -35,6 +35,10 @@ export interface StockValuation {
   bps: number | null;
   /** 배당수익률 (%) */
   dividend_yield: number | null;
+  /** 자기자본이익률 (Return on Equity, %) — null이면 데이터 없음 (ETF 등) */
+  roe: number | null;
+  /** 부채비율 (Debt-to-Equity Ratio, %) — null이면 데이터 없음 */
+  debt_ratio: number | null;
 }
 
 /** stock-valuation.json 루트 구조 */

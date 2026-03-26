@@ -75,8 +75,11 @@ function computeKosdaqScatterPoints(
             sector_code: sector.sector_code,
             per: stock.per,
             pbr: stock.pbr as number,
+            close: stock.close,
             market_cap: stock.market_cap,
             dividend_yield: stock.dividend_yield ?? null,
+            roe: stock.roe ?? null,
+            debt_ratio: stock.debt_ratio ?? null,
           });
         }
       }

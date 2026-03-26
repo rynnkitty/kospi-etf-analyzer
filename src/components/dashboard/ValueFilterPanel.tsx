@@ -18,7 +18,10 @@ interface ValueCandidate {
   pbr: number;
   graham: number;   // PER × PBR
   score: number;    // 복합 점수 (낮을수록 좋음)
+  close: number;
   dividend_yield: number | null;
+  roe: number | null;
+  debt_ratio: number | null;
 }
 
 interface ValueFilterPanelProps {
@@ -75,7 +78,10 @@ function computeKospiCandidates(points: ScatterPoint[]): ValueCandidate[] {
     pbr: p.pbr,
     graham: parseFloat((p.per * p.pbr).toFixed(2)),
     score: 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50),
+    close: p.close,
     dividend_yield: p.dividend_yield,
+    roe: p.roe,
+    debt_ratio: p.debt_ratio,
   }));
 
   // 점수 오름차순 정렬 → TOP N
@@ -110,7 +116,10 @@ function computeKosdaqCandidates(points: ScatterPoint[]): ValueCandidate[] {
     pbr: p.pbr,
     graham: parseFloat((p.per * p.pbr).toFixed(2)),
     score: 0.5 * (perRankMap.get(p.ticker) ?? 50) + 0.5 * (pbrRankMap.get(p.ticker) ?? 50),
+    close: p.close,
     dividend_yield: p.dividend_yield,
+    roe: p.roe,
+    debt_ratio: p.debt_ratio,
   }));
 
   candidates.sort((a, b) => a.score - b.score);
@@ -193,9 +202,12 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground w-8">#</th>
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground">종목명</th>
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground">섹터</th>
+              <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">현재가</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">PER</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">PBR</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">PER×PBR</th>
+              <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">ROE</th>
+              <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">부채비율</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">배당률</th>
               <th className="px-3 py-2.5 text-right text-xs font-medium text-muted-foreground">복합점수</th>
             </tr>
@@ -239,6 +251,13 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
                     )}
                   </td>
 
+                  {/* 현재가 */}
+                  <td className="px-3 py-2.5 text-right">
+                    <span className="text-xs tabular-nums">
+                      {c.close.toLocaleString('ko-KR')}원
+                    </span>
+                  </td>
+
                   {/* PER */}
                   <td className="px-3 py-2.5 text-right">
                     <ValueBadge grade={getPERGrade(c.per)} value={c.per} metric="PER" />
@@ -262,6 +281,44 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
                     >
                       {c.graham.toFixed(1)}
                     </span>
+                  </td>
+
+                  {/* ROE */}
+                  <td className="px-3 py-2.5 text-right">
+                    {c.roe != null ? (
+                      <span
+                        className={
+                          c.roe >= 15
+                            ? 'text-xs font-medium text-emerald-600'
+                            : c.roe >= 8
+                            ? 'text-xs text-foreground'
+                            : 'text-xs text-muted-foreground'
+                        }
+                      >
+                        {c.roe.toFixed(1)}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">-</span>
+                    )}
+                  </td>
+
+                  {/* 부채비율 */}
+                  <td className="px-3 py-2.5 text-right">
+                    {c.debt_ratio != null ? (
+                      <span
+                        className={
+                          c.debt_ratio > 200
+                            ? 'text-xs font-medium text-red-500'
+                            : c.debt_ratio > 100
+                            ? 'text-xs text-amber-600'
+                            : 'text-xs text-muted-foreground'
+                        }
+                      >
+                        {c.debt_ratio.toFixed(0)}%
+                      </span>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">-</span>
+                    )}
                   </td>
 
                   {/* 배당률 */}
