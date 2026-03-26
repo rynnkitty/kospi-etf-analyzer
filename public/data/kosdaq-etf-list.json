@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-26T00:00:00+09:00",
+  "updated_at": "2026-03-26T10:11:36+09:00",
   "sectors": [
     {
       "sector_code": "KQ_IT",
@@ -7,11 +7,11 @@
       "etfs": [
         {
           "ticker": "315960",
-          "name": "KODEX KOSDAQ150 IT",
-          "provider": "삼성자산운용",
-          "nav": null,
+          "name": "RISE 대형고배당10TR",
+          "provider": "기타",
+          "nav": 56702.0,
           "return_1m": null,
-          "return_3m": null
+          "return_3m": 53.9372
         }
       ]
     },
@@ -21,49 +21,23 @@
       "etfs": [
         {
           "ticker": "315930",
-          "name": "KODEX KOSDAQ150 헬스케어",
+          "name": "KODEX Top5PlusTR",
           "provider": "삼성자산운용",
-          "nav": null,
+          "nav": 59744.0,
           "return_1m": null,
-          "return_3m": null
-        },
-        {
-          "ticker": "289070",
-          "name": "TIGER KOSDAQ바이오",
-          "provider": "미래에셋자산운용",
-          "nav": null,
-          "return_1m": null,
-          "return_3m": null
+          "return_3m": 47.9815
         }
       ]
     },
     {
       "sector_code": "KQ_MEDIA",
       "sector_name": "미디어/엔터",
-      "etfs": [
-        {
-          "ticker": "315940",
-          "name": "KODEX KOSDAQ150 미디어&엔터테인먼트",
-          "provider": "삼성자산운용",
-          "nav": null,
-          "return_1m": null,
-          "return_3m": null
-        }
-      ]
+      "etfs": []
     },
     {
       "sector_code": "KQ_CONSUMER",
       "sector_name": "소비재",
-      "etfs": [
-        {
-          "ticker": "315950",
-          "name": "KODEX KOSDAQ150 소비재",
-          "provider": "삼성자산운용",
-          "nav": null,
-          "return_1m": null,
-          "return_3m": null
-        }
-      ]
+      "etfs": []
     },
     {
       "sector_code": "KQ_BROAD",
@@ -71,27 +45,27 @@
       "etfs": [
         {
           "ticker": "229200",
-          "name": "TIGER KOSDAQ150",
-          "provider": "미래에셋자산운용",
-          "nav": null,
+          "name": "KODEX 코스닥150",
+          "provider": "삼성자산운용",
+          "nav": 20348.0,
           "return_1m": null,
-          "return_3m": null
+          "return_3m": 31.8897
         },
         {
           "ticker": "232080",
-          "name": "KOSEF KOSDAQ150",
-          "provider": "키움투자자산운용",
-          "nav": null,
+          "name": "TIGER 코스닥150",
+          "provider": "미래에셋자산운용",
+          "nav": 20747.0,
           "return_1m": null,
-          "return_3m": null
+          "return_3m": 31.9935
         },
         {
           "ticker": "261240",
-          "name": "KODEX KOSDAQ150",
+          "name": "KODEX 미국달러선물",
           "provider": "삼성자산운용",
-          "nav": null,
+          "nav": 15365.0,
           "return_1m": null,
-          "return_3m": null
+          "return_3m": 4.0193
         }
       ]
     }
