@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import type { ScatterPoint } from '@/app/page';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { getPERGrade, getPBRGrade } from '@/lib/valuation-utils';
@@ -202,6 +203,7 @@ function computeKosdaqCandidates(points: ScatterPoint[]): ValueCandidate[] {
 // ─── 컴포넌트 ─────────────────────────────────────────────────────────────────
 
 export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanelProps) {
+  const router = useRouter();
   const [showInfo, setShowInfo] = useState(false);
 
   const candidates = useMemo(
@@ -289,7 +291,7 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
             {candidates.map((c) => {
               const sector = SECTOR_MAP[c.sector_code] ?? KOSDAQ_SECTOR_MAP[c.sector_code];
               return (
-                <tr key={c.ticker} className="border-b last:border-0 hover:bg-muted/20 transition-colors">
+                <tr key={c.ticker} onClick={() => router.push(`/stocks/${c.ticker}`)} className="border-b last:border-0 hover:bg-muted/20 transition-colors cursor-pointer">
                   {/* 순위 */}
                   <td className="px-3 py-2.5">
                     <span

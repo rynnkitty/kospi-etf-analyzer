@@ -43,12 +43,17 @@ jobs:
         working-directory: scripts
         run: python collect_valuation.py
 
-      # ── 4단계: 데이터 검증 + metadata.json 생성 ──────────────────
+      # ── 4단계: 일별 히스토리 스냅샷 저장 ───────────────────────
+      - name: Save daily history snapshot
+        working-directory: scripts
+        run: python save_history.py
+
+      # ── 5단계: 데이터 검증 + metadata.json 생성 ──────────────────
       - name: Merge and validate data
         working-directory: scripts
         run: python merge_data.py
 
-      # ── 5단계: 변경된 JSON 파일 커밋 및 푸시 ────────────────────
+      # ── 6단계: 변경된 JSON 파일 커밋 및 푸시 ────────────────────
       - name: Commit data files
         id: commit
         run: |
@@ -65,7 +70,7 @@ jobs:
             echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # ── 6단계: 데이터 변경 시 배포 워크플로우 트리거 ───────────
+      # ── 7단계: 데이터 변경 시 배포 워크플로우 트리거 ───────────
       - name: Trigger deploy workflow
         if: steps.commit.outputs.pushed == 'true'
         run: gh workflow run deploy.yml --ref main

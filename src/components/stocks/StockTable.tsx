@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Building2, ChevronDown, ChevronUp, ChevronsUpDown } from 'lucide-react';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { SECTOR_MAP } from '@/constants/sectors';
@@ -101,6 +102,7 @@ export function StockTable({
   onPageChange,
   pageSize = 50,
 }: StockTableProps) {
+  const router = useRouter();
   const totalPages = Math.ceil(rows.length / pageSize);
   const start = (page - 1) * pageSize;
   const pageRows = rows.slice(start, start + pageSize);
@@ -215,7 +217,8 @@ export function StockTable({
               pageRows.map((row) => (
                 <tr
                   key={row.ticker}
-                  className="border-b last:border-0 hover:bg-muted/30 transition-colors"
+                  onClick={() => router.push(`/stocks/${row.ticker}`)}
+                  className="border-b last:border-0 hover:bg-muted/30 transition-colors cursor-pointer"
                 >
                   {/* 종목명 */}
                   <td className="px-3 py-2.5 font-medium">{row.name}</td>
