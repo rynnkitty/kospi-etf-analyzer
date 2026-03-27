@@ -281,68 +281,46 @@ export default function StockDetailClient({ ticker }: { ticker: string }) {
               </ResponsiveContainer>
             </div>
 
-            {/* ── 히스토리 테이블 ── */}
+            {/* ── 히스토리 리스트 ── */}
             <div className="rounded-xl border bg-card overflow-hidden">
               <div className="px-4 py-3 border-b bg-muted/30">
                 <h3 className="text-sm font-semibold">기간별 데이터</h3>
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full text-xs">
-                  <thead>
-                    <tr className="border-b bg-muted/20">
-                      <th className="px-3 py-2.5 text-left text-muted-foreground font-medium whitespace-nowrap">날짜</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">종가</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">PER</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">PBR</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">EPS</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">BPS</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">ROE</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">부채비율</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">배당수익률</th>
-                      <th className="px-3 py-2.5 text-right text-muted-foreground font-medium">시가총액</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[...history].reverse().map((snap, idx) => {
-                      const prev = [...history].reverse()[idx + 1];
-                      return (
-                        <tr key={snap.date} className="border-b last:border-0 hover:bg-muted/20 transition-colors">
-                          <td className="px-3 py-2 font-mono text-muted-foreground whitespace-nowrap">{snap.date}</td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            <div>{snap.close != null ? `${formatNumber(snap.close)}원` : '—'}</div>
-                            {prev && <ChangeBadge current={snap.close} previous={prev.close} />}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            <div>{snap.per != null ? `${snap.per.toFixed(2)}` : '—'}</div>
-                            {prev && <ChangeBadge current={snap.per} previous={prev.per} />}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            <div>{snap.pbr != null ? `${snap.pbr.toFixed(2)}` : '—'}</div>
-                            {prev && <ChangeBadge current={snap.pbr} previous={prev.pbr} />}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.eps != null ? formatNumber(snap.eps) : '—'}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.bps != null ? formatNumber(snap.bps) : '—'}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.roe != null ? `${snap.roe.toFixed(2)}%` : '—'}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.debt_ratio != null ? `${snap.debt_ratio.toFixed(1)}%` : '—'}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.dividend_yield != null ? `${snap.dividend_yield.toFixed(2)}%` : '—'}
-                          </td>
-                          <td className="px-3 py-2 text-right tabular-nums">
-                            {snap.market_cap != null ? formatMarketCap(snap.market_cap) : '—'}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+              <div className="divide-y">
+                {[...history].reverse().map((snap, idx) => {
+                  const prev = [...history].reverse()[idx + 1];
+                  const metrics: { label: string; value: string | null; current: number | null; previous: number | null }[] = [
+                    { label: '종가', value: snap.close != null ? `${formatNumber(snap.close)}원` : null, current: snap.close ?? null, previous: prev?.close ?? null },
+                    { label: 'PER', value: snap.per != null ? `${snap.per.toFixed(2)}배` : null, current: snap.per ?? null, previous: prev?.per ?? null },
+                    { label: 'PBR', value: snap.pbr != null ? `${snap.pbr.toFixed(2)}배` : null, current: snap.pbr ?? null, previous: prev?.pbr ?? null },
+                    { label: 'EPS', value: snap.eps != null ? `${formatNumber(snap.eps)}원` : null, current: snap.eps ?? null, previous: prev?.eps ?? null },
+                    { label: 'BPS', value: snap.bps != null ? `${formatNumber(snap.bps)}원` : null, current: snap.bps ?? null, previous: prev?.bps ?? null },
+                    { label: 'ROE', value: snap.roe != null ? `${snap.roe.toFixed(2)}%` : null, current: snap.roe ?? null, previous: prev?.roe ?? null },
+                    { label: '부채비율', value: snap.debt_ratio != null ? `${snap.debt_ratio.toFixed(1)}%` : null, current: snap.debt_ratio ?? null, previous: prev?.debt_ratio ?? null },
+                    { label: '배당수익률', value: snap.dividend_yield != null ? `${snap.dividend_yield.toFixed(2)}%` : null, current: snap.dividend_yield ?? null, previous: prev?.dividend_yield ?? null },
+                    { label: '시가총액', value: snap.market_cap != null ? formatMarketCap(snap.market_cap) : null, current: snap.market_cap ?? null, previous: prev?.market_cap ?? null },
+                  ];
+                  return (
+                    <div key={snap.date} className="px-4 py-3 hover:bg-muted/20 transition-colors">
+                      <p className="text-xs font-mono text-muted-foreground mb-2.5">{snap.date}</p>
+                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-4 gap-y-2.5">
+                        {metrics.map((m) => (
+                          <div key={m.label} className="min-w-0">
+                            <p className="text-[10px] text-muted-foreground leading-none mb-1">{m.label}</p>
+                            <p className="text-xs font-semibold tabular-nums leading-none mb-1">
+                              {m.value ?? '—'}
+                            </p>
+                            {prev ? (
+                              <ChangeBadge current={m.current} previous={m.previous} />
+                            ) : (
+                              <span className="text-[10px] text-muted-foreground/40">—</span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </>
