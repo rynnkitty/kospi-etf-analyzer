@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Building2, ChevronDown, ChevronUp, ChevronsUpDown } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ChevronsUpDown, Star } from 'lucide-react';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { SECTOR_MAP } from '@/constants/sectors';
 import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
@@ -13,6 +13,7 @@ import {
   formatPercent,
 } from '@/lib/valuation-utils';
 import { cn } from '@/lib/utils';
+import { useFavoritesStore } from '@/store/favorites-store';
 import type { SortField, SortDirection } from '@/types/filter';
 import type { StockValuation } from '@/types/stock';
 
@@ -103,6 +104,7 @@ export function StockTable({
   pageSize = 50,
 }: StockTableProps) {
   const router = useRouter();
+  const { toggle, has } = useFavoritesStore();
   const totalPages = Math.ceil(rows.length / pageSize);
   const start = (page - 1) * pageSize;
   const pageRows = rows.slice(start, start + pageSize);
@@ -124,6 +126,7 @@ export function StockTable({
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b bg-muted/40">
+              <th className="w-8 px-2 py-2.5" aria-label="즐겨찾기" />
               <Th
                 field="name"
                 label="종목명"
@@ -207,7 +210,7 @@ export function StockTable({
             {pageRows.length === 0 ? (
               <tr>
                 <td
-                  colSpan={11}
+                  colSpan={12}
                   className="py-16 text-center text-sm text-muted-foreground"
                 >
                   검색 결과가 없습니다.
@@ -220,6 +223,24 @@ export function StockTable({
                   onClick={() => router.push(`/stocks/${row.ticker}`)}
                   className="border-b last:border-0 hover:bg-muted/30 transition-colors cursor-pointer"
                 >
+                  {/* 즐겨찾기 버튼 */}
+                  <td
+                    className="px-2 py-2.5"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggle(row.ticker);
+                    }}
+                  >
+                    <Star
+                      className={cn(
+                        'h-3.5 w-3.5 transition-colors',
+                        has(row.ticker)
+                          ? 'fill-yellow-400 text-yellow-400'
+                          : 'text-muted-foreground/30 hover:text-yellow-400'
+                      )}
+                    />
+                  </td>
+
                   {/* 종목명 */}
                   <td className="px-3 py-2.5 font-medium">{row.name}</td>
 

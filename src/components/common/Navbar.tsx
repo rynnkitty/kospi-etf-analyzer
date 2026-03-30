@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BarChart3, Menu, X, Sun, Moon } from 'lucide-react';
+import { BarChart3, Menu, X, Sun, Moon, Star } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
+import { useFavoritesStore } from '@/store/favorites-store';
 
 const NAV_LINKS = [
   { href: '/', label: 'KOSPI' },
@@ -18,6 +19,7 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
+  const favoriteCount = useFavoritesStore((s) => s.favorites.length);
 
   useEffect(() => setMounted(true), []);
 
@@ -58,8 +60,31 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* 우측: 테마 토글 + 모바일 햄버거 */}
+          {/* 우측: 즐겨찾기 + 테마 토글 + 모바일 햄버거 */}
           <div className="flex items-center gap-1">
+            {/* 즐겨찾기 링크 */}
+            <Link
+              href="/favorites"
+              className={cn(
+                'relative rounded-md p-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                pathname === '/favorites'
+                  ? 'text-yellow-500'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+              )}
+              aria-label="즐겨찾기"
+            >
+              <Star
+                className={cn(
+                  'h-4 w-4',
+                  pathname === '/favorites' ? 'fill-yellow-400 text-yellow-400' : ''
+                )}
+              />
+              {mounted && favoriteCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-yellow-400 text-[9px] font-bold text-black leading-none">
+                  {favoriteCount > 99 ? '99+' : favoriteCount}
+                </span>
+              )}
+            </Link>
             {/* 테마 토글 */}
             <button
               type="button"
@@ -110,6 +135,24 @@ export function Navbar() {
                 {label}
               </Link>
             ))}
+            <Link
+              href="/favorites"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                'flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors',
+                pathname === '/favorites'
+                  ? 'bg-muted font-medium text-foreground'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/60'
+              )}
+            >
+              <Star className="h-3.5 w-3.5" />
+              즐겨찾기
+              {favoriteCount > 0 && (
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-yellow-400 text-[9px] font-bold text-black">
+                  {favoriteCount > 99 ? '99+' : favoriteCount}
+                </span>
+              )}
+            </Link>
           </nav>
         )}
       </div>
