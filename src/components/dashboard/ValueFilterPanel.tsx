@@ -2,11 +2,14 @@
 
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Star } from 'lucide-react';
 import type { ScatterPoint } from '@/app/page';
 import { ValueBadge } from '@/components/common/ValueBadge';
 import { getPERGrade, getPBRGrade } from '@/lib/valuation-utils';
 import { SECTOR_MAP } from '@/constants/sectors';
 import { KOSDAQ_SECTOR_MAP } from '@/constants/kosdaq-sectors';
+import { useFavoritesStore } from '@/store/favorites-store';
+import { cn } from '@/lib/utils';
 
 // ─── 타입 ─────────────────────────────────────────────────────────────────────
 
@@ -205,6 +208,7 @@ function computeKosdaqCandidates(points: ScatterPoint[]): ValueCandidate[] {
 export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanelProps) {
   const router = useRouter();
   const [showInfo, setShowInfo] = useState(false);
+  const { toggle, has } = useFavoritesStore();
 
   const candidates = useMemo(
     () => variant === 'kosdaq' ? computeKosdaqCandidates(points) : computeKospiCandidates(points),
@@ -273,6 +277,7 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b bg-muted/30">
+              <th className="w-8 px-2 py-2.5" aria-label="즐겨찾기" />
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground w-8">#</th>
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground">종목명</th>
               <th className="px-3 py-2.5 text-left text-xs font-medium text-muted-foreground">섹터</th>
@@ -292,6 +297,24 @@ export function ValueFilterPanel({ points, variant = 'kospi' }: ValueFilterPanel
               const sector = SECTOR_MAP[c.sector_code] ?? KOSDAQ_SECTOR_MAP[c.sector_code];
               return (
                 <tr key={c.ticker} onClick={() => router.push(`/stocks/${c.ticker}`)} className="border-b last:border-0 hover:bg-muted/20 transition-colors cursor-pointer">
+                  {/* 즐겨찾기 버튼 */}
+                  <td
+                    className="px-2 py-2.5"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggle(c.ticker);
+                    }}
+                  >
+                    <Star
+                      className={cn(
+                        'h-3.5 w-3.5 transition-colors',
+                        has(c.ticker)
+                          ? 'fill-yellow-400 text-yellow-400'
+                          : 'text-muted-foreground/30 hover:text-yellow-400'
+                      )}
+                    />
+                  </td>
+
                   {/* 순위 */}
                   <td className="px-3 py-2.5">
                     <span
