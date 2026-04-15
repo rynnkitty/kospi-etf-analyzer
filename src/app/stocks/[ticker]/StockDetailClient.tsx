@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState, useMemo } from 'react';
-import { ArrowLeft, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { useState, useMemo, useEffect } from 'react';
+import { ArrowLeft, TrendingUp, TrendingDown, Minus, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   LineChart,
   Line,
@@ -98,11 +98,17 @@ function ChangeBadge({ current, previous }: { current: number | null; previous: 
 export default function StockDetailClient({ ticker }: { ticker: string }) {
   const router = useRouter();
 
+  const PAGE_SIZE = 20;
+
   const [period, setPeriod] = useState<PeriodType>('daily');
   const [selectedMetric, setSelectedMetric] = useState<MetricDef>(METRICS[0]);
+  const [page, setPage] = useState(0);
 
   const { history, isLoading, error } = useStockHistory(ticker, period);
   const { valuation } = useValuation();
+
+  // 기간 변경 시 페이지 초기화
+  useEffect(() => { setPage(0); }, [period]);
 
   // 최신 종목 정보
   const stockInfo = valuation?.stocks?.[ticker];
@@ -123,6 +129,14 @@ export default function StockDetailClient({ ticker }: { ticker: string }) {
   // 최신/직전 값 (변화율 계산용)
   const latest = chartData[chartData.length - 1]?.value ?? null;
   const previous = chartData[chartData.length - 2]?.value ?? null;
+
+  // 테이블용: 최신순 정렬 + 페이지네이션
+  const reversedHistory = useMemo(() => [...history].reverse(), [history]);
+  const totalPages = Math.ceil(reversedHistory.length / PAGE_SIZE);
+  const pagedHistory = useMemo(
+    () => reversedHistory.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE),
+    [reversedHistory, page, PAGE_SIZE]
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -281,47 +295,114 @@ export default function StockDetailClient({ ticker }: { ticker: string }) {
               </ResponsiveContainer>
             </div>
 
-            {/* ── 히스토리 리스트 ── */}
+            {/* ── 히스토리 테이블 ── */}
             <div className="rounded-xl border bg-card overflow-hidden">
-              <div className="px-4 py-3 border-b bg-muted/30">
+              {/* 헤더 */}
+              <div className="px-4 py-3 border-b bg-muted/30 flex items-center justify-between">
                 <h3 className="text-sm font-semibold">기간별 데이터</h3>
+                <span className="text-xs text-muted-foreground">
+                  전체 {reversedHistory.length}개
+                  {totalPages > 1 && ` · ${page * PAGE_SIZE + 1}–${Math.min((page + 1) * PAGE_SIZE, reversedHistory.length)}번째`}
+                </span>
               </div>
-              <div className="divide-y">
-                {[...history].reverse().map((snap, idx) => {
-                  const prev = [...history].reverse()[idx + 1];
-                  const metrics: { label: string; value: string | null; current: number | null; previous: number | null }[] = [
-                    { label: '종가', value: snap.close != null ? `${formatNumber(snap.close)}원` : null, current: snap.close ?? null, previous: prev?.close ?? null },
-                    { label: 'PER', value: snap.per != null ? `${snap.per.toFixed(2)}배` : null, current: snap.per ?? null, previous: prev?.per ?? null },
-                    { label: 'PBR', value: snap.pbr != null ? `${snap.pbr.toFixed(2)}배` : null, current: snap.pbr ?? null, previous: prev?.pbr ?? null },
-                    { label: 'EPS', value: snap.eps != null ? `${formatNumber(snap.eps)}원` : null, current: snap.eps ?? null, previous: prev?.eps ?? null },
-                    { label: 'BPS', value: snap.bps != null ? `${formatNumber(snap.bps)}원` : null, current: snap.bps ?? null, previous: prev?.bps ?? null },
-                    { label: 'ROE', value: snap.roe != null ? `${snap.roe.toFixed(2)}%` : null, current: snap.roe ?? null, previous: prev?.roe ?? null },
-                    { label: '부채비율', value: snap.debt_ratio != null ? `${snap.debt_ratio.toFixed(1)}%` : null, current: snap.debt_ratio ?? null, previous: prev?.debt_ratio ?? null },
-                    { label: '배당수익률', value: snap.dividend_yield != null ? `${snap.dividend_yield.toFixed(2)}%` : null, current: snap.dividend_yield ?? null, previous: prev?.dividend_yield ?? null },
-                    { label: '시가총액', value: snap.market_cap != null ? formatMarketCap(snap.market_cap) : null, current: snap.market_cap ?? null, previous: prev?.market_cap ?? null },
-                  ];
-                  return (
-                    <div key={snap.date} className="px-4 py-3 hover:bg-muted/20 transition-colors">
-                      <p className="text-xs font-mono text-muted-foreground mb-2.5">{snap.date}</p>
-                      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-4 gap-y-2.5">
-                        {metrics.map((m) => (
-                          <div key={m.label} className="min-w-0">
-                            <p className="text-[10px] text-muted-foreground leading-none mb-1">{m.label}</p>
-                            <p className="text-xs font-semibold tabular-nums leading-none mb-1">
-                              {m.value ?? '—'}
-                            </p>
-                            {prev ? (
-                              <ChangeBadge current={m.current} previous={m.previous} />
-                            ) : (
-                              <span className="text-[10px] text-muted-foreground/40">—</span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
+
+              {/* 가로 스크롤 테이블 */}
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="border-b bg-muted/20">
+                      <th className="sticky left-0 z-10 bg-muted/20 px-4 py-2.5 text-left font-medium text-muted-foreground whitespace-nowrap border-r border-border">
+                        날짜
+                      </th>
+                      {METRICS.map((m) => (
+                        <th
+                          key={m.key}
+                          className={cn(
+                            'px-3 py-2.5 text-right font-medium whitespace-nowrap',
+                            selectedMetric.key === m.key
+                              ? 'text-foreground'
+                              : 'text-muted-foreground'
+                          )}
+                          style={selectedMetric.key === m.key ? { color: m.color } : {}}
+                        >
+                          {m.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pagedHistory.map((snap, idx) => {
+                      const prevSnap = reversedHistory[page * PAGE_SIZE + idx + 1] ?? null;
+                      return (
+                        <tr
+                          key={snap.date}
+                          className="border-b border-border/50 hover:bg-muted/20 transition-colors"
+                        >
+                          <td className="sticky left-0 z-10 bg-card px-4 py-2.5 font-mono text-muted-foreground whitespace-nowrap border-r border-border/50">
+                            {snap.date}
+                          </td>
+                          {METRICS.map((m) => {
+                            const val = snap[m.key] as number | null;
+                            const prevVal = prevSnap ? (prevSnap[m.key] as number | null) : null;
+                            return (
+                              <td
+                                key={m.key}
+                                className={cn(
+                                  'px-3 py-2.5 text-right whitespace-nowrap align-top',
+                                  selectedMetric.key === m.key && 'bg-muted/10'
+                                )}
+                              >
+                                <div className="font-semibold tabular-nums text-foreground">
+                                  {val != null ? m.format(val) : <span className="text-muted-foreground/40">—</span>}
+                                </div>
+                                {val != null && prevVal != null && (
+                                  <ChangeBadge current={val} previous={prevVal} />
+                                )}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
+
+              {/* 페이지네이션 */}
+              {totalPages > 1 && (
+                <div className="px-4 py-3 border-t flex items-center justify-between bg-muted/10">
+                  <button
+                    onClick={() => setPage((p) => Math.max(0, p - 1))}
+                    disabled={page === 0}
+                    className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-xs font-medium border transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-muted"
+                  >
+                    <ChevronLeft className="h-3 w-3" /> 이전
+                  </button>
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: totalPages }, (_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setPage(i)}
+                        className={cn(
+                          'w-7 h-7 rounded text-xs font-medium transition-colors',
+                          i === page
+                            ? 'bg-foreground text-background'
+                            : 'hover:bg-muted text-muted-foreground'
+                        )}
+                      >
+                        {i + 1}
+                      </button>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                    disabled={page === totalPages - 1}
+                    className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-xs font-medium border transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-muted"
+                  >
+                    다음 <ChevronRight className="h-3 w-3" />
+                  </button>
+                </div>
+              )}
             </div>
           </>
         )}
