@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-04-20T18:44:54+09:00",
+  "collected_at": "2026-04-21T18:42:08+09:00",
   "version": "1.0.0",
   "stats": {
     "sector_count": 10,
     "etf_count": 19,
     "holding_etf_count": 32,
-    "total_holding_items": 319,
+    "total_holding_items": 320,
     "stock_count": 174
   },
   "validation": {
