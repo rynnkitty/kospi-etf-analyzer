@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-21T18:33:50+09:00",
+  "updated_at": "2026-04-22T18:33:29+09:00",
   "sectors": [
     {
       "sector_code": "G10",
@@ -9,17 +9,17 @@
           "ticker": "117460",
           "name": "KODEX 에너지화학",
           "provider": "삼성자산운용",
-          "nav": 17407.0,
+          "nav": 17787.0,
           "return_1m": null,
-          "return_3m": 19.6029
+          "return_3m": 24.4619
         },
         {
           "ticker": "139250",
           "name": "TIGER 200 에너지화학",
           "provider": "미래에셋자산운용",
-          "nav": 19054.0,
+          "nav": 19275.0,
           "return_1m": null,
-          "return_3m": 20.24
+          "return_3m": 24.7781
         }
       ]
     },
@@ -31,17 +31,17 @@
           "ticker": "117680",
           "name": "KODEX 철강",
           "provider": "삼성자산운용",
-          "nav": 16726.0,
+          "nav": 16905.0,
           "return_1m": null,
-          "return_3m": 11.4099
+          "return_3m": 14.6037
         },
         {
           "ticker": "139240",
           "name": "TIGER 200 철강소재",
           "provider": "미래에셋자산운용",
-          "nav": 15301.0,
+          "nav": 15381.0,
           "return_1m": null,
-          "return_3m": 4.8404
+          "return_3m": 7.0703
         }
       ]
     },
@@ -53,17 +53,17 @@
           "ticker": "117700",
           "name": "KODEX 건설",
           "provider": "삼성자산운용",
-          "nav": 9320.0,
+          "nav": 9177.0,
           "return_1m": null,
-          "return_3m": 73.1256
+          "return_3m": 81.1284
         },
         {
           "ticker": "102960",
           "name": "KODEX 기계장비",
           "provider": "삼성자산운용",
-          "nav": 18452.0,
+          "nav": 19039.0,
           "return_1m": null,
-          "return_3m": 12.6938
+          "return_3m": 19.7137
         }
       ]
     },
@@ -75,17 +75,17 @@
           "ticker": "091180",
           "name": "KODEX 자동차",
           "provider": "삼성자산운용",
-          "nav": 33382.0,
+          "nav": 33492.0,
           "return_1m": null,
-          "return_3m": 1.4984
+          "return_3m": -2.1339
         },
         {
           "ticker": "139290",
           "name": "TIGER 200 경기소비재",
           "provider": "미래에셋자산운용",
-          "nav": 28283.0,
+          "nav": 28305.0,
           "return_1m": null,
-          "return_3m": 3.0898
+          "return_3m": -1.7389
         }
       ]
     },
@@ -97,17 +97,17 @@
           "ticker": "266410",
           "name": "KODEX 필수소비재",
           "provider": "삼성자산운용",
-          "nav": 10058.0,
+          "nav": 10151.0,
           "return_1m": null,
-          "return_3m": 22.4033
+          "return_3m": 20.5421
         },
         {
           "ticker": "227560",
           "name": "TIGER 200 생활소비재",
           "provider": "미래에셋자산운용",
-          "nav": 14079.0,
+          "nav": 14182.0,
           "return_1m": null,
-          "return_3m": 5.4871
+          "return_3m": 4.4659
         }
       ]
     },
@@ -119,17 +119,17 @@
           "ticker": "143860",
           "name": "TIGER 헬스케어",
           "provider": "미래에셋자산운용",
-          "nav": 48051.0,
+          "nav": 47260.0,
           "return_1m": null,
-          "return_3m": -2.1868
+          "return_3m": 2.6822
         },
         {
           "ticker": "244580",
           "name": "KODEX 바이오",
           "provider": "삼성자산운용",
-          "nav": 12353.0,
+          "nav": 12203.0,
           "return_1m": null,
-          "return_3m": 3.643
+          "return_3m": 6.3793
         }
       ]
     },
@@ -141,25 +141,25 @@
           "ticker": "091170",
           "name": "KODEX 은행",
           "provider": "삼성자산운용",
-          "nav": 16077.0,
+          "nav": 15771.0,
           "return_1m": null,
-          "return_3m": 24.3635
+          "return_3m": 23.2129
         },
         {
           "ticker": "102970",
           "name": "KODEX 증권",
           "provider": "삼성자산운용",
-          "nav": 28772.0,
+          "nav": 28602.0,
           "return_1m": null,
-          "return_3m": 64.1466
+          "return_3m": 67.8717
         },
         {
           "ticker": "139270",
           "name": "TIGER 200 금융",
           "provider": "미래에셋자산운용",
-          "nav": 17254.0,
+          "nav": 16981.0,
           "return_1m": null,
-          "return_3m": 28.602
+          "return_3m": 28.1198
         }
       ]
     },
@@ -171,25 +171,25 @@
           "ticker": "396500",
           "name": "TIGER 반도체TOP10",
           "provider": "미래에셋자산운용",
-          "nav": 37390.0,
+          "nav": 37425.0,
           "return_1m": null,
-          "return_3m": 53.2305
+          "return_3m": 55.9841
         },
         {
           "ticker": "091160",
           "name": "KODEX 반도체",
           "provider": "삼성자산운용",
-          "nav": 115800.0,
+          "nav": 116874.0,
           "return_1m": null,
-          "return_3m": 59.4326
+          "return_3m": 63.5881
         },
         {
           "ticker": "139260",
           "name": "TIGER 200 IT",
           "provider": "미래에셋자산운용",
-          "nav": 106063.0,
+          "nav": 107839.0,
           "return_1m": null,
-          "return_3m": 54.7747
+          "return_3m": 61.4226
         }
       ]
     },
@@ -201,9 +201,9 @@
           "ticker": "315270",
           "name": "TIGER 200커뮤니케이션서비스",
           "provider": "미래에셋자산운용",
-          "nav": 23132.0,
+          "nav": 23149.0,
           "return_1m": null,
-          "return_3m": 2.9641
+          "return_3m": 5.4872
         }
       ]
     },
