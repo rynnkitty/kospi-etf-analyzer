@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30T18:43:05+09:00",
+  "updated_at": "2026-05-01T18:34:31+09:00",
   "sectors": [
     {
       "sector_code": "G10",
@@ -11,7 +11,7 @@
           "provider": "삼성자산운용",
           "nav": 18941.0,
           "return_1m": null,
-          "return_3m": 29.0203
+          "return_3m": 29.1989
         },
         {
           "ticker": "139250",
@@ -19,7 +19,7 @@
           "provider": "미래에셋자산운용",
           "nav": 20918.0,
           "return_1m": null,
-          "return_3m": 31.8183
+          "return_3m": 32.2696
         }
       ]
     },
@@ -33,7 +33,7 @@
           "provider": "삼성자산운용",
           "nav": 17428.0,
           "return_1m": null,
-          "return_3m": 13.1522
+          "return_3m": 11.7103
         },
         {
           "ticker": "139240",
@@ -41,7 +41,7 @@
           "provider": "미래에셋자산운용",
           "nav": 15407.0,
           "return_1m": null,
-          "return_3m": 4.2294
+          "return_3m": 4.1592
         }
       ]
     },
@@ -55,7 +55,7 @@
           "provider": "삼성자산운용",
           "nav": 9347.0,
           "return_1m": null,
-          "return_3m": 81.0637
+          "return_3m": 79.7011
         },
         {
           "ticker": "102960",
@@ -63,7 +63,7 @@
           "provider": "삼성자산운용",
           "nav": 20653.0,
           "return_1m": null,
-          "return_3m": 25.0606
+          "return_3m": 26.2738
         }
       ]
     },
@@ -77,7 +77,7 @@
           "provider": "삼성자산운용",
           "nav": 32041.0,
           "return_1m": null,
-          "return_3m": 3.5296
+          "return_3m": 3.3196
         },
         {
           "ticker": "139290",
@@ -85,7 +85,7 @@
           "provider": "미래에셋자산운용",
           "nav": 27513.0,
           "return_1m": null,
-          "return_3m": 3.9961
+          "return_3m": 3.4077
         }
       ]
     },
@@ -99,7 +99,7 @@
           "provider": "삼성자산운용",
           "nav": 10179.0,
           "return_1m": null,
-          "return_3m": 19.2439
+          "return_3m": 16.4364
         },
         {
           "ticker": "227560",
@@ -107,7 +107,7 @@
           "provider": "미래에셋자산운용",
           "nav": 13986.0,
           "return_1m": null,
-          "return_3m": 7.3475
+          "return_3m": 6.4852
         }
       ]
     },
@@ -121,7 +121,7 @@
           "provider": "미래에셋자산운용",
           "nav": 46604.0,
           "return_1m": null,
-          "return_3m": -12.3166
+          "return_3m": -11.4044
         },
         {
           "ticker": "244580",
@@ -129,7 +129,7 @@
           "provider": "삼성자산운용",
           "nav": 12114.0,
           "return_1m": null,
-          "return_3m": -9.4894
+          "return_3m": -9.7507
         }
       ]
     },
@@ -143,7 +143,7 @@
           "provider": "삼성자산운용",
           "nav": 15892.0,
           "return_1m": null,
-          "return_3m": 16.7786
+          "return_3m": 18.6125
         },
         {
           "ticker": "102970",
@@ -151,7 +151,7 @@
           "provider": "삼성자산운용",
           "nav": 26784.0,
           "return_1m": null,
-          "return_3m": 31.032
+          "return_3m": 24.197
         },
         {
           "ticker": "139270",
@@ -159,7 +159,7 @@
           "provider": "미래에셋자산운용",
           "nav": 16676.0,
           "return_1m": null,
-          "return_3m": 19.0572
+          "return_3m": 18.28
         }
       ]
     },
@@ -173,7 +173,7 @@
           "provider": "미래에셋자산운용",
           "nav": 39966.0,
           "return_1m": null,
-          "return_3m": 42.3317
+          "return_3m": 34.9957
         },
         {
           "ticker": "091160",
@@ -181,7 +181,7 @@
           "provider": "삼성자산운용",
           "nav": 123503.0,
           "return_1m": null,
-          "return_3m": 47.1675
+          "return_3m": 40.5481
         },
         {
           "ticker": "139260",
@@ -189,7 +189,7 @@
           "provider": "미래에셋자산운용",
           "nav": 114089.0,
           "return_1m": null,
-          "return_3m": 56.8062
+          "return_3m": 52.2832
         }
       ]
     },
@@ -203,7 +203,7 @@
           "provider": "미래에셋자산운용",
           "nav": 22554.0,
           "return_1m": null,
-          "return_3m": -4.7155
+          "return_3m": -5.4826
         }
       ]
     },
