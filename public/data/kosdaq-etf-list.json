@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T18:55:08+09:00",
+  "updated_at": "2026-05-14T18:48:52+09:00",
   "sectors": [
     {
       "sector_code": "KQ_BIO",
@@ -9,9 +9,9 @@
           "ticker": "261070",
           "name": "TIGER 코스닥150바이오테크",
           "provider": "미래에셋자산운용",
-          "nav": 17012.0,
+          "nav": 17488.0,
           "return_1m": null,
-          "return_3m": -9.8381
+          "return_3m": -11.9397
         }
       ]
     },
@@ -23,9 +23,9 @@
           "ticker": "261060",
           "name": "TIGER 코스닥150IT",
           "provider": "미래에셋자산운용",
-          "nav": 30783.0,
+          "nav": 30979.0,
           "return_1m": null,
-          "return_3m": 27.9129
+          "return_3m": 34.428
         }
       ]
     },
@@ -37,33 +37,33 @@
           "ticker": "364990",
           "name": "TIGER 게임TOP10",
           "provider": "미래에셋자산운용",
-          "nav": 5609.0,
+          "nav": 5850.0,
           "return_1m": null,
-          "return_3m": -0.9705
+          "return_3m": 2.4848
         },
         {
           "ticker": "300950",
           "name": "KODEX 게임산업",
           "provider": "삼성자산운용",
-          "nav": 6543.0,
+          "nav": 6782.0,
           "return_1m": null,
-          "return_3m": -3.2138
+          "return_3m": -0.5316
         },
         {
           "ticker": "300640",
           "name": "RISE 게임테마",
           "provider": "기타",
-          "nav": 7323.0,
+          "nav": 7566.0,
           "return_1m": null,
-          "return_3m": -11.1219
+          "return_3m": -9.2057
         },
         {
           "ticker": "300610",
           "name": "TIGER K게임",
           "provider": "미래에셋자산운용",
-          "nav": 6188.0,
+          "nav": 6401.0,
           "return_1m": null,
-          "return_3m": -11.9936
+          "return_3m": -9.8783
         }
       ]
     },
@@ -75,17 +75,17 @@
           "ticker": "228810",
           "name": "TIGER 미디어컨텐츠",
           "provider": "미래에셋자산운용",
-          "nav": 4275.0,
+          "nav": 4466.0,
           "return_1m": null,
-          "return_3m": -31.0695
+          "return_3m": -29.6403
         },
         {
           "ticker": "395290",
           "name": "HANARO Fn K-POP&미디어",
           "provider": "NH아문디자산운용",
-          "nav": 6367.0,
+          "nav": 6721.0,
           "return_1m": null,
-          "return_3m": -31.1971
+          "return_3m": -31.6212
         }
       ]
     },
@@ -97,41 +97,41 @@
           "ticker": "229200",
           "name": "KODEX 코스닥150",
           "provider": "삼성자산운용",
-          "nav": 19632.0,
+          "nav": 20028.0,
           "return_1m": null,
-          "return_3m": 1.1059
+          "return_3m": 3.2126
         },
         {
           "ticker": "232080",
           "name": "TIGER 코스닥150",
           "provider": "미래에셋자산운용",
-          "nav": 20023.0,
+          "nav": 20428.0,
           "return_1m": null,
-          "return_3m": 1.4378
+          "return_3m": 3.3023
         },
         {
           "ticker": "270810",
           "name": "RISE 코스닥150",
           "provider": "기타",
-          "nav": 19514.0,
+          "nav": 19907.0,
           "return_1m": null,
-          "return_3m": 0.7255
+          "return_3m": 3.1061
         },
         {
           "ticker": "354500",
           "name": "ACE 코스닥150",
           "provider": "한국투자신탁운용",
-          "nav": 19789.0,
+          "nav": 20186.0,
           "return_1m": null,
-          "return_3m": 1.453
+          "return_3m": 3.1554
         },
         {
           "ticker": "304770",
           "name": "HANARO 코스닥150",
           "provider": "NH아문디자산운용",
-          "nav": 19641.0,
+          "nav": 20037.0,
           "return_1m": null,
-          "return_3m": 1.2931
+          "return_3m": 3.2167
         }
       ]
     }
