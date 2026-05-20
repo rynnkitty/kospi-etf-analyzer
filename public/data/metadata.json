@@ -1,12 +1,12 @@
 {
-  "collected_at": "2026-05-19T19:26:49+09:00",
+  "collected_at": "2026-05-20T19:16:41+09:00",
   "version": "1.0.0",
   "stats": {
     "sector_count": 10,
     "etf_count": 19,
     "holding_etf_count": 32,
-    "total_holding_items": 319,
-    "stock_count": 175
+    "total_holding_items": 320,
+    "stock_count": 177
   },
   "validation": {
     "passed": true,
@@ -16,8 +16,8 @@
       "missing": []
     },
     "valuation_coverage": {
-      "matched": 175,
-      "total": 175,
+      "matched": 177,
+      "total": 177,
       "coverage_pct": 100.0,
       "missing_sample": []
     },
