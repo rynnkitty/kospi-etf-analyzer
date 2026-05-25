@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T19:05:47+09:00",
+  "updated_at": "2026-05-25T19:33:08+09:00",
   "sectors": [
     {
       "sector_code": "KQ_BIO",
@@ -11,7 +11,7 @@
           "provider": "미래에셋자산운용",
           "nav": 16585.0,
           "return_1m": null,
-          "return_3m": -25.3352
+          "return_3m": -18.8246
         }
       ]
     },
@@ -25,7 +25,7 @@
           "provider": "미래에셋자산운용",
           "nav": 32036.0,
           "return_1m": null,
-          "return_3m": 26.6528
+          "return_3m": 32.7828
         }
       ]
     },
@@ -39,7 +39,7 @@
           "provider": "미래에셋자산운용",
           "nav": 5650.0,
           "return_1m": null,
-          "return_3m": -5.4022
+          "return_3m": -0.9226
         },
         {
           "ticker": "300950",
@@ -47,7 +47,7 @@
           "provider": "삼성자산운용",
           "nav": 6525.0,
           "return_1m": null,
-          "return_3m": -7.3747
+          "return_3m": -3.4661
         },
         {
           "ticker": "300640",
@@ -55,7 +55,7 @@
           "provider": "기타",
           "nav": 7413.0,
           "return_1m": null,
-          "return_3m": -14.2742
+          "return_3m": -9.8391
         },
         {
           "ticker": "300610",
@@ -63,7 +63,7 @@
           "provider": "미래에셋자산운용",
           "nav": 6268.0,
           "return_1m": null,
-          "return_3m": -13.8613
+          "return_3m": -10.2156
         }
       ]
     },
@@ -77,7 +77,7 @@
           "provider": "미래에셋자산운용",
           "nav": 4095.0,
           "return_1m": null,
-          "return_3m": -34.8884
+          "return_3m": -32.6602
         },
         {
           "ticker": "395290",
@@ -85,7 +85,7 @@
           "provider": "NH아문디자산운용",
           "nav": 6478.0,
           "return_1m": null,
-          "return_3m": -32.2495
+          "return_3m": -30.757
         }
       ]
     },
@@ -99,7 +99,7 @@
           "provider": "삼성자산운용",
           "nav": 19825.0,
           "return_1m": null,
-          "return_3m": -7.9467
+          "return_3m": -2.0804
         },
         {
           "ticker": "232080",
@@ -107,7 +107,7 @@
           "provider": "미래에셋자산운용",
           "nav": 20218.0,
           "return_1m": null,
-          "return_3m": -8.0882
+          "return_3m": -1.9931
         },
         {
           "ticker": "270810",
@@ -115,7 +115,7 @@
           "provider": "기타",
           "nav": 19705.0,
           "return_1m": null,
-          "return_3m": -8.0553
+          "return_3m": -1.9457
         },
         {
           "ticker": "354500",
@@ -123,7 +123,7 @@
           "provider": "한국투자신탁운용",
           "nav": 19978.0,
           "return_1m": null,
-          "return_3m": -8.2639
+          "return_3m": -1.9941
         },
         {
           "ticker": "304770",
@@ -131,7 +131,7 @@
           "provider": "NH아문디자산운용",
           "nav": 19834.0,
           "return_1m": null,
-          "return_3m": -7.9847
+          "return_3m": -1.9099
         }
       ]
     }
