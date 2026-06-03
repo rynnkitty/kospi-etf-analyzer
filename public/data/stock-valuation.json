@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T19:42:13+09:00",
+  "updated_at": "2026-06-03T19:43:37+09:00",
   "stocks": {
     "000100": {
       "name": "유한양행",
@@ -637,6 +637,19 @@
       "market_cap": 2297900000000,
       "roe": 2.75,
       "debt_ratio": 72.8
+    },
+    "011780": {
+      "name": "금호석유화학",
+      "market": "KOSPI",
+      "per": 14.28,
+      "eps": 8970,
+      "pbr": 0.51,
+      "bps": 251072,
+      "dividend_yield": 1.33,
+      "close": 128100,
+      "market_cap": 3222600000000,
+      "roe": 4.74,
+      "debt_ratio": 35.67
     },
     "011790": {
       "name": "SKC",
@@ -1899,6 +1912,19 @@
       "roe": 75.3,
       "debt_ratio": 73.11
     },
+    "290650": {
+      "name": "엘앤씨바이오",
+      "market": "KOSPI",
+      "per": 5531.0,
+      "eps": null,
+      "pbr": 9.54,
+      "bps": 8264,
+      "dividend_yield": 0.06,
+      "close": 78800,
+      "market_cap": 2125200000000,
+      "roe": -57.68,
+      "debt_ratio": 118.98
+    },
     "293490": {
       "name": "카카오게임즈",
       "market": "KOSPI",
@@ -2029,19 +2055,6 @@
       "roe": 7.23,
       "debt_ratio": 1032.02
     },
-    "328130": {
-      "name": "루닛",
-      "market": "KOSPI",
-      "per": 1074.0,
-      "eps": null,
-      "pbr": 7.56,
-      "bps": 1992,
-      "dividend_yield": null,
-      "close": 15060,
-      "market_cap": 1120200000000,
-      "roe": -31.57,
-      "debt_ratio": 169.16
-    },
     "329180": {
       "name": "HD현대중공업",
       "market": "KOSPI",
@@ -2073,8 +2086,8 @@
       "market": "KOSPI",
       "per": 535.0,
       "eps": null,
-      "pbr": 46.06,
-      "bps": 1826,
+      "pbr": 49.41,
+      "bps": 1702,
       "dividend_yield": null,
       "close": 84100,
       "market_cap": 3683900000000,
@@ -2224,18 +2237,18 @@
       "roe": -131.08,
       "debt_ratio": 518.5
     },
-    "457190": {
-      "name": "이수스페셜티케미컬",
+    "445680": {
+      "name": "큐리옥스바이오시스템즈",
       "market": "KOSPI",
-      "per": 37.0,
+      "per": 1563.0,
       "eps": null,
-      "pbr": 19.95,
-      "bps": 4462,
+      "pbr": 30.75,
+      "bps": 3021,
       "dividend_yield": null,
-      "close": 89000,
-      "market_cap": 2689400000000,
-      "roe": 0.6,
-      "debt_ratio": 175.79
+      "close": 92900,
+      "market_cap": 1598100000000,
+      "roe": -53.58,
+      "debt_ratio": 47.75
     },
     "460860": {
       "name": "동국제강",
