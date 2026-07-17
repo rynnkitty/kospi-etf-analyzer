@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T19:53:48+09:00",
+  "updated_at": "2026-07-17T19:41:50+09:00",
   "sectors": [
     {
       "sector_code": "G10",
@@ -11,7 +11,7 @@
           "provider": "삼성자산운용",
           "nav": 13035.0,
           "return_1m": null,
-          "return_3m": -19.5919
+          "return_3m": -22.3892
         },
         {
           "ticker": "139250",
@@ -19,7 +19,7 @@
           "provider": "미래에셋자산운용",
           "nav": 16798.0,
           "return_1m": null,
-          "return_3m": -5.3936
+          "return_3m": -8.8434
         }
       ]
     },
@@ -33,7 +33,7 @@
           "provider": "삼성자산운용",
           "nav": 10746.0,
           "return_1m": null,
-          "return_3m": -32.3099
+          "return_3m": -32.9442
         },
         {
           "ticker": "139240",
@@ -41,7 +41,7 @@
           "provider": "미래에셋자산운용",
           "nav": 9527.0,
           "return_1m": null,
-          "return_3m": -34.0451
+          "return_3m": -35.4765
         }
       ]
     },
@@ -55,7 +55,7 @@
           "provider": "삼성자산운용",
           "nav": 5758.0,
           "return_1m": null,
-          "return_3m": -34.7244
+          "return_3m": -36.6981
         },
         {
           "ticker": "102960",
@@ -63,7 +63,7 @@
           "provider": "삼성자산운용",
           "nav": 13150.0,
           "return_1m": null,
-          "return_3m": -20.7454
+          "return_3m": -24.3949
         }
       ]
     },
@@ -77,7 +77,7 @@
           "provider": "삼성자산운용",
           "nav": 29783.0,
           "return_1m": null,
-          "return_3m": -4.253
+          "return_3m": -7.0364
         },
         {
           "ticker": "139290",
@@ -85,7 +85,7 @@
           "provider": "미래에셋자산운용",
           "nav": 27455.0,
           "return_1m": null,
-          "return_3m": 2.9375
+          "return_3m": -0.7105
         }
       ]
     },
@@ -99,7 +99,7 @@
           "provider": "삼성자산운용",
           "nav": 9189.0,
           "return_1m": null,
-          "return_3m": -8.3223
+          "return_3m": -8.4554
         },
         {
           "ticker": "227560",
@@ -107,7 +107,7 @@
           "provider": "미래에셋자산운용",
           "nav": 12397.0,
           "return_1m": null,
-          "return_3m": -10.6936
+          "return_3m": -11.042
         }
       ]
     },
@@ -121,7 +121,7 @@
           "provider": "미래에셋자산운용",
           "nav": 35278.0,
           "return_1m": null,
-          "return_3m": -27.2705
+          "return_3m": -28.2928
         },
         {
           "ticker": "244580",
@@ -129,7 +129,7 @@
           "provider": "삼성자산운용",
           "nav": 8155.0,
           "return_1m": null,
-          "return_3m": -33.9921
+          "return_3m": -35.7957
         }
       ]
     },
@@ -143,7 +143,7 @@
           "provider": "삼성자산운용",
           "nav": 16522.0,
           "return_1m": null,
-          "return_3m": 4.6357
+          "return_3m": 3.626
         },
         {
           "ticker": "102970",
@@ -151,7 +151,7 @@
           "provider": "삼성자산운용",
           "nav": 21376.0,
           "return_1m": null,
-          "return_3m": -23.1561
+          "return_3m": -25.9046
         },
         {
           "ticker": "139270",
@@ -159,7 +159,7 @@
           "provider": "미래에셋자산운용",
           "nav": 17627.0,
           "return_1m": null,
-          "return_3m": 3.9536
+          "return_3m": 2.8834
         }
       ]
     },
@@ -173,7 +173,7 @@
           "provider": "미래에셋자산운용",
           "nav": 37286.0,
           "return_1m": null,
-          "return_3m": 17.6305
+          "return_3m": 3.9112
         },
         {
           "ticker": "091160",
@@ -181,7 +181,7 @@
           "provider": "삼성자산운용",
           "nav": 131834.0,
           "return_1m": null,
-          "return_3m": 34.5916
+          "return_3m": 19.6448
         },
         {
           "ticker": "139260",
@@ -189,7 +189,7 @@
           "provider": "미래에셋자산운용",
           "nav": 137727.0,
           "return_1m": null,
-          "return_3m": 59.0744
+          "return_3m": 39.9463
         }
       ]
     },
@@ -203,7 +203,7 @@
           "provider": "미래에셋자산운용",
           "nav": 19554.0,
           "return_1m": null,
-          "return_3m": -16.4244
+          "return_3m": -15.8803
         }
       ]
     },

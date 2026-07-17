@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T20:02:18+09:00",
+  "updated_at": "2026-07-17T19:49:49+09:00",
   "stocks": {
     "000100": {
       "name": "유한양행",
@@ -1587,6 +1587,19 @@
       "roe": -13.22,
       "debt_ratio": 29.7
     },
+    "145020": {
+      "name": "휴젤",
+      "market": "KOSPI",
+      "per": 19.56,
+      "eps": 12242,
+      "pbr": 2.58,
+      "bps": 92935,
+      "dividend_yield": null,
+      "close": 239500,
+      "market_cap": 2946800000000,
+      "roe": 16.06,
+      "debt_ratio": 9.86
+    },
     "161390": {
       "name": "한국타이어앤테크놀로지",
       "market": "KOSPI",
@@ -1990,32 +2003,6 @@
       "roe": -23.48,
       "debt_ratio": 79.29
     },
-    "310200": {
-      "name": "애니플러스",
-      "market": "KOSPI",
-      "per": 14.37,
-      "eps": 190,
-      "pbr": 1.16,
-      "bps": 2355,
-      "dividend_yield": 2.56,
-      "close": 2730,
-      "market_cap": 142400000000,
-      "roe": 10.39,
-      "debt_ratio": 111.74
-    },
-    "310210": {
-      "name": "보로노이",
-      "market": "KOSPI",
-      "per": 2751.0,
-      "eps": null,
-      "pbr": 29.06,
-      "bps": 5010,
-      "dividend_yield": null,
-      "close": 145600,
-      "market_cap": 2682000000000,
-      "roe": -50.18,
-      "debt_ratio": 64.97
-    },
     "316140": {
       "name": "우리금융지주",
       "market": "KOSPI",
@@ -2158,19 +2145,6 @@
       "market_cap": 476000000000,
       "roe": 9.18,
       "debt_ratio": 15.79
-    },
-    "376900": {
-      "name": "로킷헬스케어",
-      "market": "KOSPI",
-      "per": 282.0,
-      "eps": null,
-      "pbr": 70.79,
-      "bps": 683,
-      "dividend_yield": null,
-      "close": 48350,
-      "market_cap": 767500000000,
-      "roe": 8.69,
-      "debt_ratio": 376.27
     },
     "402340": {
       "name": "SK스퀘어",
