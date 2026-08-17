@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T19:03:25+09:00",
+  "updated_at": "2026-08-17T18:43:14+09:00",
   "stocks": {
     "000100": {
       "name": "유한양행",
@@ -537,8 +537,8 @@
     "010060": {
       "name": "OCI홀딩스",
       "market": "KOSPI",
-      "per": 4664.0,
-      "eps": null,
+      "per": 139.78,
+      "eps": 1996,
       "pbr": 1.29,
       "bps": 215930,
       "dividend_yield": 0.36,
@@ -859,6 +859,19 @@
       "roe": 6.01,
       "debt_ratio": 117.06
     },
+    "032820": {
+      "name": "우리기술",
+      "market": "KOSPI",
+      "per": 59.16,
+      "eps": 202,
+      "pbr": 12.38,
+      "bps": 965,
+      "dividend_yield": null,
+      "close": 11950,
+      "market_cap": 2064700000000,
+      "roe": 0.67,
+      "debt_ratio": 172.08
+    },
     "032830": {
       "name": "삼성생명",
       "market": "KOSPI",
@@ -1072,8 +1085,8 @@
       "market": "KOSPI",
       "per": 14.15,
       "eps": 6770,
-      "pbr": 4.3,
-      "bps": 22265,
+      "pbr": 3.9,
+      "bps": 24558,
       "dividend_yield": null,
       "close": 95800,
       "market_cap": 29354400000000,
@@ -1301,32 +1314,6 @@
       "roe": 19.21,
       "debt_ratio": 47.94
     },
-    "084370": {
-      "name": "유진테크",
-      "market": "KOSPI",
-      "per": 53.01,
-      "eps": 2473,
-      "pbr": 6.19,
-      "bps": 21188,
-      "dividend_yield": 0.17,
-      "close": 131100,
-      "market_cap": 3004200000000,
-      "roe": 9.81,
-      "debt_ratio": 18.16
-    },
-    "086450": {
-      "name": "동국제약",
-      "market": "KOSPI",
-      "per": 11.97,
-      "eps": 1648,
-      "pbr": 1.31,
-      "bps": 15058,
-      "dividend_yield": 1.01,
-      "close": 19720,
-      "market_cap": 891900000000,
-      "roe": 10.42,
-      "debt_ratio": 39.17
-    },
     "086520": {
       "name": "에코프로",
       "market": "KOSPI",
@@ -1378,19 +1365,6 @@
       "market_cap": 7937400000000,
       "roe": 4.41,
       "debt_ratio": 26.49
-    },
-    "095660": {
-      "name": "네오위즈",
-      "market": "KOSPI",
-      "per": 7.08,
-      "eps": 2696,
-      "pbr": 0.7,
-      "bps": 27406,
-      "dividend_yield": 1.59,
-      "close": 19100,
-      "market_cap": 413300000000,
-      "roe": 9.81,
-      "debt_ratio": 22.23
     },
     "096770": {
       "name": "SK이노베이션",
@@ -1964,6 +1938,19 @@
       "roe": -23.48,
       "debt_ratio": 79.29
     },
+    "310200": {
+      "name": "애니플러스",
+      "market": "KOSPI",
+      "per": 14.74,
+      "eps": 190,
+      "pbr": 1.19,
+      "bps": 2355,
+      "dividend_yield": 2.5,
+      "close": 2800,
+      "market_cap": 146100000000,
+      "roe": 10.39,
+      "debt_ratio": 111.74
+    },
     "310210": {
       "name": "보로노이",
       "market": "KOSPI",
@@ -2084,7 +2071,7 @@
     "373220": {
       "name": "LG에너지솔루션",
       "market": "KOSPI",
-      "per": 6851.0,
+      "per": 7193.0,
       "eps": null,
       "pbr": 3.9,
       "bps": 94721,
@@ -2197,6 +2184,19 @@
       "market_cap": 1862100000000,
       "roe": 22.71,
       "debt_ratio": 17.6
+    },
+    "468530": {
+      "name": "프로티나",
+      "market": "KOSPI",
+      "per": 1044.0,
+      "eps": null,
+      "pbr": 16.31,
+      "bps": 2306,
+      "dividend_yield": null,
+      "close": 37600,
+      "market_cap": 414900000000,
+      "roe": -40.84,
+      "debt_ratio": 11.91
     },
     "473980": {
       "name": "노머스",
