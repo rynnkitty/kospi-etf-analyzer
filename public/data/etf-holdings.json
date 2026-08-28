@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T04:24:05+09:00",
+  "updated_at": "2026-08-29T05:38:25+09:00",
   "holdings": {
     "091160": {
       "etf_name": "KODEX 반도체",
@@ -7,52 +7,52 @@
         {
           "ticker": "000660",
           "name": "SK하이닉스",
-          "weight": 37.4
+          "weight": 37.42
         },
         {
           "ticker": "005930",
           "name": "삼성전자",
-          "weight": 23.16
+          "weight": 23.0
         },
         {
           "ticker": "042700",
           "name": "한미반도체",
-          "weight": 6.06
+          "weight": 5.99
         },
         {
           "ticker": "036930",
           "name": "주성엔지니어링",
-          "weight": 3.56
+          "weight": 3.59
         },
         {
           "ticker": "240810",
           "name": "원익IPS",
-          "weight": 2.37
+          "weight": 2.38
         },
         {
           "ticker": "039030",
           "name": "이오테크닉스",
-          "weight": 2.21
+          "weight": 2.19
         },
         {
           "ticker": "058470",
           "name": "리노공업",
-          "weight": 2.17
+          "weight": 2.13
         },
         {
           "ticker": "403870",
           "name": "HPSP",
-          "weight": 2.08
+          "weight": 2.11
         },
         {
           "ticker": "222800",
           "name": "심텍",
-          "weight": 1.84
+          "weight": 2.02
         },
         {
           "ticker": "000990",
           "name": "DB하이텍",
-          "weight": 1.84
+          "weight": 1.87
         }
       ]
     },
@@ -62,27 +62,27 @@
         {
           "ticker": "055550",
           "name": "신한지주",
-          "weight": 23.09
+          "weight": 23.24
         },
         {
           "ticker": "086790",
           "name": "하나금융지주",
-          "weight": 22.22
+          "weight": 22.14
         },
         {
           "ticker": "105560",
           "name": "KB금융",
-          "weight": 20.34
+          "weight": 20.4
         },
         {
           "ticker": "316140",
           "name": "우리금융지주",
-          "weight": 16.27
+          "weight": 16.14
         },
         {
           "ticker": "323410",
           "name": "카카오뱅크",
-          "weight": 5.36
+          "weight": 5.35
         },
         {
           "ticker": "024110",
@@ -92,7 +92,7 @@
         {
           "ticker": "175330",
           "name": "JB금융지주",
-          "weight": 3.16
+          "weight": 3.17
         },
         {
           "ticker": "138930",
@@ -117,52 +117,52 @@
         {
           "ticker": "005380",
           "name": "현대차",
-          "weight": 25.51
+          "weight": 25.54
         },
         {
           "ticker": "012330",
           "name": "현대모비스",
-          "weight": 20.32
+          "weight": 20.3
         },
         {
           "ticker": "000270",
           "name": "기아",
-          "weight": 16.89
+          "weight": 16.64
         },
         {
           "ticker": "161390",
           "name": "한국타이어앤테크놀로지",
-          "weight": 12.64
+          "weight": 12.46
         },
         {
           "ticker": "204320",
           "name": "HL만도",
-          "weight": 4.21
+          "weight": 4.32
         },
         {
           "ticker": "018880",
           "name": "한온시스템",
-          "weight": 3.19
+          "weight": 3.21
         },
         {
           "ticker": "007340",
           "name": "DN오토모티브",
-          "weight": 2.5
+          "weight": 2.51
         },
         {
           "ticker": "011210",
           "name": "현대위아",
-          "weight": 2.41
+          "weight": 2.43
         },
         {
           "ticker": "005850",
           "name": "에스엘",
-          "weight": 2.15
+          "weight": 2.2
         },
         {
           "ticker": "073240",
           "name": "금호타이어",
-          "weight": 2.04
+          "weight": 2.11
         }
       ]
     },
@@ -172,17 +172,7 @@
         {
           "ticker": "034020",
           "name": "두산에너빌리티",
-          "weight": 15.6
-        },
-        {
-          "ticker": "373220",
-          "name": "LG에너지솔루션",
-          "weight": 57.0
-        },
-        {
-          "ticker": "009540",
-          "name": "HD한국조선해양",
-          "weight": 54.0
+          "weight": 15.01
         },
         {
           "ticker": "267260",
@@ -190,9 +180,19 @@
           "weight": 26.0
         },
         {
+          "ticker": "373220",
+          "name": "LG에너지솔루션",
+          "weight": 57.0
+        },
+        {
           "ticker": "010120",
           "name": "LS ELECTRIC",
           "weight": 90.0
+        },
+        {
+          "ticker": "009540",
+          "name": "HD한국조선해양",
+          "weight": 54.0
         },
         {
           "ticker": "329180",
@@ -202,7 +202,7 @@
         {
           "ticker": "010140",
           "name": "삼성중공업",
-          "weight": 5.79
+          "weight": 5.64
         },
         {
           "ticker": "298040",
@@ -212,7 +212,7 @@
         {
           "ticker": "042660",
           "name": "한화오션",
-          "weight": 4.88
+          "weight": 4.81
         },
         {
           "ticker": "064350",
@@ -227,32 +227,32 @@
         {
           "ticker": "006800",
           "name": "미래에셋증권",
-          "weight": 24.61
+          "weight": 24.54
         },
         {
           "ticker": "071050",
           "name": "한국금융지주",
-          "weight": 19.54
+          "weight": 19.62
         },
         {
           "ticker": "016360",
           "name": "삼성증권",
-          "weight": 17.31
+          "weight": 17.33
         },
         {
           "ticker": "039490",
           "name": "키움증권",
-          "weight": 13.89
+          "weight": 13.98
         },
         {
           "ticker": "005940",
           "name": "NH투자증권",
-          "weight": 12.99
+          "weight": 13.01
         },
         {
           "ticker": "001720",
           "name": "신영증권",
-          "weight": 2.27
+          "weight": 2.22
         },
         {
           "ticker": "003540",
@@ -262,7 +262,7 @@
         {
           "ticker": "003530",
           "name": "한화투자증권",
-          "weight": 1.72
+          "weight": 1.66
         },
         {
           "ticker": "001510",
@@ -272,7 +272,7 @@
         {
           "ticker": "003470",
           "name": "유안타증권",
-          "weight": 1.13
+          "weight": 1.12
         }
       ]
     },
@@ -282,42 +282,42 @@
         {
           "ticker": "051910",
           "name": "LG화학",
-          "weight": 16.17
+          "weight": 16.67
         },
         {
           "ticker": "267250",
           "name": "HD현대",
-          "weight": 14.74
+          "weight": 14.53
         },
         {
           "ticker": "096770",
           "name": "SK이노베이션",
-          "weight": 12.48
+          "weight": 12.44
         },
         {
           "ticker": "010950",
           "name": "S-Oil",
-          "weight": 8.86
+          "weight": 8.5
         },
         {
           "ticker": "009830",
           "name": "한화솔루션",
-          "weight": 7.01
+          "weight": 7.04
         },
         {
           "ticker": "010060",
           "name": "OCI홀딩스",
-          "weight": 5.5
+          "weight": 5.45
         },
         {
           "ticker": "011790",
           "name": "SKC",
-          "weight": 3.44
+          "weight": 3.47
         },
         {
           "ticker": "014680",
           "name": "한솔케미칼",
-          "weight": 2.92
+          "weight": 2.94
         },
         {
           "ticker": "002380",
@@ -327,7 +327,7 @@
         {
           "ticker": "011780",
           "name": "금호석유화학",
-          "weight": 2.73
+          "weight": 2.69
         }
       ]
     },
@@ -335,53 +335,53 @@
       "etf_name": "KODEX 철강",
       "top_holdings": [
         {
-          "ticker": "010130",
-          "name": "고려아연",
-          "weight": 21.2
-        },
-        {
           "ticker": "005490",
           "name": "POSCO홀딩스",
-          "weight": 21.05
+          "weight": 21.17
+        },
+        {
+          "ticker": "010130",
+          "name": "고려아연",
+          "weight": 20.6
         },
         {
           "ticker": "004020",
           "name": "현대제철",
-          "weight": 18.86
+          "weight": 19.4
         },
         {
           "ticker": "103140",
           "name": "풍산",
-          "weight": 10.46
-        },
-        {
-          "ticker": "001430",
-          "name": "세아베스틸지주",
-          "weight": 3.95
+          "weight": 10.24
         },
         {
           "ticker": "006110",
           "name": "삼아알미늄",
-          "weight": 3.76
+          "weight": 4.0
+        },
+        {
+          "ticker": "001430",
+          "name": "세아베스틸지주",
+          "weight": 3.89
         },
         {
           "ticker": "295310",
           "name": "에이치브이엠",
-          "weight": 2.79
+          "weight": 2.8
         },
         {
           "ticker": "460860",
           "name": "동국제강",
-          "weight": 2.57
-        },
-        {
-          "ticker": "005810",
-          "name": "풍산홀딩스",
-          "weight": 2.05
+          "weight": 2.8
         },
         {
           "ticker": "009520",
           "name": "포스코엠텍",
+          "weight": 2.0
+        },
+        {
+          "ticker": "005810",
+          "name": "풍산홀딩스",
           "weight": 2.0
         }
       ]
@@ -392,52 +392,52 @@
         {
           "ticker": "028050",
           "name": "삼성E&A",
-          "weight": 21.88
+          "weight": 22.36
         },
         {
           "ticker": "000720",
           "name": "현대건설",
-          "weight": 21.28
+          "weight": 20.77
         },
         {
           "ticker": "047040",
           "name": "대우건설",
-          "weight": 12.82
+          "weight": 13.22
         },
         {
           "ticker": "006360",
           "name": "GS건설",
-          "weight": 8.26
+          "weight": 7.94
         },
         {
           "ticker": "052690",
           "name": "한전기술",
-          "weight": 7.87
+          "weight": 7.93
         },
         {
           "ticker": "375500",
           "name": "DL이앤씨",
-          "weight": 7.34
+          "weight": 7.32
         },
         {
           "ticker": "319400",
           "name": "현대무벡스",
-          "weight": 4.44
+          "weight": 4.51
         },
         {
           "ticker": "294870",
           "name": "IPARK현대산업개발",
-          "weight": 2.68
+          "weight": 2.64
         },
         {
           "ticker": "012630",
           "name": "HDC",
-          "weight": 2.01
+          "weight": 2.0
         },
         {
           "ticker": "060370",
           "name": "LS마린솔루션",
-          "weight": 1.77
+          "weight": 1.81
         }
       ]
     },
@@ -452,32 +452,32 @@
         {
           "ticker": "005490",
           "name": "POSCO홀딩스",
-          "weight": 20.63
-        },
-        {
-          "ticker": "103140",
-          "name": "풍산",
-          "weight": 19.2
+          "weight": 20.92
         },
         {
           "ticker": "004020",
           "name": "현대제철",
-          "weight": 19.11
+          "weight": 19.82
+        },
+        {
+          "ticker": "103140",
+          "name": "풍산",
+          "weight": 18.95
         },
         {
           "ticker": "001430",
           "name": "세아베스틸지주",
-          "weight": 7.24
+          "weight": 7.19
         },
         {
           "ticker": "000670",
           "name": "영풍",
-          "weight": 2.65
+          "weight": 2.62
         },
         {
           "ticker": "008730",
           "name": "율촌화학",
-          "weight": 2.32
+          "weight": 2.27
         },
         {
           "ticker": "002030",
@@ -492,7 +492,7 @@
         {
           "ticker": "014820",
           "name": "동원시스템즈",
-          "weight": 1.66
+          "weight": 1.61
         }
       ]
     },
@@ -502,37 +502,37 @@
         {
           "ticker": "034730",
           "name": "SK",
-          "weight": 22.15
+          "weight": 22.05
         },
         {
           "ticker": "051910",
           "name": "LG화학",
-          "weight": 13.64
+          "weight": 14.09
         },
         {
           "ticker": "267250",
           "name": "HD현대",
-          "weight": 10.98
+          "weight": 10.84
         },
         {
           "ticker": "096770",
           "name": "SK이노베이션",
-          "weight": 9.31
+          "weight": 9.3
         },
         {
           "ticker": "010950",
           "name": "S-Oil",
-          "weight": 6.61
+          "weight": 6.36
         },
         {
           "ticker": "078930",
           "name": "GS",
-          "weight": 6.43
+          "weight": 6.15
         },
         {
           "ticker": "009830",
           "name": "한화솔루션",
-          "weight": 5.25
+          "weight": 5.29
         },
         {
           "ticker": "010060",
@@ -542,12 +542,12 @@
         {
           "ticker": "000880",
           "name": "한화",
-          "weight": 3.49
+          "weight": 3.79
         },
         {
           "ticker": "011790",
           "name": "SKC",
-          "weight": 2.57
+          "weight": 2.6
         }
       ]
     },
@@ -555,44 +555,44 @@
       "etf_name": "TIGER 200 IT",
       "top_holdings": [
         {
-          "ticker": "402340",
-          "name": "SK스퀘어",
-          "weight": 22.62
-        },
-        {
           "ticker": "000660",
           "name": "SK하이닉스",
-          "weight": 22.42
+          "weight": 22.43
+        },
+        {
+          "ticker": "402340",
+          "name": "SK스퀘어",
+          "weight": 22.29
         },
         {
           "ticker": "005930",
           "name": "삼성전자",
-          "weight": 18.46
+          "weight": 18.33
         },
         {
           "ticker": "009150",
           "name": "삼성전기",
-          "weight": 16.33
+          "weight": 16.6
         },
         {
           "ticker": "006400",
           "name": "삼성SDI",
-          "weight": 5.74
+          "weight": 6.18
         },
         {
           "ticker": "066570",
           "name": "LG전자",
-          "weight": 3.97
+          "weight": 3.83
         },
         {
           "ticker": "003550",
           "name": "LG",
-          "weight": 1.88
+          "weight": 1.83
         },
         {
           "ticker": "042700",
           "name": "한미반도체",
-          "weight": 1.7
+          "weight": 1.67
         },
         {
           "ticker": "018260",
@@ -612,12 +612,12 @@
         {
           "ticker": "105560",
           "name": "KB금융",
-          "weight": 18.31
+          "weight": 18.42
         },
         {
           "ticker": "055550",
           "name": "신한지주",
-          "weight": 15.96
+          "weight": 16.12
         },
         {
           "ticker": "086790",
@@ -627,12 +627,12 @@
         {
           "ticker": "032830",
           "name": "삼성생명",
-          "weight": 9.51
+          "weight": 9.4
         },
         {
           "ticker": "316140",
           "name": "우리금융지주",
-          "weight": 8.02
+          "weight": 7.99
         },
         {
           "ticker": "000810",
@@ -642,7 +642,7 @@
         {
           "ticker": "006800",
           "name": "미래에셋증권",
-          "weight": 3.55
+          "weight": 3.52
         },
         {
           "ticker": "138040",
@@ -667,12 +667,12 @@
         {
           "ticker": "012330",
           "name": "현대모비스",
-          "weight": 21.53
+          "weight": 21.47
         },
         {
           "ticker": "000270",
           "name": "기아",
-          "weight": 17.76
+          "weight": 17.46
         },
         {
           "ticker": "005380",
@@ -682,17 +682,17 @@
         {
           "ticker": "180640",
           "name": "한진칼",
-          "weight": 7.07
+          "weight": 7.12
         },
         {
           "ticker": "021240",
           "name": "코웨이",
-          "weight": 6.32
+          "weight": 6.37
         },
         {
           "ticker": "161390",
           "name": "한국타이어앤테크놀로지",
-          "weight": 5.76
+          "weight": 5.67
         },
         {
           "ticker": "004170",
@@ -702,16 +702,16 @@
         {
           "ticker": "035250",
           "name": "강원랜드",
-          "weight": 1.95
-        },
-        {
-          "ticker": "111770",
-          "name": "영원무역",
-          "weight": 1.94
+          "weight": 1.98
         },
         {
           "ticker": "204320",
           "name": "HL만도",
+          "weight": 1.97
+        },
+        {
+          "ticker": "111770",
+          "name": "영원무역",
           "weight": 1.92
         }
       ]
@@ -722,12 +722,12 @@
         {
           "ticker": "068270",
           "name": "셀트리온",
-          "weight": 22.63
+          "weight": 22.56
         },
         {
           "ticker": "196170",
           "name": "알테오젠",
-          "weight": 12.65
+          "weight": 12.75
         },
         {
           "ticker": "207940",
@@ -737,32 +737,32 @@
         {
           "ticker": "000100",
           "name": "유한양행",
-          "weight": 3.98
+          "weight": 3.83
         },
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 3.29
+          "weight": 3.22
         },
         {
           "ticker": "087010",
           "name": "펩트론",
-          "weight": 3.06
+          "weight": 3.13
         },
         {
           "ticker": "326030",
           "name": "SK바이오팜",
-          "weight": 2.75
+          "weight": 2.66
+        },
+        {
+          "ticker": "298380",
+          "name": "에이비엘바이오",
+          "weight": 2.43
         },
         {
           "ticker": "128940",
           "name": "한미약품",
           "weight": 38.0
-        },
-        {
-          "ticker": "298380",
-          "name": "에이비엘바이오",
-          "weight": 2.37
         },
         {
           "ticker": "214450",
@@ -777,12 +777,12 @@
         {
           "ticker": "033780",
           "name": "KT&G",
-          "weight": 18.9
+          "weight": 19.24
         },
         {
           "ticker": "015760",
           "name": "한국전력",
-          "weight": 14.83
+          "weight": 14.74
         },
         {
           "ticker": "278470",
@@ -797,7 +797,7 @@
         {
           "ticker": "090430",
           "name": "아모레퍼시픽",
-          "weight": 6.0
+          "weight": 6.07
         },
         {
           "ticker": "051900",
@@ -832,32 +832,32 @@
         {
           "ticker": "035760",
           "name": "CJ ENM",
-          "weight": 11.22
+          "weight": 11.08
         },
         {
           "ticker": "253450",
           "name": "스튜디오드래곤",
-          "weight": 10.66
-        },
-        {
-          "ticker": "041510",
-          "name": "에스엠",
-          "weight": 10.58
+          "weight": 10.68
         },
         {
           "ticker": "122870",
           "name": "와이지엔터테인먼트",
-          "weight": 10.47
+          "weight": 10.39
+        },
+        {
+          "ticker": "041510",
+          "name": "에스엠",
+          "weight": 10.36
         },
         {
           "ticker": "376300",
           "name": "디어유",
-          "weight": 9.27
+          "weight": 9.45
         },
         {
           "ticker": "419530",
           "name": "SAMG엔터",
-          "weight": 8.86
+          "weight": 8.94
         },
         {
           "ticker": "352820",
@@ -867,17 +867,17 @@
         {
           "ticker": "035900",
           "name": "JYP Ent.",
-          "weight": 8.23
+          "weight": 8.26
         },
         {
           "ticker": "473980",
           "name": "노머스",
-          "weight": 6.82
+          "weight": 6.89
         },
         {
           "ticker": "403850",
           "name": "더핑크퐁컴퍼니",
-          "weight": 6.7
+          "weight": 6.65
         }
       ]
     },
@@ -887,27 +887,27 @@
         {
           "ticker": "196170",
           "name": "알테오젠",
-          "weight": 9.58
+          "weight": 9.41
         },
         {
           "ticker": "086520",
           "name": "에코프로",
-          "weight": 4.96
+          "weight": 5.15
         },
         {
           "ticker": "247540",
           "name": "에코프로비엠",
-          "weight": 3.51
+          "weight": 3.65
         },
         {
           "ticker": "036930",
           "name": "주성엔지니어링",
-          "weight": 3.14
+          "weight": 3.19
         },
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 2.5
+          "weight": 2.38
         },
         {
           "ticker": "087010",
@@ -917,7 +917,7 @@
         {
           "ticker": "240810",
           "name": "원익IPS",
-          "weight": 2.1
+          "weight": 2.13
         },
         {
           "ticker": "277810",
@@ -932,7 +932,7 @@
         {
           "ticker": "058470",
           "name": "리노공업",
-          "weight": 1.92
+          "weight": 1.89
         }
       ]
     },
@@ -947,7 +947,7 @@
         {
           "ticker": "086520",
           "name": "에코프로",
-          "weight": 4.97
+          "weight": 5.16
         },
         {
           "ticker": "247540",
@@ -962,7 +962,7 @@
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 2.5
+          "weight": 2.38
         },
         {
           "ticker": "087010",
@@ -1002,7 +1002,7 @@
         {
           "ticker": "008930",
           "name": "한미사이언스",
-          "weight": 3.35
+          "weight": 3.19
         },
         {
           "ticker": "128940",
@@ -1017,12 +1017,7 @@
         {
           "ticker": "009420",
           "name": "한올바이오파마",
-          "weight": 2.69
-        },
-        {
-          "ticker": "068270",
-          "name": "셀트리온",
-          "weight": 94.0
+          "weight": 2.75
         },
         {
           "ticker": "196170",
@@ -1030,19 +1025,24 @@
           "weight": 58.0
         },
         {
-          "ticker": "000100",
-          "name": "유한양행",
-          "weight": 2.55
+          "ticker": "068270",
+          "name": "셀트리온",
+          "weight": 94.0
         },
         {
           "ticker": "468530",
           "name": "프로티나",
-          "weight": 2.54
+          "weight": 2.58
         },
         {
-          "ticker": "195940",
-          "name": "HK이노엔",
-          "weight": 2.35
+          "ticker": "108860",
+          "name": "셀바스AI",
+          "weight": 2.45
+        },
+        {
+          "ticker": "000100",
+          "name": "유한양행",
+          "weight": 2.45
         }
       ]
     },
@@ -1052,12 +1052,12 @@
         {
           "ticker": "036930",
           "name": "주성엔지니어링",
-          "weight": 8.12
+          "weight": 8.15
         },
         {
           "ticker": "240810",
           "name": "원익IPS",
-          "weight": 5.4
+          "weight": 5.41
         },
         {
           "ticker": "039030",
@@ -1067,22 +1067,22 @@
         {
           "ticker": "058470",
           "name": "리노공업",
-          "weight": 4.94
+          "weight": 4.82
         },
         {
           "ticker": "403870",
           "name": "HPSP",
-          "weight": 4.73
+          "weight": 4.79
+        },
+        {
+          "ticker": "222800",
+          "name": "심텍",
+          "weight": 4.63
         },
         {
           "ticker": "108490",
           "name": "로보티즈",
           "weight": 79.0
-        },
-        {
-          "ticker": "222800",
-          "name": "심텍",
-          "weight": 4.18
         },
         {
           "ticker": "319660",
@@ -1092,12 +1092,12 @@
         {
           "ticker": "080220",
           "name": "제주반도체",
-          "weight": 3.46
+          "weight": 3.44
         },
         {
-          "ticker": "032820",
-          "name": "우리기술",
-          "weight": 2.93
+          "ticker": "178320",
+          "name": "서진시스템",
+          "weight": 2.96
         }
       ]
     },
@@ -1107,22 +1107,22 @@
         {
           "ticker": "196170",
           "name": "알테오젠",
-          "weight": 29.45
+          "weight": 29.4
         },
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 7.67
+          "weight": 7.43
         },
         {
           "ticker": "087010",
           "name": "펩트론",
-          "weight": 7.12
+          "weight": 7.23
         },
         {
           "ticker": "298380",
           "name": "에이비엘바이오",
-          "weight": 5.55
+          "weight": 5.64
         },
         {
           "ticker": "214450",
@@ -1132,7 +1132,7 @@
         {
           "ticker": "141080",
           "name": "리가켐바이오",
-          "weight": 4.57
+          "weight": 4.63
         },
         {
           "ticker": "000250",
@@ -1142,7 +1142,7 @@
         {
           "ticker": "347850",
           "name": "디앤디파마텍",
-          "weight": 3.5
+          "weight": 3.49
         },
         {
           "ticker": "310210",
@@ -1162,12 +1162,12 @@
         {
           "ticker": "033780",
           "name": "KT&G",
-          "weight": 20.3
+          "weight": 20.65
         },
         {
           "ticker": "278470",
           "name": "에이피알",
-          "weight": 18.29
+          "weight": 18.3
         },
         {
           "ticker": "003230",
@@ -1177,22 +1177,22 @@
         {
           "ticker": "090430",
           "name": "아모레퍼시픽",
-          "weight": 7.56
+          "weight": 7.64
         },
         {
           "ticker": "271560",
           "name": "오리온",
-          "weight": 4.77
+          "weight": 4.75
         },
         {
           "ticker": "051900",
           "name": "LG생활건강",
-          "weight": 4.75
+          "weight": 4.64
         },
         {
           "ticker": "161890",
           "name": "한국콜마",
-          "weight": 4.3
+          "weight": 4.29
         },
         {
           "ticker": "192820",
@@ -1222,7 +1222,7 @@
         {
           "ticker": "086520",
           "name": "에코프로",
-          "weight": 4.97
+          "weight": 5.16
         },
         {
           "ticker": "247540",
@@ -1237,7 +1237,7 @@
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 2.5
+          "weight": 2.38
         },
         {
           "ticker": "087010",
@@ -1245,14 +1245,14 @@
           "weight": 35.0
         },
         {
-          "ticker": "240810",
-          "name": "원익IPS",
-          "weight": 54.0
-        },
-        {
           "ticker": "277810",
           "name": "레인보우로보틱스",
           "weight": 13.0
+        },
+        {
+          "ticker": "240810",
+          "name": "원익IPS",
+          "weight": 54.0
         },
         {
           "ticker": "039030",
@@ -1272,52 +1272,52 @@
         {
           "ticker": "251270",
           "name": "넷마블",
-          "weight": 10.06
-        },
-        {
-          "ticker": "259960",
-          "name": "크래프톤",
-          "weight": 9.71
-        },
-        {
-          "ticker": "293490",
-          "name": "카카오게임즈",
-          "weight": 9.57
+          "weight": 9.84
         },
         {
           "ticker": "462870",
           "name": "시프트업",
-          "weight": 9.49
+          "weight": 9.56
+        },
+        {
+          "ticker": "259960",
+          "name": "크래프톤",
+          "weight": 9.47
+        },
+        {
+          "ticker": "293490",
+          "name": "카카오게임즈",
+          "weight": 9.46
         },
         {
           "ticker": "192080",
           "name": "더블유게임즈",
-          "weight": 9.49
+          "weight": 9.34
         },
         {
           "ticker": "263750",
           "name": "펄어비스",
-          "weight": 9.28
+          "weight": 9.14
         },
         {
           "ticker": "036570",
           "name": "NC",
-          "weight": 9.06
+          "weight": 9.04
         },
         {
           "ticker": "112040",
           "name": "위메이드",
-          "weight": 7.5
+          "weight": 7.6
         },
         {
           "ticker": "078340",
           "name": "컴투스",
-          "weight": 6.4
+          "weight": 6.7
         },
         {
           "ticker": "225570",
           "name": "넥슨게임즈",
-          "weight": 6.2
+          "weight": 6.35
         }
       ]
     },
@@ -1327,52 +1327,52 @@
         {
           "ticker": "462870",
           "name": "시프트업",
-          "weight": 12.0
+          "weight": 12.06
         },
         {
           "ticker": "036570",
           "name": "NC",
-          "weight": 10.93
+          "weight": 10.89
         },
         {
           "ticker": "192080",
           "name": "더블유게임즈",
-          "weight": 10.78
+          "weight": 10.59
         },
         {
           "ticker": "259960",
           "name": "크래프톤",
-          "weight": 10.66
+          "weight": 10.38
         },
         {
           "ticker": "251270",
           "name": "넷마블",
-          "weight": 7.73
+          "weight": 7.55
         },
         {
           "ticker": "293490",
           "name": "카카오게임즈",
-          "weight": 5.76
+          "weight": 5.68
         },
         {
           "ticker": "112040",
           "name": "위메이드",
-          "weight": 5.22
+          "weight": 5.28
         },
         {
           "ticker": "263750",
           "name": "펄어비스",
-          "weight": 5.18
+          "weight": 5.09
         },
         {
           "ticker": "078340",
           "name": "컴투스",
-          "weight": 4.6
+          "weight": 4.8
         },
         {
           "ticker": "225570",
           "name": "넥슨게임즈",
-          "weight": 4.46
+          "weight": 4.56
         }
       ]
     },
@@ -1382,52 +1382,52 @@
         {
           "ticker": "259960",
           "name": "크래프톤",
-          "weight": 26.3
+          "weight": 25.89
         },
         {
           "ticker": "036570",
           "name": "NC",
-          "weight": 18.73
+          "weight": 18.85
         },
         {
           "ticker": "263750",
           "name": "펄어비스",
-          "weight": 11.2
+          "weight": 11.13
         },
         {
           "ticker": "251270",
           "name": "넷마블",
-          "weight": 10.55
+          "weight": 10.41
         },
         {
           "ticker": "462870",
           "name": "시프트업",
-          "weight": 10.18
+          "weight": 10.35
         },
         {
           "ticker": "192080",
           "name": "더블유게임즈",
-          "weight": 5.65
+          "weight": 5.61
         },
         {
           "ticker": "293490",
           "name": "카카오게임즈",
-          "weight": 3.0
+          "weight": 2.99
         },
         {
           "ticker": "112040",
           "name": "위메이드",
-          "weight": 2.81
+          "weight": 2.87
         },
         {
           "ticker": "078340",
           "name": "컴투스",
-          "weight": 2.4
+          "weight": 2.53
         },
         {
           "ticker": "225570",
           "name": "넥슨게임즈",
-          "weight": 2.32
+          "weight": 2.4
         }
       ]
     },
@@ -1442,7 +1442,7 @@
         {
           "ticker": "086520",
           "name": "에코프로",
-          "weight": 4.94
+          "weight": 5.13
         },
         {
           "ticker": "247540",
@@ -1457,7 +1457,7 @@
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 2.48
+          "weight": 2.37
         },
         {
           "ticker": "087010",
@@ -1492,37 +1492,37 @@
         {
           "ticker": "035420",
           "name": "NAVER",
-          "weight": 22.17
+          "weight": 22.03
         },
         {
           "ticker": "017670",
           "name": "SK텔레콤",
-          "weight": 19.08
+          "weight": 19.17
         },
         {
           "ticker": "035720",
           "name": "카카오",
-          "weight": 15.8
+          "weight": 15.81
         },
         {
           "ticker": "030200",
           "name": "KT",
-          "weight": 15.1
+          "weight": 15.42
         },
         {
           "ticker": "259960",
           "name": "크래프톤",
-          "weight": 8.22
+          "weight": 7.99
         },
         {
           "ticker": "352820",
           "name": "하이브",
-          "weight": 5.8
+          "weight": 5.83
         },
         {
           "ticker": "032640",
           "name": "LG유플러스",
-          "weight": 5.23
+          "weight": 5.22
         },
         {
           "ticker": "036570",
@@ -1532,12 +1532,12 @@
         {
           "ticker": "030000",
           "name": "제일기획",
-          "weight": 1.72
+          "weight": 1.71
         },
         {
           "ticker": "251270",
           "name": "넷마블",
-          "weight": 1.49
+          "weight": 1.46
         }
       ]
     },
@@ -1547,27 +1547,27 @@
         {
           "ticker": "196170",
           "name": "알테오젠",
-          "weight": 9.57
+          "weight": 9.4
         },
         {
           "ticker": "086520",
           "name": "에코프로",
-          "weight": 4.93
+          "weight": 5.12
         },
         {
           "ticker": "247540",
           "name": "에코프로비엠",
-          "weight": 3.48
+          "weight": 3.62
         },
         {
           "ticker": "036930",
           "name": "주성엔지니어링",
-          "weight": 3.13
+          "weight": 3.18
         },
         {
           "ticker": "028300",
           "name": "HLB",
-          "weight": 2.48
+          "weight": 2.37
         },
         {
           "ticker": "087010",
@@ -1577,7 +1577,7 @@
         {
           "ticker": "240810",
           "name": "원익IPS",
-          "weight": 2.09
+          "weight": 2.12
         },
         {
           "ticker": "277810",
@@ -1592,7 +1592,7 @@
         {
           "ticker": "058470",
           "name": "리노공업",
-          "weight": 1.91
+          "weight": 1.88
         }
       ]
     },
@@ -1602,37 +1602,37 @@
         {
           "ticker": "036570",
           "name": "NC",
-          "weight": 29.54
+          "weight": 29.74
         },
         {
           "ticker": "259960",
           "name": "크래프톤",
-          "weight": 29.07
+          "weight": 28.62
         },
         {
           "ticker": "251270",
           "name": "넷마블",
-          "weight": 19.02
+          "weight": 18.78
         },
         {
           "ticker": "263750",
           "name": "펄어비스",
-          "weight": 6.32
+          "weight": 6.28
         },
         {
           "ticker": "181710",
           "name": "NHN",
-          "weight": 4.61
+          "weight": 5.06
         },
         {
           "ticker": "192080",
           "name": "더블유게임즈",
-          "weight": 3.6
+          "weight": 3.57
         },
         {
           "ticker": "462870",
           "name": "시프트업",
-          "weight": 2.53
+          "weight": 2.57
         },
         {
           "ticker": "293490",
@@ -1642,12 +1642,12 @@
         {
           "ticker": "112040",
           "name": "위메이드",
-          "weight": 1.7
+          "weight": 1.74
         },
         {
           "ticker": "225570",
           "name": "넥슨게임즈",
-          "weight": 1.46
+          "weight": 1.5
         }
       ]
     },
@@ -1657,52 +1657,52 @@
         {
           "ticker": "352820",
           "name": "하이브",
-          "weight": 24.36
+          "weight": 24.61
         },
         {
           "ticker": "035900",
           "name": "JYP Ent.",
-          "weight": 20.67
+          "weight": 20.8
         },
         {
           "ticker": "041510",
           "name": "에스엠",
-          "weight": 19.3
+          "weight": 18.96
         },
         {
           "ticker": "122870",
           "name": "와이지엔터테인먼트",
-          "weight": 10.6
+          "weight": 10.55
         },
         {
           "ticker": "035760",
           "name": "CJ ENM",
-          "weight": 7.2
+          "weight": 7.13
         },
         {
           "ticker": "253450",
           "name": "스튜디오드래곤",
-          "weight": 5.59
+          "weight": 5.61
         },
         {
           "ticker": "419530",
           "name": "SAMG엔터",
-          "weight": 2.86
+          "weight": 2.89
         },
         {
           "ticker": "034120",
           "name": "SBS",
-          "weight": 2.6
+          "weight": 2.61
         },
         {
           "ticker": "037270",
           "name": "YG PLUS",
-          "weight": 2.58
+          "weight": 2.56
         },
         {
           "ticker": "473980",
           "name": "노머스",
-          "weight": 1.67
+          "weight": 1.7
         }
       ]
     },
@@ -1712,22 +1712,22 @@
         {
           "ticker": "005930",
           "name": "삼성전자",
-          "weight": 30.28
+          "weight": 30.23
         },
         {
           "ticker": "000660",
           "name": "SK하이닉스",
-          "weight": 25.36
+          "weight": 25.52
         },
         {
           "ticker": "402340",
           "name": "SK스퀘어",
-          "weight": 20.28
+          "weight": 20.09
         },
         {
           "ticker": "042700",
           "name": "한미반도체",
-          "weight": 5.04
+          "weight": 5.0
         },
         {
           "ticker": "007660",
@@ -1737,27 +1737,27 @@
         {
           "ticker": "036930",
           "name": "주성엔지니어링",
-          "weight": 4.61
+          "weight": 4.68
         },
         {
           "ticker": "240810",
           "name": "원익IPS",
-          "weight": 2.86
+          "weight": 2.89
         },
         {
           "ticker": "039030",
           "name": "이오테크닉스",
-          "weight": 2.54
+          "weight": 2.53
         },
         {
           "ticker": "000990",
           "name": "DB하이텍",
-          "weight": 2.15
+          "weight": 2.2
         },
         {
           "ticker": "058470",
           "name": "리노공업",
-          "weight": 2.08
+          "weight": 2.05
         }
       ]
     }
